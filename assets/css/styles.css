@@ -552,6 +552,17 @@ tr:first-child > td > .fc-day-grid-event {
   border-color: #262262;
 }
 
+.fc-toolbar h2 {
+  display: none;
+}
+
+.active-month {
+  background: #fff;
+  color: #262262;
+  -webkit-box-shadow: 11px 19px 22px rgba(0, 0, 0, 0.8) !important;
+          box-shadow: 11px 19px 22px rgba(0, 0, 0, 0.8) !important;
+}
+
 @media (max-width: 1366) {
   .banner-main .banner-con-main {
     top: 26%;
@@ -680,6 +691,12 @@ tr:first-child > td > .fc-day-grid-event {
   }
   .section-5 .aiata-logo-box .desc {
     text-align: justify;
+  }
+}
+
+@media (max-width: 471px) {
+  .topBar {
+    height: 61px;
   }
 }
 

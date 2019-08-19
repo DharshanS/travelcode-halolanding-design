@@ -532,4 +532,12 @@ tr:first-child > td > .fc-day-grid-event {
   }
 }
 
+.fc-toolbar h2{
+  display: none;
+}
+.active-month{
+  background: #fff;
+  color: #262262;
+  box-shadow: 11px 19px 22px rgba(0, 0, 0, 0.8) !important;
+}
 @import 'mediaquery';

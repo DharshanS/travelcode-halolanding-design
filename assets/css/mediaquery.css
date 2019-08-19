@@ -129,6 +129,12 @@
   }
 }
 
+@media (max-width: 471px) {
+  .topBar {
+    height: 61px;
+  }
+}
+
 @media (max-width: 414px) {
   .item-menu .item .item-text {
     font-size: 8px;
