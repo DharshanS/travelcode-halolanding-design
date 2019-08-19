@@ -1,0 +1,185 @@
+@media (max-width: 1366) {
+  .banner-main .banner-con-main {
+    top: 26%;
+    right: 12%;
+  }
+}
+@media (max-width: 991px) {
+  .banner-main {
+    height: 480px;
+  }
+  .section-1 .slid-img-left {
+    height: 260px;
+  }
+  .section-1 .slid-img-right {
+    height: 86.5px;
+  }
+  .section-1 .sec1-right .right-img-main {
+    height: 237px;
+  }
+  .section-1 .sec1-right .img1 {
+    height: 106px;
+  }
+  .section-1 .sec1-right .flynowpaylater {
+    padding-top: 40px;
+  }
+  .section-1 {
+    top: -133px;
+  }
+  .item-menu .item img {
+    float: inherit;
+  }
+  .item-img {
+    text-align: center;
+  }
+  .item-menu .item .item-text {
+    font-size: 12px;
+  }
+  .item-menu {
+    height: 72px;
+  }
+  img.iata {
+    margin-top: 8px;
+  }
+  .section-3 .menu-btn {
+    padding-top: 4px !important;
+    font-size: 13px;
+  }
+  .Overview-cont-main h4 {
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .banner-main .banner-con-main {
+     top: 26%;
+    right: 11%;
+}
+tr:first-child > td > .fc-day-grid-event {
+ 
+    font-size: 12px;
+}
+.input-label {
+    font-size: 14px !important;
+}
+.form-control {
+    font-size: 13px
+}
+.section-5 .social img {
+    max-width: 40px;
+}
+.section-5 .sign {
+    max-width: 37px;
+    margin: 0.1rem 1rem 1rem 0px;
+}
+.section-5 .payment {
+    max-width: 157px;
+    margin-top: 0.2rem;
+}
+.section-5 .social {
+    margin-bottom: 0em;
+}
+}
+
+@media (max-width: 767px) {
+    .section-1 .slid-img-left {
+        height: 219px;
+    }
+    .section-1 .slid-img-right {
+        height: 73px;
+    }
+
+    .section-1 .sec1-right .img1 {
+        height: 91px;
+    }
+    .section-1 .sec1-right .right-img-main {
+        height: 197px;
+    }
+    .item-menu .item .item-text {
+        font-size: 9px;
+    }
+    .section-3 .menu-btn {
+        font-size: 11px;
+    }
+    .Overview-cont-main {
+        padding: 0px 26px;
+        height: 233px;
+        line-height: 15px;
+    }
+    .item-menu {
+        height: 64px;
+    }
+    .section-3 {
+        top: -107px;
+    }
+    .section-4 {
+        top: -81px;
+    }
+    .fc .fc-row .fc-content-skeleton table, .fc .fc-row .fc-content-skeleton td, .fc .fc-row .fc-mirror-skeleton td {
+        font-size: 10px;
+        padding-left: 7px;
+    }
+    .holiday {
+        margin-top: 23px !important;
+    }
+    .social2{
+        text-align: center;
+        margin-top: 12px;
+        margin-left: 17px;
+    }
+    .section-5 .aiata-logo-box .desc {
+        text-align: justify;
+    }
+}
+
+@media (max-width: 414px) {
+    .item-menu .item .item-text {
+        font-size: 8px;
+        display: none;
+    }
+    .item-menu {
+        height: 48px;
+    }
+    .item-menu {
+        height: 54px;
+    }
+    .item-menu .item img {
+        width: 34px;
+    }
+    .item-menu .item .iata {
+        padding-top: 2px;
+    }
+    .section-3 .menu-btn {
+        font-size: 10px;
+        height: 21px;
+    }
+}
+
+@media(max-width:320px){
+    .section-3 .menu-btn {
+        font-size: 8px;
+    }
+    .section-1 .slid-img-left {
+        height: 189px;
+    }
+    .section-1 .slid-img-right {
+        height: 63px;
+    }
+    .section-1 .sec1-right .img1 {
+        height: 79px;
+    }
+    .section-1 .sec1-right label {
+        font-size: 12px;
+    }
+    .section-1 .sec1-right .right-img-main {
+        height: 167px;
+    }
+    .topBar {
+        font-size: 11px;
+        height: 46px;
+    }
+    tr:first-child > td > .fc-day-grid-event {
+        font-size: 8px;
+    }
+    .fc .fc-row .fc-content-skeleton table, .fc .fc-row .fc-content-skeleton td, .fc .fc-row .fc-mirror-skeleton td {
+        font-size: 8px;
+    }
+}

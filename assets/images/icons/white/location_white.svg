@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 50.76 68.36"
+   version="1.1"
+   id="svg1450"
+   sodipodi:docname="location_white.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata1454">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>location</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1235"
+     inkscape:window-height="965"
+     id="namedview1452"
+     showgrid="false"
+     inkscape:zoom="10.898186"
+     inkscape:cx="25.379999"
+     inkscape:cy="34.18"
+     inkscape:window-x="45"
+     inkscape:window-y="22"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1450" />
+  <defs
+     id="defs1442">
+    <style
+       id="style1440">.cls-1{fill:#545a80;}</style>
+  </defs>
+  <title
+     id="title1444">location</title>
+  <g
+     id="Layer_2"
+     data-name="Layer 2"
+     style="fill:#ffffff;fill-opacity:1">
+    <g
+       id="Layer_1-2"
+       data-name="Layer 1"
+       style="fill:#ffffff;fill-opacity:1">
+      <path
+         class="cls-1"
+         d="M8.08,6.66a25.82,25.82,0,0,0-4.6,31.7L19.38,65a7,7,0,0,0,6,3.4h0a7,7,0,0,0,6-3.4l15.9-26.6A25.5,25.5,0,0,0,8.08,6.66Zm17.3,29.6a11.6,11.6,0,1,1,11.3-11.9v.3A11.48,11.48,0,0,1,25.38,36.26Z"
+         id="path1446"
+         style="fill:#ffffff;fill-opacity:1" />
+    </g>
+  </g>
+</svg>
