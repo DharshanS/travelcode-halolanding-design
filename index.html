@@ -106,26 +106,20 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light ">
     <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo/haloflight-logo.png" alt=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto float-right">
+          <li class="nav-item ">
+              <img src="assets/images/icons/phone.svg" class="right-phone" alt="">
+          </li>
+        <li class="nav-item active">
+          <a class="nav-link login-text" href="#">
+            <span class="span-phone">CUSTOMER SUPPORT 8AM - 11PM</span>
+           <label for="" class="phone-num"> 0207 290 5570</label></a>
+        </li>
+      </ul>
+    </div>
 
-    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto float-right">
-            <li class="nav-item active">
-              <a class="nav-link login-text" href="#">LOGIN</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <button class=" start-top-btn"> Start your tour Now</button>
-              </a>
-            </li>
-         
-          </ul>
-       
-        
-        </div> -->
   </nav>
   <div class="topBar text-center">
     <strong>Get 25%</strong> Off Lorem Ipsum is simply dummy text of the printing
@@ -591,21 +585,53 @@
   <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
   <script src="assets/slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">
-   $(document).ready(function() {
-      $(".regular").slick({
-        infinite: true,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        arrows: true,
-        dots:false
-      });
-
+    $(document).ready(function() {
+       $(".regular").slick({
+         infinite: true,
+         slidesToShow: 6,
+         slidesToScroll: 1,
+         arrows: true,
+         dots:false,
+         responsive: [
+         {
+                               breakpoint: 992,
+                               settings: {
+                                 slidesToShow: 5,
+                                 slidesToScroll: 1
+                               }
+                             },
+                             {
+                               breakpoint: 991,
+                               settings: {
+                                 slidesToShow: 5,
+                                 slidesToScroll: 1
+                               }
+                             },
+                             {
+                               breakpoint: 575,
+                               settings: {
+                                 slidesToShow: 3,
+                                 slidesToScroll: 1
+                               }
+                             },
+                             {
+                               breakpoint:350,
+                               settings: {
+                                 slidesToShow: 2,
+                                 slidesToScroll: 1
+                               }
+                             }
+ 
+                           ]
+       });
+   
+ 
 
 $(".fc-title").click(function(){
  $("#exampleModal").modal('show'); 
 })
 
-    })
+    });
     </script>
 </body>
 
