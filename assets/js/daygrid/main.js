@@ -236,7 +236,7 @@ Docs & License: https://fullcalendar.io/
                 }
             }
             titleHtml =
-                '<span class="fc-title">' +
+                '<span class="fc-title ">' +
                     (core.htmlEscape(eventDef.title || '') || '&nbsp;') + // we always want one line of height
                     '</span>';
             return '<a class="' + classes.join(' ') + '"' +
@@ -509,7 +509,7 @@ Docs & License: https://fullcalendar.io/
         return DayGridMirrorRenderer;
     }(DayGridEventRenderer));
 
-    var EMPTY_CELL_HTML = '<td style="pointer-events:none"></td>';
+    var EMPTY_CELL_HTML = '<td style="pointer-events:none" class="d-none"></td>';
     var DayGridFillRenderer = /** @class */ (function (_super) {
         __extends(DayGridFillRenderer, _super);
         function DayGridFillRenderer(dayGrid) {
@@ -557,8 +557,8 @@ Docs & License: https://fullcalendar.io/
             else {
                 className = type.toLowerCase();
             }
-            skeletonEl = core.htmlToElement('<div class="fc-' + className + '-skeleton">' +
-                '<table><tr></tr></table>' +
+            skeletonEl = core.htmlToElement('<div  class="  fc-' + className + '-skeleton">' +
+                '<table><tr class="abc"></tr></table>' +
                 '</div>');
             trEl = skeletonEl.getElementsByTagName('tr')[0];
             if (startCol > 0) {
@@ -620,7 +620,7 @@ Docs & License: https://fullcalendar.io/
             var title = dateEnv.format(date, core.createFormatter(this.opt('dayPopoverFormat')) // TODO: cache
             );
             this.el.innerHTML =
-                '<div class="fc-header ' + theme.getClass('popoverHeader') + '">' +
+                '<div class="abcHea fc-header ' + theme.getClass('popoverHeader') + '">' +
                     '<span class="fc-title">' +
                     core.htmlEscape(title) +
                     '</span>' +
@@ -976,6 +976,7 @@ Docs & License: https://fullcalendar.io/
         DayGrid.prototype._unrenderEventDrag = function (state) {
             if (state) {
                 this.eventRenderer.showByHash(state.affectedInstances);
+
                 this.fillRenderer.unrender('highlight');
             }
         };

@@ -1,0 +1,158 @@
+
+
+/* Icons */
+/* @font-face {
+    font-family: 'soap-icons';
+    src: url("../fonts/soap-icons.eot?26664784");
+    src: url("../fonts/soap-icons.eot?26664784#iefix") format("embedded-opentype"), url("../fonts/soap-icons.woff?26664784") format("woff"), url("../fonts/soap-icons.ttf?26664784") format("truetype"), url("../fonts/soap-icons.svg?26664784#soap-icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+} */
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+
+
+/* 5.1.4. Hotel main content, Flight main content */
+#cal-main-content .tab-content .tab-pane, #flight-main-content .tab-content .tab-pane, #cruise-main-content .tab-content .tab-pane {
+    padding: 0;
+}
+
+#cal-main-content #calendar-tab, #flight-main-content #calendar-tab, #cruise-main-content #calendar-tab {
+    /*background: #383a40;*/
+     padding: 12px 20px 25px 20px;
+}
+
+    #cal-main-content #calendar-tab label, #cal-main-content #calendar-tab p, #flight-main-content #calendar-tab label, #flight-main-content #calendar-tab p, #cruise-main-content #calendar-tab label, #cruise-main-content #calendar-tab p {
+        /*color: #7c9abd;*/
+        text-transform: uppercase;
+    }
+
+    #cal-main-content #calendar-tab .description, #flight-main-content #calendar-tab .description, #cruise-main-content #calendar-tab .description {
+        padding-top: 30px;
+    }
+
+    #cal-main-content #calendar-tab .row, #flight-main-content #calendar-tab .row, #cruise-main-content #calendar-tab .row {
+        border: none;
+    }
+
+#cal-main-content .calendar table, #flight-main-content .calendar table, #cruise-main-content .calendar table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+    #cal-main-content .calendar table thead td, #flight-main-content .calendar table thead td, #cruise-main-content .calendar table thead td {
+        text-align: center;
+        color: #2a3025;
+        text-transform: uppercase;
+        font-size: 0.8333em;
+        text-indent: -5px;
+        line-height: 5em;
+    }
+
+    #cal-main-content .calendar table tbody td, #flight-main-content .calendar table tbody td, #cruise-main-content .calendar table tbody td {
+        padding: 0 5px 5px 0;
+        text-align: right;
+        position: relative;
+    }
+
+        #cal-main-content .calendar table tbody td > a, #cal-main-content .calendar table tbody td > span, #flight-main-content .calendar table tbody td > a, #flight-main-content .calendar table tbody td > span, #cruise-main-content .calendar table tbody td > a, #cruise-main-content .calendar table tbody td > span {
+            background: #ffffff;
+            border: 1px solid #cdcdcd;
+            display: block;
+            color: #2a3025;
+            padding: 5px;
+            line-height: 1em;
+            height: 3.8em;
+            font-size: 13px;
+            position: relative;
+        }
+
+            #cal-main-content .calendar table tbody td > a:before, #cal-main-content .calendar table tbody td > span:before, #flight-main-content .calendar table tbody td > a:before, #flight-main-content .calendar table tbody td > span:before, #cruise-main-content .calendar table tbody td > a:before, #cruise-main-content .calendar table tbody td > span:before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                content: "SELECT";
+                background: #da6161;
+                font-size: 10px;
+                text-align: center;
+                z-index: 1;
+                line-height: 1;
+                padding: 2.2em 5px 5px;
+                color: #fff;
+                display: none;
+                cursor: default;
+                /*background-color: blue !important;*/
+            }
+
+            #cal-main-content .calendar table tbody td > a:hover:before, #cal-main-content .calendar table tbody td > span:hover:before, #flight-main-content .calendar table tbody td > a:hover:before, #flight-main-content .calendar table tbody td > span:hover:before, #cruise-main-content .calendar table tbody td > a:hover:before, #cruise-main-content .calendar table tbody td > span:hover:before {
+                display: block;
+            }
+
+        /*#cal-main-content .calendar table tbody td.available > a, #cal-main-content .calendar table tbody td.available > span, #flight-main-content .calendar table tbody td.available > a, #flight-main-content .calendar table tbody td.available > span, #cruise-main-content .calendar table tbody td.available > a, #cruise-main-content .calendar table tbody td.available > span {
+            border-color: #98ce44;
+            color: #98ce44;
+        }*/
+
+        /*#cal-main-content .calendar table tbody td.available > a:before, #cal-main-content .calendar table tbody td.available > span:before, #flight-main-content .calendar table tbody td.available > a:before, #flight-main-content .calendar table tbody td.available > span:before, #cruise-main-content .calendar table tbody td.available > a:before, #cruise-main-content .calendar table tbody td.available > span:before {
+                background: #98ce44;
+                content: "BOOK FROM";
+                cursor: pointer;
+            }*/
+
+        /*#cal-main-content .calendar table tbody td.date-passed > a, #cal-main-content .calendar table tbody td.date-passed > span, #flight-main-content .calendar table tbody td.date-passed > a, #flight-main-content .calendar table tbody td.date-passed > span, #cruise-main-content .calendar table tbody td.date-passed > a, #cruise-main-content .calendar table tbody td.date-passed > span {
+            border-color: #01b7f2;
+            color: #01b7f2;
+        }*/
+
+        /*#cal-main-content .calendar table tbody td.date-passed > a:before, #cal-main-content .calendar table tbody td.date-passed > span:before, #flight-main-content .calendar table tbody td.date-passed > a:before, #flight-main-content .calendar table tbody td.date-passed > span:before, #cruise-main-content .calendar table tbody td.date-passed > a:before, #cruise-main-content .calendar table tbody td.date-passed > span:before {
+                background: #01b7f2;
+                content: "DATE PASSED";
+            }*/
+
+        #cal-main-content .calendar table tbody td .price-text, #flight-main-content .calendar table tbody td .price-text, #cruise-main-content .calendar table tbody td .price-text {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            color: #000;
+            color: #42748d;
+            font-size: 15px;
+        }
+
+#cal-main-content .calendar-legend, #flight-main-content .calendar-legend, #cruise-main-content .calendar-legend {
+    margin-top: 15px;
+}
+
+    #cal-main-content .calendar-legend label, #flight-main-content .calendar-legend label, #cruise-main-content .calendar-legend label {
+        text-transform: uppercase;
+        font-weight: normal;
+        letter-spacing: 0.04em;
+        line-height: 15px;
+        color: #fff !important;
+        margin-right: 15px;
+        font-size: 0.9167em;
+    }
+
+        #cal-main-content .calendar-legend label:before, #flight-main-content .calendar-legend label:before, #cruise-main-content .calendar-legend label:before {
+            content: "";
+            display: block;
+            float: left;
+            width: 15px;
+            height: 15px;
+            border: 1px solid;
+            margin-right: 4px;
+        }
+
+        #cal-main-content .calendar-legend label.available:before, #flight-main-content .calendar-legend label.available:before, #cruise-main-content .calendar-legend label.available:before {
+            border-color: #98ce44;
+        }
+
+        #cal-main-content .calendar-legend label.unavailable:before, #flight-main-content .calendar-legend label.unavailable:before, #cruise-main-content .calendar-legend label.unavailable:before {
+            border-color: #da6161;
+        }
+
+        #cal-main-content .calendar-legend label.past:before, #flight-main-content .calendar-legend label.past:before, #cruise-main-content .calendar-legend label.past:before {
+            border-color: #01b7f2;
+        }

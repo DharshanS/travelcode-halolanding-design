@@ -505,7 +505,7 @@ var DayGridMirrorRenderer = /** @class */ (function (_super) {
     return DayGridMirrorRenderer;
 }(DayGridEventRenderer));
 
-var EMPTY_CELL_HTML = '<td style="pointer-events:none"></td>';
+var EMPTY_CELL_HTML = '<td style="pointer-events:none" class="d-none"></td>';
 var DayGridFillRenderer = /** @class */ (function (_super) {
     __extends(DayGridFillRenderer, _super);
     function DayGridFillRenderer(dayGrid) {

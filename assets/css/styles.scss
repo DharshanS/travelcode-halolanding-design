@@ -544,7 +544,7 @@ tr:first-child > td > .fc-day-grid-event {
 .right-phone{
   height: 2.1rem;
   transform: rotate(10deg);
-  margin: 1.1rem 0.5rem 0px;
+  margin:1.8rem 0.5rem 0px;
 }
 .phone-num{
   font-size: 24px;
@@ -560,6 +560,20 @@ tr:first-child > td > .fc-day-grid-event {
 }
 
 .navbar {
-  padding-bottom: 0px;
+  border-radius: 4px !important;
+  padding: 0px 10px !important;
+  margin-bottom: 0px !important;
 }
+.navbar-brand{
+  height: auto !important;
+  padding: 0px 15px !important;
+}
+
+.fc-other-month, .fc-other-month td {
+  background: #fff !important;
+  /* display: none; */
+  opacity: .1 !important;
+  border: 0;
+  border-color: #fff !important;
+} 
 @import 'mediaquery';

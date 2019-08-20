@@ -10,116 +10,75 @@
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-
-  <link href='assets/js/core/main.css' rel='stylesheet' />
-  <script src='assets/js/core/main.js'></script>
-  <script src='assets/js/daygrid/main.js'></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+    rel="stylesheet">
 
 
 
-  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
-  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
-  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<link rel="stylesheet" href="assets/js/datepicker-master/css/datepicker.css">
+
+
+  <!-- Google web fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Lato:300,400|Montserrat:400,400i,700,700i"
+    rel="stylesheet">
+  <link href="https://www.travelcenter.uk/Assets/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" /> -->
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" rel="stylesheet" />
+  <link href="https://www.travelcenter.uk/Assets/css/date_time_picker.css" rel="stylesheet" /> -->
+  <link href="assets/tourStyle.css" rel="stylesheet" />
+  <link href="assets/style.css" rel="stylesheet" />
+
+  <link href="assets/owl/owl.carousel.css" rel="stylesheet" />
+  <link href="assets/owl/owl.theme.css" rel="stylesheet" />
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://www.travelcenter.uk/Assets/jquery-ui/jquery-ui.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js"></script>
+  <script src="assets/js/jquery.sliderPro.min.js"></script>
+  <script src="assets/calendar.js"></script>
+  <script src="assets/script.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.js"></script>
+  <script src="assets/owl/owl.carousel.min.js"></script>
   <title>Halo Flights</title>
 
-  <script>
-
-    document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar');
-      sep ='06' ;
-  // '+sep+'
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-     
-        plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
-        header: {
-        
-          center: '',
-          right: ''
-        },
-       
-        defaultDate: '2019-'+sep+'-12',
-        navLinks: true, // can click day/week names to navigate views
-        businessHours: true, // display business hours
-        editable: true,
-        events: [
-        {
-            title: '$275',
-            start: '2019-'+sep+'-18',
-          },
-          {
-            title: '$272',
-            start: '2019-'+sep+'-14',
-          },
-          {
-            title: '$234',
-            start: '2019-'+sep+'-23',
-          },
-          {
-            title: '$274',
-            start: '2019-'+sep+'-09',
-          },
-          {
-            title: '$273',
-            start: '2019-'+sep+'-01',
-          },
-          {
-            title: '$204',
-            start: '2019-'+sep+'-25',
-          },
-          {
-            title: '$270',
-            start: '2019-'+sep+'-11',
-          },
-          {
-            title: '$273',
-            start: '2019-'+sep+'-19',
-          },
-          {
-            title: '$204',
-            start: '2019-'+sep+'-21',
-          }
-        ]
-      });
-  
-      calendar.render();
-    });
-  
-  
-    $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-  </script>
 
   <style>
     #calendar {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
+      max-width: 900px;
+      margin: 0 auto;
+    }
   </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light ">
     <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo/haloflight-logo.png" alt=""></a>
-  
+
+    </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto float-right">
-          <li class="nav-item ">
-              <img src="assets/images/icons/phone.svg" class="right-phone" alt="">
-          </li>
-        <li class="nav-item active">
-          <a class="nav-link login-text" href="#">
-            <span class="span-phone">CUSTOMER SUPPORT 8AM - 11PM</span>
-           <label for="" class="phone-num"> 0207 290 5570</label></a>
+        <li class="nav-item ">
+          <img src="assets/images/icons/phone.svg" class="right-phone" alt="">
         </li>
-      </ul>
-    </div>
+        <li class="nav-item active">
 
+          <a class="nav-link login-text" href="#">
+
+            <span class="span-phone">CUSTOMER SUPPORT 8AM - 11PM</span>
+            <label for="" class="phone-num"> 0207 290 5570</label></a>
+        </li>
+
+
+      </ul>
+
+
+    </div>
   </nav>
   <div class="topBar text-center">
     <strong>Get 25%</strong> Off Lorem Ipsum is simply dummy text of the printing
@@ -270,108 +229,210 @@
         </div>
         <div class="row mt-3">
           <div class="col-md-8 ">
-            <div class="regular slider">
-                <div class="month-slid">
-                    <div class="month">January  </div>
-                    <div class="year">2019</div>
-                  </div>
-                <div class="month-slid">
-                    <div class="month">February </div>
-                    <div class="year">2019</div>
-                  </div>
-                  <div class="month-slid s-activ">
-                    <div class="month">March  </div>
-                    <div class="year">2019</div>
-                  </div>
-                  <div class="month-slid">
-                    <div class="month">April  </div>
-                    <div class="year">2019</div>
-                  </div>
-                <div class="month-slid">
-                <div class="month">May </div>
-                <div class="year">2019</div>
-                </div>
-                <div class="month-slid">
-                  <div class="month">August </div>
-                  <div class="year">2019</div>
-                </div>
-                <div class="month-slid">
-                  <div class="month">September </div>
-                  <div class="year">2019</div>
-                </div>
-                <div class="month-slid">
-                  <div class="month">October  </div>
-                  <div class="year">2019</div>
-                </div>
-                <div class="month-slid">
-                  <div class="month">November  </div>
-                  <div class="year">2019</div>
-                </div>
-                <div class="month-slid">
-                  <div class="month">December  </div>
-                  <div class="year">2019</div>
-                </div>
-            
-            </div>
+
           </div>
-       <div class="col-md-4 col-sm-12"></div>
+          <div class="col-md-4 col-sm-12"></div>
         </div>
         <div class="row mt-3 mr-0 ml-0">
-          <div class="col-md-8 col-sm-12" id="calendar-main">
-            <div id='calendar'></div>
+          <div class="col-md-12 col-sm-12" id="calendar-main">
 
-          </div>
-          <div class="col-md-4 col-sm-12 m-auto holiday">
-              <h2>HOLIDAY PACKAGE</h2>
-              <label for="">
-                HOLIDAY PACKAGE
-  
-                The calendar is updated frequently and is only an approxi-
-                mation of availability. Please proceed to choose your
-  
-                preferred option of travel
-              </label>
-              <div class="form-group">
-                  <label class="input-label">Number of Nights <img src="assets/images/icons/icons-06.png" class="lable-icon"
-                      alt=""></label>
-                  <select class="form-control">
-                    <option value="1">5 Nights 4 Days </option>
-                    <option value="1">6 Nights 5 Days </option>
-                    <option value="1">7 Nights 6 Days </option>
-                
-                  </select>
-                
+
+            <div class="row" id="cal-main-content">
+
+              <div class="col-md-12">
+
+                <div id="calendar-tab">
+                  <div class="row">
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+
+                      <div class="col-md-12 no_padding">
+                        <div class="calMonthPriceContainer" id="monthSlider">
+                          <div>
+
+                            <div class="calMonthPrice " value="2019-07">
+                              <h2>Jul </h2>
+                              <h4>2019</h4>
+                            </div>
+
+                          </div>
+                          <div>
+
+                            <div class="calMonthPrice" value="2019-08">
+                              <h2>Aug </h2>
+                              <h4>2019</h4>
+                            </div>
+
+                          </div>
+                          <div>
+
+                            <div class="calMonthPrice" value="2019-09">
+                              <h2>Sep </h2>
+                              <h4>2019</h4>
+                            </div>
+
+                          </div>
+                          <div>
+
+                            <div class="calMonthPrice" value="2019-10">
+                              <h2>Oct </h2>
+                              <h4>2019</h4>
+                            </div>
+
+                          </div>
+                          <div>
+
+                            <div class="calMonthPrice" value="2019-11">
+                              <h2>Nov </h2>
+                              <h4>2019</h4>
+                            </div>
+
+                          </div>
+                          <div>
+
+                            <div class="calMonthPrice" value="2019-12">
+                              <h2>Dec </h2>
+                              <h4>2019</h4>
+                            </div>
+
+                          </div>
+                          <div>
+
+                            <div class="calMonthPrice" value="2020-01">
+                              <h2>Jan </h2>
+                              <h4>2020</h4>
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+                      <!-- <div class="hidden-lg hidden-md hidden-sm mob_selMonth" id="mob_selMonth"></div> -->
+
+                      <div class="calendar">
+                        <table>
+                          <thead>
+                            <tr>
+                              <td>SUN</td>
+                              <td>MON</td>
+                              <td>TUE</td>
+                              <td>WED</td>
+                              <td>THU</td>
+                              <td>FRI</td>
+                              <td>SAT</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="prev-month"></td>
+                              <td class="prev-month"></td>
+                              <td class="prev-month"></td>
+                              <td class="prev-month"></td>
+                              <td class="date-passed"><span>1</span></td>
+                              <td class="date-passed"><span>2</span></td>
+                              <td class="date-passed"><span>3</span></td>
+                            </tr>
+                            <tr>
+                              <td class="date-passed"><span>4</span></td>
+                              <td class="date-passed"><span>5</span></td>
+                              <td class="date-passed"><span>6</span></td>
+                              <td class="date-passed"><span>7</span></td>
+                              <td class="date-passed"><span>8</span></td>
+                              <td class="date-passed"><span>9</span></td>
+                              <td class="date-passed"><span>10</span></td>
+                            </tr>
+                            <tr>
+                              <td class="date-passed"><span>11</span></td>
+                              <td class="date-passed"><span>12</span></td>
+                              <td class="date-passed"><span>13</span></td>
+                              <td class="today available"><a href="#">14<span class="price-text"></span></a></td>
+                              <td class="available"><a href="#">15<span class="price-text"></span></a></td>
+                              <td class="available"><a href="#">16<span class="price-text"></span></a></td>
+                              <td class="unavailable"><span>17</span></td>
+                            </tr>
+                            <tr>
+                              <td class="unavailable"><span>18</span></td>
+                              <td class="unavailable"><span>19</span></td>
+                              <td class="unavailable"><span>20</span></td>
+                              <td class="unavailable"><span>21</span></td>
+                              <td class="unavailable"><span>22</span></td>
+                              <td class="unavailable"><span>23</span></td>
+                              <td class="unavailable"><span>24</span></td>
+                            </tr>
+                            <tr>
+                              <td class="unavailable"><span>25</span></td>
+                              <td class="unavailable"><span>26</span></td>
+                              <td class="unavailable"><span>27</span></td>
+                              <td class="unavailable"><span>28</span></td>
+                              <td class="unavailable"><span>29</span></td>
+                              <td class="unavailable"><span>30</span></td>
+                              <td class="unavailable"><span>31</span></td>
+                            </tr>
+                            <tr></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="col-md-5 col-sm-12 col-xs-12 marginTopMobile20">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h3 class="calHd calHdBtm calTitle">Holiday Package<span id="nightBoardBasis"></span></h3>
+                          <p class="cal_description">
+                            THE CALENDAR IS UPDATED FREQUENTLY AND IS ONLY AN APPROXIMATION OF AVAILABILITY. PLEASE
+                            PROCEED TO CHOOSE YOUR PREFERRED OPTION OF TRAVEL.
+                          </p>
+                        </div>
+
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label>Number of nights</label>
+                            <select class="select2-custom form-control" name="area" id="dealNoNights">
+                              <option value="4">4 Nights</option>
+                              <option value="6">6 Nights</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label>Departure airports</label>
+                            <select class="select2-custom form-control" name="area" id="dealDepAirport">
+                              <option value="LON">London All</option>
+                              <option value="MAN">Manchester</option>
+                              <option value="EDI">Edinburgh</option>
+                            </select>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="form-group">
-                    <label class="input-label">Departing on<img src="assets/images/icons/icons-07.png" class="lable-icon"
-                        alt=""></label>
-                        <!-- <input type="text" class="form-control docs-date" name="date" placeholder="Departing on"> -->
+              </div>
 
-                        <select class="form-control">
-                          <option value="1">London All
-                            </option>
-                            <option value="1">Manchester
-                            </option>
-                            <option value="1">Edinburgh
-                            </option>
-                        </select>
-                  
-                  </div>
-
-                  <!-- <div class="form-group">
-                      <label class="input-label">Departure Airport<img src="assets/images/icons/icons-05.png" class="lable-icon"
-                          alt=""></label>
-                      <select class="form-control">
-                        <option value="1">15 August 2019
-                          </option>
-                    
-                      </select>
-                    
-                    </div> -->
             </div>
+
+
+            <div hidden>
+              <input value="10006" id="currentDealID" />
+              <input value="0" id="currentDealMarkup" />
+              <input value="4" id="dealNoNights" />
+              <input value="Rome and Venice" id="dealTitle" />
+              <input id="selDate" value="" />
+              <input id="selPrice" value="" />
+            </div>
+
+
+
+            <!-- <div id='calendar'></div> -->
+
+          </div>
+
         </div>
+
       </div>
+
     </div>
   </div>
 
@@ -382,257 +443,253 @@
           <div class="container row">
             <div class="col-md-6 col-sm-12">
               <ul class="social">
-               <li><a href="">
-                  <img src="assets/images/icons/white/facebook-ico.png" alt="facebook">
-               </a></li>
-               <li><a href="">
-                  <img src="assets/images/icons/white/instagram-ico.png" alt="instagram">
-               </a></li>
-               <li><a href="">
-                  <img src="assets/images/icons/white/google-plus-ico.png" alt="google-plus">
-               </a></li>
-               <li><a href="">
-                  <img src="assets/images/icons/white/linkedin-ico.png" alt="linkedin">
-               </a></li>
+                <li><a href="">
+                    <img src="assets/images/icons/white/facebook-ico.png" alt="facebook">
+                  </a></li>
+                <li><a href="">
+                    <img src="assets/images/icons/white/instagram-ico.png" alt="instagram">
+                  </a></li>
+                <li><a href="">
+                    <img src="assets/images/icons/white/google-plus-ico.png" alt="google-plus">
+                  </a></li>
+                <li><a href="">
+                    <img src="assets/images/icons/white/linkedin-ico.png" alt="linkedin">
+                  </a></li>
 
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <div class="social2">
-                    <img src="assets/images/icons/white/ATOL-protected-logo.png" class="sign sign2" alt="">
-                    <img src="assets/images/icons/white/haloflight-standards-finance-protection.png" class="sign " alt="">
-                    <img src="assets/images/icons/white/haloflight-payment-methods.png" class="payment" alt="">
-                </div>
-           
-              </div>
             </div>
-          </div>
-          <div class="row aiata-logo-box">
-            <div class="m-auto">
-                <img src="assets/images/icons/white/aiata-logo.png" alt="">
-                <img src="assets/images/icons/white/worldchoice_logo.png"  alt="">
-                <h4 for="">PH Travel Ltd t/a Halo Flights IATA No. 9128369.</h4>
-                <p class="desc">
-                    Book Your Perfect Flight. Many of the flights and flight-inclusive holidays on 
-                    this website are financially protected by the ATOL scheme. But ATOL protection does not 
-                    apply to all holiday and travel services listed on this website. Please ask us to confirm 
-                    
-                    what protection may apply to your booking. If you do not receive an ATOL Certificate then 
-                    the booking will not be ATOL protected. If you do receive an ATOL Certificate but all the 
-                    parts of your trip are not listed on it, those parts will not be ATOL protected. Please see our 
-                    booking conditions for information, or for more information 
-                    about financial protection and the ATOL Certificate go to www.atol.org.uk/ATOLCertificate
-                </span>
+            <div class="col-md-6 col-sm-12">
+              <div class="social2">
+                <img src="assets/images/icons/white/ATOL-protected-logo.png" class="sign sign2" alt="">
+                <img src="assets/images/icons/white/haloflight-standards-finance-protection.png" class="sign " alt="">
+                <img src="assets/images/icons/white/haloflight-payment-methods.png" class="payment" alt="">
+              </div>
+
             </div>
-              <div class="col-md-4 col-sm-6  contact-us text-left">
-                <h4>Contact Us</h4>
-                <ul class="withSvgIcons">
-                  <li><img src="assets/images/icons/white/email.svg" alt="contact">
-                    <a href=""> contact@haloflights.co.uk</a>
-                  </li>
-                  <li><img src="assets/images/icons/white/phone_white.svg" alt="phone"><a href=""> 0207 290 5570</a></li>
-                  <li id="address">
-                    <img src="assets/images/icons/white/location_white.svg" alt="location">
-                    <span><a rel="noopener noreferrer" target="_blank" href="">68A, George Lane, South Woodford, London E18 1Lw</a></span></li>
-                  <li><img src="assets/images/icons/white/company.svg" alt="company"> Company No. 07314296</li></ul>
-              </div>
-              <div class="col-md-2 col-sm-6  text-left">
-                  <h4> Quick Links</h4>
-                  <ul class="links"><li><a href="/faq">FAQ</a></li><li><a href="/flights">Flights</a></li><li><a href="/promotions">Promotions</a></li><li><a href="/holidays">Holidays</a></li></ul>
-              </div>
-              <div class="col-md-6 text-left  first-to-know">
-                  <h4>Be the first to know</h4>
-                  <p style="font-size: 12px;">You can choose your favorite destination and start planning your long-awaited vacation. We offer 
-                    thousands of destinations. Sign up now to get exclusive offers to your inbox</p>
-                    <div class="input-group mb-3 w-75">
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                          <button data-toggle="modal" data-target="#exampleModal" class="input-group-text" id="basic-addon2">Submit</span>
-                        </div>
-                      </div>
-              </div>
-
-              <div class="textarea">
-                <p>All flights and packages, purchased from Halo Flights to and from the United Kingdom,
-                   are protected under our principal’s ATOL number 10336. This website is operated by PH Travel 
-                   Ltd Registered in England 07314296, Company Vat Number: 998214768 Office: 68 A George Lane,
-                    South Woodford, London E18 1LW</p>
-
-                    <div class="col-12" style="display: flex;">
-                        <ul class="f-bottom-links m-auto">
-                            <li><a href="/privacy-policy">Privacy Policy</a></li>
-                            <li><a href="/terms-and-conditions">Terms</a></li>
-                            <li><a href="/cookie-policy">Cookie Policy</a></li>
-                            <li><a href="/about-us">About Us</a></li>
-                            <li><a href="/contact-us">Contact Us</a></li>
-                          </ul>
-                    </div>
-                   
-                    <p class="copyright col-12">© 2019 Halo Flights. All Rights Reserved</p></div>
           </div>
         </div>
+        <div class="row aiata-logo-box">
+          <div class="m-auto">
+            <img src="assets/images/icons/white/aiata-logo.png" alt="">
+            <img src="assets/images/icons/white/worldchoice_logo.png" alt="">
+            <h4 for="">PH Travel Ltd t/a Halo Flights IATA No. 9128369.</h4>
+            <p class="desc">
+              Book Your Perfect Flight. Many of the flights and flight-inclusive holidays on
+              this website are financially protected by the ATOL scheme. But ATOL protection does not
+              apply to all holiday and travel services listed on this website. Please ask us to confirm
+
+              what protection may apply to your booking. If you do not receive an ATOL Certificate then
+              the booking will not be ATOL protected. If you do receive an ATOL Certificate but all the
+              parts of your trip are not listed on it, those parts will not be ATOL protected. Please see our
+              booking conditions for information, or for more information
+              about financial protection and the ATOL Certificate go to www.atol.org.uk/ATOLCertificate
+              </span>
+          </div>
+          <div class="col-md-4 col-sm-6  contact-us text-left">
+            <h4>Contact Us</h4>
+            <ul class="withSvgIcons">
+              <li><img src="assets/images/icons/white/email.svg" alt="contact">
+                <a href=""> contact@haloflights.co.uk</a>
+              </li>
+              <li><img src="assets/images/icons/white/phone_white.svg" alt="phone"><a href=""> 0207 290 5570</a></li>
+              <li id="address">
+                <img src="assets/images/icons/white/location_white.svg" alt="location">
+                <span><a rel="noopener noreferrer" target="_blank" href="">68A, George Lane, South Woodford, London E18
+                    1Lw</a></span></li>
+              <li><img src="assets/images/icons/white/company.svg" alt="company"> Company No. 07314296</li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-sm-6  text-left">
+            <h4> Quick Links</h4>
+            <ul class="links">
+              <li><a href="/faq">FAQ</a></li>
+              <li><a href="/flights">Flights</a></li>
+              <li><a href="/promotions">Promotions</a></li>
+              <li><a href="/holidays">Holidays</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-left  first-to-know">
+            <h4>Be the first to know</h4>
+            <p style="font-size: 12px;">You can choose your favorite destination and start planning your long-awaited
+              vacation. We offer
+              thousands of destinations. Sign up now to get exclusive offers to your inbox</p>
+            <div class="input-group mb-3 w-75">
+              <input type="text" class="form-control" placeholder="Recipient's username"
+                aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button data-toggle="modal" data-target="#exampleModal" class="input-group-text"
+                  id="basic-addon2">Submit</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="textarea">
+            <p>All flights and packages, purchased from Halo Flights to and from the United Kingdom,
+              are protected under our principal’s ATOL number 10336. This website is operated by PH Travel
+              Ltd Registered in England 07314296, Company Vat Number: 998214768 Office: 68 A George Lane,
+              South Woodford, London E18 1LW</p>
+
+            <div class="col-12" style="display: flex;">
+              <ul class="f-bottom-links m-auto">
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/terms-and-conditions">Terms</a></li>
+                <li><a href="/cookie-policy">Cookie Policy</a></li>
+                <li><a href="/about-us">About Us</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <p class="copyright col-12">© 2019 Halo Flights. All Rights Reserved</p>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </div>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content" style="border: solid 4px #262262;">
-      <div class="modal-header">
-        <h5 class="modal-title travel-model-title" id="exampleModalLabel">GET YOUR TRAVEL QUOTE</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="">Name</label>
-              <input type="text" class="form-control">
-            </div>
-          </div>
-          <div class="col-md-6">
-
-              <div class="form-group">
-                  <label for="">Email</label>
-                  <input type="text" class="form-control">
-                </div>
-          </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="border: solid 4px #262262;">
+        <div class="modal-header">
+          <h5 class="modal-title travel-model-title" id="exampleModalLabel">GET YOUR TRAVEL QUOTE</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-
-        <div class="row">
+        <div class="modal-body">
+          <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label for="">  Contact Number </label>
+                <label for="">Name</label>
                 <input type="text" class="form-control">
               </div>
             </div>
             <div class="col-md-6">
-  
-                <div class="form-group">
-                    <label for="">Communication Mode</label>
-                    <input type="text" class="form-control">
-                  </div>
+
+              <div class="form-group">
+                <label for="">Email</label>
+                <input type="text" class="form-control">
+              </div>
             </div>
           </div>
 
           <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="">, cons ectetuer  </label>
-                  <input type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="">, cons ectetuer  </label>
-                    <input type="text" class="form-control">
-                  </div>
-              </div>
-              <div class="col-md-6">
-    
-                  <div class="form-group">
-                      <label for="">Special Requests</label>
-                      <textarea name="" class="form-control1" id="" cols="30" rows="4"></textarea>
-                    </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for=""> Contact Number </label>
+                <input type="text" class="form-control">
               </div>
             </div>
+            <div class="col-md-6">
 
-            <div class="row">
-                <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Communication Mode</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">, cons ectetuer </label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="">, cons ectetuer </label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+
+              <div class="form-group">
+                <label for="">Special Requests</label>
+                <textarea name="" class="form-control1" id="" cols="30" rows="4"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">, cons ectet </label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row m-o">
+                <div class="col-md-4">
                   <div class="form-group">
-                    <label for="">, cons ectet </label>
+                    <label for="">Aduld </label>
                     <input type="text" class="form-control">
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="row m-o">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label for="">Aduld </label>
-                            <input type="text" class="form-control">
-                          </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="form-group">
-                            <label for="">Children</label>
-                            <input type="text" class="form-control">
-                          </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="form-group">
-                            <label for="">Infant
-                              </label>
-                            <input type="text" class="form-control">
-                          </div>
-                    </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label for="">Children</label>
+                    <input type="text" class="form-control">
                   </div>
-      
-                  
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="form-group">
+                    <label for="">Infant
+                    </label>
+                    <input type="text" class="form-control">
+                  </div>
                 </div>
               </div>
-      </div>
-      <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-        <button type="button" class="btn btn-primary">Submit</button>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
   <!-- Sripts -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script src="assets/js/datepicker-master/js/main.js"></script>
-<script src="assets/js/datepicker-master/js/datepicker.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
-  <script src="assets/slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-       $(".regular").slick({
-         infinite: true,
-         slidesToShow: 6,
-         slidesToScroll: 1,
-         arrows: true,
-         dots:false,
-         responsive: [
-         {
-                               breakpoint: 992,
-                               settings: {
-                                 slidesToShow: 5,
-                                 slidesToScroll: 1
-                               }
-                             },
-                             {
-                               breakpoint: 991,
-                               settings: {
-                                 slidesToShow: 5,
-                                 slidesToScroll: 1
-                               }
-                             },
-                             {
-                               breakpoint: 575,
-                               settings: {
-                                 slidesToShow: 3,
-                                 slidesToScroll: 1
-                               }
-                             },
-                             {
-                               breakpoint:350,
-                               settings: {
-                                 slidesToShow: 2,
-                                 slidesToScroll: 1
-                               }
-                             }
- 
-                           ]
-       });
-   
- 
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
 
-$(".fc-title").click(function(){
- $("#exampleModal").modal('show'); 
-})
+  <script>
+    $("#monthSlider").owlCarousel({
+
+      items: 6,
+      loop: true,
+      navigation: true,
+      navigationText: ["<i class='icon-left-open'></i>", "<i class='icon-right-open'></i>"],
+      dots: false,
+      autoPlay: false,
+      autoPlayHoverPause: false,
+      dotsData: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        480: {
+          items: 2
+        },
+        768: {
+          items: 4
+        }
+      }
 
     });
-    </script>
+  </script>
+
+  <script>
+    $('.calMonthPrice').click(function () {
+
+      $('.calMonthPrice').removeClass('calMonthPriceSelected');
+
+      $(this).addClass('calMonthPriceSelected');
+
+    });
+  </script>
 </body>
 
 </html>
