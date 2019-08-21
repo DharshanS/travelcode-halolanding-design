@@ -704,6 +704,16 @@ tr:first-child > td > .fc-day-grid-event {
   font-size: 10px;
 }
 
+.tp-widget-businessinfo__trustscore {
+  float: left;
+  color: #000;
+}
+
+.tp-widget-businessinfo__total, strong#businessEntity-numberOfReviews-total {
+  color: #000;
+  margin-left: 6px;
+}
+
 @media (max-width: 1366) {
   .banner-main .banner-con-main {
     top: 26%;

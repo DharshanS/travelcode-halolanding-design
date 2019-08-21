@@ -668,5 +668,12 @@ p{
 
 }
 }
-
+.tp-widget-businessinfo__trustscore {
+  float: left;
+  color: #000;
+}
+.tp-widget-businessinfo__total,strong#businessEntity-numberOfReviews-total {
+  color: #000;
+  margin-left: 6px;
+}
 @import 'mediaquery';
