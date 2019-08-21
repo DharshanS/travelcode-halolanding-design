@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: 'Proxima Nova';
 }
 
 .logo {
-  width: 130px;
+  width: 187px;
 }
 
 .login-text {
@@ -32,7 +32,7 @@ body {
 }
 
 .banner-main {
-  height: 550px;
+  height: 500px;
   background-image: url(../images/banner-3.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -44,18 +44,25 @@ body {
   margin-top: auto;
   position: relative;
   text-align: center;
-  top: 42%;
-  right: 20%;
+  top: 38%;
+  right: 29%;
 }
 
 .banner-main h2 {
   background: #262262;
   color: #fff;
+  font-size: 50px;
+  background: #262262;
+  color: #fff;
+  font-size: 50px;
+  padding: 0px 4px;
+  font-weight: 600;
 }
 
 .banner-main label {
   background: #ffffff7a;
   color: #262262;
+  font-size: 30px;
 }
 
 .banner-main .currency-div {
@@ -130,13 +137,15 @@ body {
   background: #262262;
   margin-bottom: 0;
   margin-bottom: 0;
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 .section-1 .sec1-right .img1 {
   width: 100%;
   height: 158px;
-  margin-bottom: 4px;
+  margin-top: 10px;
+  border-radius: 2px;
 }
 
 .section-1 .sec1-right .flynowpaylater {
@@ -567,7 +576,7 @@ tr:first-child > td > .fc-day-grid-event {
   height: 2.1rem;
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
-  margin: 1.8rem 0.5rem 0px;
+  margin: 1.1rem 0.5rem 0px;
 }
 
 .phone-num {
@@ -601,6 +610,98 @@ tr:first-child > td > .fc-day-grid-event {
   opacity: .1 !important;
   border: 0;
   border-color: #fff !important;
+}
+
+.tp-widget-wrapper.visible {
+  opacity: 1;
+  width: 230px;
+}
+
+.tp-widget-wrapper {
+  max-width: 255px;
+}
+
+.tp-widget-wrapper {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 750px;
+  opacity: 0;
+  position: relative;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+.tp-widget-logo {
+  margin: 0 0 8px;
+  width: 55%;
+}
+
+.tp-widget-stars {
+  margin: 0 0 8px;
+  width: 94%;
+}
+
+.tp-stars--5 .tp-star:nth-of-type(-n+5) .tp-star__canvas, .tp-stars--5 .tp-star:nth-of-type(-n+5) .tp-star__canvas--half {
+  fill: #00b67a;
+}
+
+.hyperlink-main {
+  position: absolute;
+  right: 8%;
+  top: 145px;
+}
+
+.call-btn-main {
+  margin: 5px 0px 0px 0px !important;
+}
+
+.con-single_box {
+  margin-top: 10px;
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 5px;
+}
+
+.con-single_box h5 {
+  color: #555e69;
+  margin-bottom: 1px;
+  font-size: 13px;
+}
+
+.con-single_box img {
+  width: 25px;
+  margin-right: 4px;
+}
+
+.con-single_box a {
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+}
+
+.single-contact-btn .inner-box {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.single-contact-btn h4 {
+  font-size: 25px;
+  padding-top: 0px;
+  color: #000;
+}
+
+.single-contact-btn a {
+  font-size: 19px;
+  padding-top: 0px;
+  color: #000;
+  font-weight: 500;
+  line-height: 7px;
+}
+
+.single-contact-btn p {
+  margin-bottom: 1px;
+  font-size: 10px;
 }
 
 @media (max-width: 1366) {

@@ -58,13 +58,14 @@
 
         #cal-main-content .calendar table tbody td > a, #cal-main-content .calendar table tbody td > span, #flight-main-content .calendar table tbody td > a, #flight-main-content .calendar table tbody td > span, #cruise-main-content .calendar table tbody td > a, #cruise-main-content .calendar table tbody td > span {
             background: #ffffff;
-            border: 1px solid #cdcdcd;
+            border: 1px solid #a29e9e;
             display: block;
             color: #2a3025;
             padding: 5px;
             line-height: 1em;
             height: 3.8em;
             font-size: 13px;
+            border-radius: 4px;
             position: relative;
         }
 
@@ -114,10 +115,10 @@
 
         #cal-main-content .calendar table tbody td .price-text, #flight-main-content .calendar table tbody td .price-text, #cruise-main-content .calendar table tbody td .price-text {
             position: absolute;
-            bottom: 5px;
-            right: 5px;
-            color: #000;
-            color: #42748d;
+            bottom: 14px;
+            right: 21px;
+            font-weight: 500;
+            color: #262262;
             font-size: 15px;
         }
 
