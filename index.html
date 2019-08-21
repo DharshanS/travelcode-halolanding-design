@@ -56,30 +56,33 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light ">
-    <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo/haloflight-logo.png" alt=""></a>
-
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto float-right">
-        <li class="nav-item ">
-          <img src="assets/images/icons/phone.svg" class="right-phone" alt="">
-        </li>
-        <li class="nav-item active">
-
-          <a class="nav-link login-text" href="#">
-
-            <span class="span-phone">CUSTOMER SUPPORT 8AM - 11PM</span>
-            <label for="" class="phone-num"> 0207 290 5570</label></a>
-        </li>
-
-
-      </ul>
-
-
-    </div>
-  </nav>
+  <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light ">
+          <a class="navbar-brand" href="#"><img class="logo" src="assets/images/logo/haloflight-logo.png" alt=""></a>
+      
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto float-right">
+              <li class="nav-item ">
+                <img src="assets/images/icons/phone.svg" class="right-phone" alt="">
+              </li>
+              <li class="nav-item active">
+      
+                <a class="nav-link login-text" href="#">
+      
+                  <span class="span-phone">CUSTOMER SUPPORT 8AM - 11PM</span>
+                  <label for="" class="phone-num"> 0207 290 5570</label></a>
+              </li>
+      
+      
+            </ul>
+      
+      
+          </div>
+        </nav>
+  </div>
+ 
   <div class="topBar text-center">
     Dive in to the holiday mood, book and save up to 25% - Handpicked deals, exclusively from Halo Flights
   </div>
@@ -185,15 +188,15 @@
         <div class="row m-0">
           <div class="col-9 p-0">
             <img
-              src="assets/images/slid/grand-canal-in-venice--italy-584393947-5a89a0d78023b900374a486b-b2be891e5535465a819696aa318d714a.jpg"
+              src="assets/images/slid/207736056.jpg"
               class="slid-img-left" alt="">
           </div>
           <div class="col-3 p-0">
             <img class="slid-img-right" src="assets/images/slid/Positano-Weather.jpg" class="slid-img-left" alt="">
             <img class="slid-img-right"
-              src="assets/images/slid/20GorgeousSidetownsinItaly__HERO_shutterstock_688078159.jpg" class="slid-img-left"
+              src="assets/images/slid/177714455.jpg" class="slid-img-left"
               alt="">
-            <img class="slid-img-right" src="assets/images/slid/Bergamo-Lombardy-Italy-WTGITALY0218.jpg"
+            <img class="slid-img-right" src="assets/images/slid/28904331.jpg"
               class="slid-img-left" alt="">
 
           </div>
@@ -223,7 +226,7 @@
                 </div>
                 <div class="col-xs-9 col-sm-8 col-lg-10">
                   <h5>Request Call</h5>
-                  <a href="tel:02084593900">Click Here</a>
+                  <a  data-toggle="modal" href="#requestCall" class="">Click Here</a>
                 </div>
               </div>
             </div>
@@ -777,6 +780,7 @@
                 <button data-toggle="modal" data-target="#exampleModal" class="input-group-text"
                   id="basic-addon2">Submit</span>
               </div>
+            
             </div>
           </div>
 
@@ -902,6 +906,61 @@
 
             </div>
           </div>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal2 -->
+  <div class="modal fade" id="requestCall" tabindex="-1" role="dialog" aria-labelledby="requestCallLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="border: solid 4px #262262;">
+        <div class="modal-header">
+          <h5 class="modal-title travel-model-title" id="requestCallLabel">Request a Call Back</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Your Name</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+
+              <div class="form-group">
+                <label for="">Your Email</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Your Contact Number </label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+
+              <div class="form-group">
+                <label for="">Best time to call</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+
+         
         </div>
         <div class="modal-footer">
           <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->

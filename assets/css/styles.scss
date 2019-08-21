@@ -38,7 +38,7 @@ body {
 }
 .banner-main {
   height: 500px;
-  background-image: url(../images/banner-3.jpg);
+  background-image: url(https://www.thesun.co.uk/wp-content/uploads/2019/05/NINTCHDBPICT000388482610.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -620,9 +620,16 @@ tr:first-child > td > .fc-day-grid-event {
   margin: 5px 0px 0px 0px !important;
 }
 .con-single_box{
-  margin-top: 10px;
+  margin-top: 6px;
   border-bottom: solid 1px #ccc;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
+  .row{
+    border: solid 2px #262262;
+    padding: 2px;
+    border-radius: 3px;
+    box-sizing: border-box;
+
+  }
   h5{
     color: #555e69;
     margin-bottom: 1px;

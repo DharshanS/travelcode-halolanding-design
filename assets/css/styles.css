@@ -33,8 +33,8 @@ body {
 
 .banner-main {
   height: 500px;
-  background-image: url(../images/banner-3.jpg);
-  background-position: center;
+  background-image: url(https://www.thesun.co.uk/wp-content/uploads/2019/05/NINTCHDBPICT000388482610.jpg);
+  background-position: inherit;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -49,10 +49,9 @@ body {
 }
 
 .banner-main h2 {
-  background: #262262;
   color: #fff;
   font-size: 50px;
-  background: #262262;
+  background: #982e36;
   color: #fff;
   font-size: 50px;
   padding: 0px 4px;
@@ -61,7 +60,7 @@ body {
 
 .banner-main label {
   background: #ffffff7a;
-  color: #262262;
+  color: #982e36;
   font-size: 30px;
 }
 
@@ -656,9 +655,17 @@ tr:first-child > td > .fc-day-grid-event {
 }
 
 .con-single_box {
-  margin-top: 10px;
+  margin-top: 6px;
   border-bottom: solid 1px #ccc;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
+}
+
+.con-single_box .row {
+  border: solid 2px #262262;
+  padding: 2px;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .con-single_box h5 {
