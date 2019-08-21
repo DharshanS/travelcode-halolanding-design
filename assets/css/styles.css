@@ -714,6 +714,19 @@ tr:first-child > td > .fc-day-grid-event {
   margin-left: 6px;
 }
 
+.itinerary {
+  margin-top: 15px;
+}
+
+.itinerary h5 {
+  font-size: 16px;
+}
+
+.itinerary label {
+  font-size: 15px;
+  width: 100%;
+}
+
 @media (max-width: 1366) {
   .banner-main .banner-con-main {
     top: 26%;

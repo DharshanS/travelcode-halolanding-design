@@ -676,4 +676,14 @@ p{
   color: #000;
   margin-left: 6px;
 }
+.itinerary{
+  margin-top: 15px;
+  h5{
+    font-size: 16px;
+  }
+  label{
+    font-size: 15px;
+    width: 100%;
+  }
+}
 @import 'mediaquery';
