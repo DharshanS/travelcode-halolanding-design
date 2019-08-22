@@ -185,6 +185,7 @@ body {
 .item-menu .item {
   float: left;
   width: 25%;
+  padding-left: 43px;
 }
 
 .item-menu .item img {
