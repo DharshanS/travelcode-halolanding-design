@@ -551,15 +551,15 @@
 
 .calMonthPriceContainer .owl-prev, .calMonthPriceContainer .owl-next {
     position: absolute;
-    top: 12px;
+    top: 1px;
 }
 
 .calMonthPriceContainer .owl-next {
-    right: -50px;
+    right: -35px;
 }
 
 .calMonthPriceContainer .owl-prev {
-    left: -50px;
+    left: -37px;
 }
 
 .calMonthPriceContainer.owl-theme .owl-controls .owl-buttons div {

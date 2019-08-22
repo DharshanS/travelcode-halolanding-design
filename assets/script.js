@@ -132,28 +132,6 @@
 
         });
 
-        $("#monthSlider").owlCarousel({
-
-          items: 6,
-          loop: true,
-          navigation: true,
-          navigationText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
-          dots: false,
-          autoPlay: false,
-          autoPlayHoverPause: false,
-          dotsData: true,
-          responsive: {
-              0: {
-                  items: 1
-              },
-              480: {
-                  items: 2
-              },
-              768: {
-                  items: 4
-              }
-          }
-
-      });
+       
 
    
