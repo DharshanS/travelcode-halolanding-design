@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
   <link rel="stylesheet" href="assets/proxima-nova/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-
+<link rel="stylesheet" href="assets/css/mediaquery.scss">
   <link href="https://fonts.googleapis.com/css?family=Rancho&display=swap" rel="stylesheet">
 
 
@@ -178,7 +178,7 @@
     <div class="banner-con-main">
       <h2>Disneyland Paris</h2>
       <label>5 Days 6 Nights</label>
-      <div class="currency-div">&#163; 139 <small style="font-size: 16px;">pp</small> </div>
+      <div class="currency-div">&#163; 139<small style="font-size: 16px;">pp</small> </div>
     </div>
   </div>
 
@@ -186,12 +186,12 @@
     <div class="container">
       <div class="sec1-img-left">
         <div class="row m-0">
-          <div class="col-9 p-0">
+          <div class="col-9 col-img-left p-0">
             <img
               src="assets/images/slid/roller-coaster.jpg"
               class="slid-img-left" alt="">
           </div>
-          <div class="col-3 p-0">
+          <div class="col-3 p-0 col-img-right">
             <img class="slid-img-right" src="assets/images/slid/disneylandmakeover.jpg" class="slid-img-left" alt="">
             <img class="slid-img-right"
               src="assets/images/slid/images.jpg" class="slid-img-left"
@@ -388,11 +388,11 @@
                   <div class="cunt">
                     <div class="row">
                       <div class="col-md-12">
-                      <img src="assets/images/slid/177714455.jpg" width="200px" alt=""> 
-                      <img src="assets/images/slid/204471517.jpg" width="200px" alt=""> 
-                      <img src="assets/images/slid/28904331.jpg" width="200px" alt=""> 
+                      <img src="assets/images/slid/177714455.jpg" class="hotel-img"  alt=""> 
+                      <img src="assets/images/slid/204471517.jpg" class="hotel-img"  alt=""> 
+                      <img src="assets/images/slid/28904331.jpg" class="hotel-img" alt=""> 
                       
-                       <img src="assets/images/slid/204471450.jpg" width="200px" alt="">
+                       <img src="assets/images/slid/204471450.jpg" class="hotel-img" alt="">
                        </div> 
                     
                     </div>
@@ -774,14 +774,14 @@
   <div class="container">
       <div class="row">
 
-          <div class="col-xs-12 col-sm-6 col-lg-4 single-contact-btn">
+          <div class=" col-md-4 col-sm-4 col-lg-4 single-contact-btn">
             <div class="inner-box" style="padding-bottom: 7px;">
   
               <div class="row">
-                <div class="col-xs-2 col-lg-2">
+                <div class="col-md-2 col-lg-2">
                   <img src="assets/images/icons/support.png" alt="Ask Our Expert">
                 </div>
-                <div class="col-xs-10  col-lg-10">
+                <div class="col-md-10  col-lg-10">
                   <a href="#" data-toggle="modal" data-target="#exampleModal"
                   data-dismiss="modal">
               
@@ -794,14 +794,14 @@
             </div>
           </div>
   
-          <div class="col-xs-12 col-sm-6 col-lg-4 single-contact-btn">
+          <div class=" col-md-4 col-sm-4 col-lg-4 single-contact-btn">
             <div class="inner-box" style="padding-bottom: 7px;">
   
               <div class="row">
-                <div class="col-xs-2 col-lg-2">
+                <div class="col-md-2 col-lg-2">
                   <img src="assets/images/icons/call.png" alt="Call Now">
                 </div>
-                <div class="col-xs-10 col-lg-10">
+                <div class="col-md-10 col-lg-10">
                
                   <a href=""> 0207 290 5570</a>
                   <p>Speak to our Expert</p>
@@ -827,14 +827,14 @@
             </div>
           </div> -->
   
-          <div class="col-xs-12 col-sm-6 col-lg-4 single-contact-btn">
+          <div class=" col-md-4 col-sm-4 col-lg-4 single-contact-btn">
             <div class="inner-box" style="padding-bottom: 7px;">
   
               <div class="row">
-                <div class="col-xs-2 col-lg-2">
+                <div class="col-md-2 col-lg-2">
                   <img src="assets/images/icons/contact.png" alt="Request Call">
                 </div>
-                <div class="col-xs-10 col-lg-10">
+                <div class="col-md-10 col-lg-10">
                   
                   <a href="#" data-toggle="modal" data-target="#requestCallBackModal"
                     data-dismiss="modal">Request a Call</a>
@@ -1177,7 +1177,7 @@
           items: 2
         },
         768: {
-          items: 4
+          items: 3
         }
       }
 

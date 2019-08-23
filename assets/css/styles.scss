@@ -73,6 +73,7 @@ body {
     text-shadow: 3px 1px 1px #E91E63;
     font-family: 'Rancho', cursive;
   }
+
   label {
     background: #139ed8;
     color: #262262;
@@ -344,7 +345,7 @@ li{
 }
 img{
   color: yellow;
-  width: 1rem;
+  width: 1rem !important;
   height: auto;
   margin: 0px 0.8em 0px 0px;
 }
@@ -723,5 +724,12 @@ p{
   }
 }
 
+.hotel-img{
+  width: 231px
+}
 
-@import 'mediaquery';
+
+
+
+
+

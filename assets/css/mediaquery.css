@@ -1,4 +1,4 @@
-@media (max-width: 1366) {
+@media (max-width: 1366px) {
   .banner-main .banner-con-main {
     top: 26%;
     right: 12%;
@@ -6,11 +6,21 @@
 }
 
 @media (max-width: 991px) {
+  .container {
+    max-width: 872px;
+  }
   .banner-main {
-    height: 480px;
+    height: 408px;
   }
   .section-1 .slid-img-left {
     height: 260px;
+  }
+  .section-1 .sec1-right {
+    float: left;
+    width: 21%;
+  }
+  .section-1 .sec1-img-left {
+    width: 78%;
   }
   .section-1 .slid-img-right {
     height: 86.5px;
@@ -18,14 +28,11 @@
   .section-1 .sec1-right .right-img-main {
     height: 237px;
   }
-  .section-1 .sec1-right .img1 {
+  .section-1 .img1 {
     height: 106px;
   }
-  .section-1 .sec1-right .flynowpaylater {
-    padding-top: 40px;
-  }
-  .section-1 {
-    top: -133px;
+  .con-single_box {
+    margin-top: -5px;
   }
   .item-menu .item img {
     float: inherit;
@@ -52,7 +59,23 @@
   }
   .banner-main .banner-con-main {
     top: 26%;
-    right: 11%;
+    right: 2%;
+  }
+  .banner-main h2 {
+    color: #fff;
+    font-size: 71px;
+  }
+  .banner-main .currency-div {
+    width: 115px;
+    font-size: 27px;
+    right: -140px;
+  }
+  .banner-main label {
+    background: #139ed8;
+    color: #262262;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 1px;
   }
   tr:first-child > td > .fc-day-grid-event {
     font-size: 12px;
@@ -76,6 +99,10 @@
   }
   .section-5 .social {
     margin-bottom: 0em;
+  }
+  .item-menu .item {
+    padding-left: 22px;
+    text-align: center;
   }
 }
 
@@ -104,7 +131,29 @@
     font-size: 13px !important;
   }
   .section-3 {
-    top: -89px;
+    top: -65px;
+  }
+  .single-contact-btn a {
+    font-size: 19px;
+  }
+  #cal-main-content .calendar table tbody td > span {
+    height: 3em;
+  }
+  .cunt li {
+    font-size: 13px;
+  }
+  .section-1 .sec1-right {
+    float: left;
+    width: 23%;
+  }
+  .section-1 .sec1-img-left {
+    width: 72%;
+  }
+  .tp-widget-stars {
+    width: 60%;
+  }
+  .hotel-img {
+    width: 128px;
   }
 }
 
@@ -158,11 +207,123 @@
   .section-5 .aiata-logo-box .desc {
     text-align: justify;
   }
+  .col-img-left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .col-img-right {
+    display: none;
+  }
+  .section-1 .sec1-right .flynowpaylater {
+    display: none;
+  }
+  .con-single_box {
+    margin: 6px 0px;
+  }
+  .single-contact-btn {
+    text-align: center;
+  }
+  .cunt label {
+    line-height: 23px;
+    font-size: 13px;
+  }
+  .section-3 {
+    top: -57px;
+  }
+  .item-menu .item .item-text {
+    font-size: 12px;
+  }
+  .section-4 {
+    top: -37px;
+  }
+  .hotel-img {
+    width: 154px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-1 .sec1-right {
+    width: 34%;
+  }
+  .section-1 .sec1-img-left {
+    width: 64%;
+  }
+  .hotel-img {
+    width: 125px;
+  }
+  .Overview-cont-main {
+    padding: 0px 26px;
+    height: 306px;
+  }
+}
+
+@media (max-width: 575px) {
+  .item-menu .item {
+    padding-left: 0px;
+  }
+  .topBar {
+    background-color: #8e2327;
+    float: left;
+    height: 59px;
+  }
+  .banner-main h2 {
+    text-shadow: 3px 1px 1px #001f8e;
+    margin: 0;
+  }
+  .banner-main label {
+    margin-bottom: 1px;
+    margin-left: 46%;
+  }
+  .banner-main .currency-div {
+    width: 115px;
+    font-size: 22px;
+    color: #FFEB3B;
+    right: -252px;
+  }
+  .hotel-img {
+    width: 110px;
+  }
 }
 
 @media (max-width: 471px) {
+  .hyperlink-main {
+    display: none;
+  }
   .topBar {
     height: 61px;
+  }
+  .section-1 .sec1-right {
+    width: 100%;
+  }
+  .section-1 .sec1-img-left {
+    width: 100%;
+  }
+  .section-1 .sec1-right label {
+    display: none;
+  }
+  .banner-main .banner-con-main {
+    top: -1%;
+  }
+  .itinerary .hotel-name {
+    font-size: 18px;
+  }
+  .col-md-4 img {
+    width: 144px;
+  }
+  .hotel-img {
+    width: 86px;
+  }
+  .section-3 .menu-btn {
+    height: 40px;
+  }
+  .single-contact-btn img {
+    width: 39px;
+  }
+  .calHdBtm {
+    margin-bottom: 5px;
+    margin-top: 24px !important;
   }
 }
 
@@ -186,6 +347,12 @@
   .section-3 .menu-btn {
     font-size: 10px;
     height: 21px;
+  }
+}
+
+@media (max-width: 375px) {
+  .topBar {
+    font-size: 14px;
   }
 }
 
@@ -219,6 +386,27 @@
   .fc .fc-row .fc-content-skeleton td,
   .fc .fc-row .fc-mirror-skeleton td {
     font-size: 8px;
+  }
+  .banner-main .currency-div {
+    right: -168px;
+  }
+  .banner-main label {
+    font-size: 24px;
+  }
+  .banner-main h2 {
+    font-size: 53px;
+  }
+  .con-single_box {
+    margin: 3px 0px;
+  }
+  .banner-main label {
+    margin-left: 39%;
+  }
+  .section-3 .menu-btn {
+    height: 28px;
+  }
+  #cal-main-content .calendar table tbody td .price-text {
+    font-size: 10px !important;
   }
 }
 /*# sourceMappingURL=mediaquery.css.map */
