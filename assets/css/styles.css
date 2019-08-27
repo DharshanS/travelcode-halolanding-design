@@ -53,6 +53,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 40px;
 }
 
 .banner-main .banner-con-main {
@@ -62,6 +63,7 @@ body {
   text-align: center;
   top: 24%;
   right: 6%;
+  display: none;
 }
 
 .banner-main h2 {
