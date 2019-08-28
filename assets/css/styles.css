@@ -770,3 +770,7 @@ tr:first-child > td > .fc-day-grid-event {
   width: 231px;
 }
 /*# sourceMappingURL=styles.css.map */
+.error{
+font-size: 11px !important;
+color: red !important;
+}
