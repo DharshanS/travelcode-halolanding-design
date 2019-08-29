@@ -5,13 +5,10 @@ $white: #fff;
 $logo-right: #8e2327;
 
 body {
-  margin: 0;
+  margin: 0 !important;
   font-family:'Proxima Nova';
   font-weight: 400
 }
-// .navbar {
-//     height: 50px;
-// }
 
 
 .hotel-star{
@@ -65,6 +62,7 @@ body {
     position: relative;
     text-align: center;
     top: 24%;
+    display: none;
     right: 6%;
   }
   h2 {

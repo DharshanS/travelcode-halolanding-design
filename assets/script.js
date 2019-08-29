@@ -134,4 +134,59 @@
 
        
 
-   
+        $(document).ready(function() {
+            console.log("php");
+          
+                   $('#myModal').modal('show');
+          
+          // hf
+              });
+          
+          
+          // International Telephone Input {{ asset('js/tel/utils.js?1549804213570')}}
+          
+          
+          var input = document.querySelector("#phone"),
+            errorMsg = document.querySelector("#error-msg"),
+            validMsg = document.querySelector("#valid-msg");
+          
+          // here, the index maps to the error code returned from getValidationError - see readme
+          var errorMap = [ "Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+          
+          // initialise plugin
+          // initialise plugin
+          var iti = window.intlTelInput(input, {
+            utilsScript: "https://moa-static-files.s3-us-west-2.amazonaws.com/css/utils.js"
+          });
+          var iti = intlTelInput(input, {
+            initialCountry: "LK"
+          });
+          
+          
+          
+          
+          // on blur: validate
+          input.addEventListener('blur', function() {
+          
+            // reset();
+            if (input.value.trim()) {
+              if (iti.isValidNumber()) {
+                var num = input.value.trim();
+                document.getElementById("phoneNumber").value = num;
+                document.getElementById("phoneNumber-l").innerHTML = "";
+                documet.getElementById("phone").classList.remove("error-b");
+              } else {
+                
+                document.getElementById("phoneNumber").value = "";
+                document.getElementById("phoneNumber-l").innerHTML = "Enter valid mobile number";
+                documet.getElementById("phone").classList.add("error-b");
+              }
+            }
+          
+          });
+          input.addEventListener('change', reset);
+          input.addEventListener('keyup', reset); 
+          
+          
+          // International Telephone Input End 
+          

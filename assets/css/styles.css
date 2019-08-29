@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 !important;
   font-family: 'Proxima Nova';
   font-weight: 400;
 }
@@ -61,6 +61,7 @@ body {
   position: relative;
   text-align: center;
   top: 24%;
+  display: none;
   right: 6%;
 }
 
