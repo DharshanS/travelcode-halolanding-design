@@ -1,0 +1,4 @@
+[09-Jul-2017 13:32:06 Etc/UTC] PHP Warning:  stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed in /home/dharshans/public_html/wp-content/plugins/traveler/PHPMailer/class.smtp.php on line 344
+[09-Jul-2017 13:34:37 Etc/UTC] PHP Warning:  stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed in /home/dharshans/public_html/wp-content/plugins/traveler/PHPMailer/class.smtp.php on line 344
