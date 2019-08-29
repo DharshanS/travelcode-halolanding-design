@@ -6,6 +6,11 @@
 }
 
 @media (max-width: 991px) {
+  .hyperlink-main {
+    position: absolute;
+    right: 1%;
+    top: 171px;
+  }
   .container {
     max-width: 872px;
   }
@@ -244,6 +249,12 @@
 }
 
 @media (max-width: 640px) {
+  .section-1 .sec1-right .right-img-main {
+    height: 267px;
+  }
+  .section-1 .slid-img-left {
+    height: 289px;
+  }
   .section-1 .sec1-right {
     width: 34%;
   }
@@ -260,6 +271,13 @@
 }
 
 @media (max-width: 575px) {
+  .section-1 .sec1-right .con-single_box {
+    margin-top: -3px;
+    text-align: center;
+  }
+  .section-1 .sec1-right .right-img-main {
+    height: 278px;
+  }
   .item-menu .item {
     padding-left: 0px;
   }
@@ -294,6 +312,26 @@
   .textarea .f-bottom-links {
     text-align: left;
     padding-left: 0;
+  }
+  .logo {
+    width: 135px;
+  }
+  .right-phone {
+    display: none;
+    height: 1.1rem;
+  }
+  .phone-num {
+    font-size: 18px;
+  }
+  .span-phone {
+    display: block;
+    font-size: 8px;
+  }
+  .nav-right {
+    width: 45%;
+  }
+  .item-menu {
+    height: 80px;
   }
 }
 
@@ -375,11 +413,27 @@
   .nav-right {
     width: 45%;
   }
+  .itinerary .hotel-name {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 375px) {
   .topBar {
     font-size: 14px;
+  }
+  .logo {
+    width: 109px;
+  }
+  .navbar-brand {
+    margin: 0 !important;
+    float: left;
+    width: 40%;
+    height: auto !important;
+    padding: 0px 15px !important;
+  }
+  .nav-right {
+    width: 60%;
   }
 }
 

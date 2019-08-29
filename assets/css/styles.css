@@ -627,6 +627,7 @@ tr:first-child > td > .fc-day-grid-event {
 
 .navbar-brand {
   float: left;
+  margin: 0 !important;
   width: 50%;
   height: auto !important;
   padding: 0px 15px !important;
