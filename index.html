@@ -1003,7 +1003,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="">CONTACT NUMBER</label>
-                <input type="hidden" id="phoneNumber" class="form-control" name="phoneNumber"    value="" autocomplete="off">
+                <input type="hidden" id="phoneNumber" class="form-control" name="phoneNumberN"    value="" autocomplete="off">
                 <input type="text" id="phone" class="form-control "value=""  autocomplete="off">
         
                 <span class="error mt-0 pb-0" id="phoneNumber-l"></span>
@@ -1014,7 +1014,11 @@
 
               <div class="form-group">
                 <label for="">COMMUNICATION MODE</label>
-                <input type="text" class="form-control">
+                <select name="" id="" class="form-control" >
+                  <option value="">A Call Back</option>
+                  <option value="">Quote by Email</option>
+             
+                </select>
               </div>
             </div>
           </div>
@@ -1044,42 +1048,78 @@
           </div>
 
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
+
               <div class="form-group">
                 <label for="">NUMBER OF ROOMS</label>
-                <input type="text" class="form-control">
+          
+                <select name="" id="noOfRooms" class="form-control" >
+                    <option value="">01</option>
+                    <option value="">02</option>
+                    <option value="">03</option>
+                  </select>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="row m-o">
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label for="">ADULTS </label>
-                    <input type="text" class="form-control">
+       
+          </div>
+
+          <div class="row">
+      
+   
+                <div class="col-md-3  col-sm-6">
+                    <div class="form-group">
+                      <label >Room 1 </label>
+                     
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <div class="form-group">
-                    <label for="">CHILDREN</label>
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <div class="form-group">
-                    <label for="">INFANT
-                    </label>
-                    <input type="text" class="form-control">
-                  </div>
+
+              <div class="col-md-3  col-sm-6">
+                <div class="form-group">
+                  <label for="">ADULTS </label>
+                  <select name="" id="noOfAdults" class="form-control" >
+                      <option value="">01</option>
+                      <option value="">02</option>
+                      <option value="">03</option>
+                      <option value="">04</option>
+                    </select>
                 </div>
               </div>
 
+              <div class="col-md-3 col-sm-6">
+                <div class="form-group">
+                  <label for="">CHILDREN</label>
+                  <select name="" id="noOfAdults" class="form-control" >
+                      <option value="">0</option>
+                      <option value="">01</option>
+                      <option value="">02</option>
+                      <option value="">03</option>
+                    </select>
+                </div>
+              </div>
 
-            </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="form-group">
+                  <label for="">INFANT
+                  </label>
+                  <select name="" id="noOfAdults" class="form-control" >
+                      <option value="">01</option>
+                      <option value="">02</option>
+                      <option value="">03</option>
+                      <option value="">04</option>
+                    </select>
+                </div>
+              </div>
+
+         
+          
+        
+
+
           </div>
         </div>
         <div class="modal-footer">
           <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-          <button type="button" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-primary qte-submit">Submit</button>
         </div>
       </div>
     </div>
