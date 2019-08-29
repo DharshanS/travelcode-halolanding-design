@@ -12,6 +12,8 @@ body {
 // .navbar {
 //     height: 50px;
 // }
+
+
 .hotel-star{
   color: #FFC107 !important;
   margin: 0 !important
@@ -600,10 +602,15 @@ tr:first-child > td > .fc-day-grid-event {
   margin-bottom: 0px !important;
 }
 .navbar-brand{
+  float: left;
+  width: 50%;
   height: auto !important;
   padding: 0px 15px !important;
 }
-
+.nav-right{
+  float: right;
+  width: 50%;
+}
 .fc-other-month, .fc-other-month td {
   background: #fff !important;
   /* display: none; */

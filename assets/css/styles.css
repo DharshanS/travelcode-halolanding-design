@@ -53,7 +53,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 40px;
 }
 
 .banner-main .banner-con-main {
@@ -63,7 +62,6 @@ body {
   text-align: center;
   top: 24%;
   right: 6%;
-  display: none;
 }
 
 .banner-main h2 {
@@ -627,8 +625,15 @@ tr:first-child > td > .fc-day-grid-event {
 }
 
 .navbar-brand {
+  float: left;
+  width: 50%;
   height: auto !important;
   padding: 0px 15px !important;
+}
+
+.nav-right {
+  float: right;
+  width: 50%;
 }
 
 .fc-other-month, .fc-other-month td {
@@ -770,7 +775,3 @@ tr:first-child > td > .fc-day-grid-event {
   width: 231px;
 }
 /*# sourceMappingURL=styles.css.map */
-.error{
-font-size: 11px !important;
-color: red !important;
-}

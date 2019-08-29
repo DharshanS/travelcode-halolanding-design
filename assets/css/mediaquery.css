@@ -279,11 +279,21 @@
   .banner-main .currency-div {
     width: 115px;
     font-size: 22px;
-    color: #FFEB3B;
+    color: #ffeb3b;
     right: -252px;
+  }
+  .textarea .f-bottom-links li {
+    display: block;
+  }
+  .textarea p {
+    text-align: justify;
   }
   .hotel-img {
     width: 110px;
+  }
+  .textarea .f-bottom-links {
+    text-align: left;
+    padding-left: 0;
   }
 }
 
@@ -346,7 +356,24 @@
   }
   .section-3 .menu-btn {
     font-size: 10px;
-    height: 21px;
+    height: 36px;
+  }
+  .logo {
+    width: 135px;
+  }
+  .right-phone {
+    display: none;
+    height: 1.1rem;
+  }
+  .phone-num {
+    font-size: 18px;
+  }
+  .span-phone {
+    display: block;
+    font-size: 8px;
+  }
+  .nav-right {
+    width: 45%;
   }
 }
 
