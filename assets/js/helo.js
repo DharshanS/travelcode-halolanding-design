@@ -51,6 +51,32 @@ $('.qte-submit').click(function(){
   validateFirstName();
   emailValidate();
 
+  var name = "Dharshan";
+  var email = "cdharshans@gmail.com";
+  var subject = "Sara Travels Web";
+  var message = "Loojs"
+  var dataString = 'name=' + name + '&email=' + email + '&subject=' + subject + '&message=' + message;
+
+
+  $.ajax({
+    type: "POST",
+    url: "php/contact.php",
+    data: dataString,
+    success: function (data) {    
+     //alert(data);   
+        if(data==1){
+          $("#res_p").append("Email sent");
+        }
+        else{
+          $("#res_p").append("An error occured");
+        }     
+        $('.text-success').fadeIn(1000);
+        $('.text-success').fadeOut(500);
+        $("#contact-form")[0].reset();
+        //$("#res_p").empty();
+    }
+});
+
 })
 
 
