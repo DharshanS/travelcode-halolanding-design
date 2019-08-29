@@ -5,10 +5,10 @@ require_once('PHPMailerAutoload.php');
   $mail = new PHPMailer();
   $mail->SMTPDebug =2;
 
-$name=$_POST['name'];
-$email=$_POST['email'];
-$subject=$_POST['subject'];
-$message=$_POST['message'];
+$name="Dharshan";
+$email="charshans@gmail.com";
+$subject="Lets";
+$message="Docks";
 
 
   // More headers
@@ -22,9 +22,9 @@ $message=$_POST['message'];
   //Whether to use SMTP authentication
   $mail->SMTPAuth = true;
   //Username to use for SMTP authentication
-  $mail->Username = "saratravelsaif@gmail.com";
+  $mail->Username = "cdharshans@gmail.com";
   //Password to use for SMTP authentication
-  $mail->Password = "bismillah.1";
+  $mail->Password = "saraspathy@123";
   //Set who the message is to be sent from
  //$mail->setFrom('no-reply@jsvilla.com', 'jsvilla');
  $mail->setFrom('no-reply@jsvilla.com', "SARA TRAVELS");
