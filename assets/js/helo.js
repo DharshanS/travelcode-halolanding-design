@@ -2,18 +2,11 @@ $(document).ready(function(){
 
 
     $("#firstName").keyup(function(){
-    console.log("firstName");
-	reg_name = /^([a-zA-Z]{1,50})$/;
-    fName = $("#firstName").val();
-
-    if(fName !="" && reg_name.test(fName)){
-		$("#firstName-l").hide();
-	}
-	else{
-		$("#firstName-l").text("name should be text");
-	}	
+  
+      validateFirstName();
 
 })
+
 $("#lastName").keyup(function(){
 	reg_name1 = /^([a-zA-Z]{1,50})$/;
     lName = $("#lastName").val();
@@ -27,15 +20,7 @@ $("#lastName").keyup(function(){
 
 })
 $("#email").keyup(function(){
-	reg_name1 = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
-    lName = $("#email").val();
 
-    if(lName !="" && reg_name1.test(lName)){
-		$("#email-l").hide();
-	}
-	else{
-		$("#email-l").text('Enter your valid email address');
-	}	
 
 })
 
@@ -62,6 +47,39 @@ $("#reEmail").keyup(function(){
 })	
 
 
+$('.qte-submit').click(function(){
+  validateFirstName();
+  emailValidate();
+
+})
+
+
+function validateFirstName(){
+  reg_name = /^([a-zA-Z]{1,50})$/;
+    fName = $("#firstName").val();
+
+  
+    if(fName !="" && reg_name.test(fName)){
+		$("#firstName-l").hide();
+	}
+	else{
+    
+		$("#firstName-l").text("name should be text");
+	}	
+}
+
+
+function emailValidate(){
+  reg_name1 = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+  lName = $("#email").val();
+
+  if(lName !="" && reg_name1.test(lName)){
+  $("#email-l").hide();
+}
+else{
+  $("#email-l").text('Enter your valid email address');
+}	
+}
 
 var input = document.querySelector("#phone"),
   errorMsg = document.querySelector("#error-msg"),
@@ -105,6 +123,7 @@ var iti = window.intlTelInput(input, {
   input.addEventListener('keyup', reset); 
   
   
+
 
 
 
