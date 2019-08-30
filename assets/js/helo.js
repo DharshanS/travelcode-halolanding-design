@@ -1,5 +1,16 @@
 $(document).ready(function(){
 
+var request={
+  name:"",
+  email:"",
+  number:"",
+  mode:"",
+  callbackTime:"",
+  specialRequest:"",
+  noOfRoms:[]
+}
+var lastRoomsCount=1;
+var roomList=[];
 
     $("#firstName").keyup(function(){
   
@@ -51,11 +62,6 @@ $('.qte-submit').click(function(){
   validateFirstName();
   emailValidate();
 
-  var name = "Dharshan";
-  var email = "cdharshans@gmail.com";
-  var subject = "Sara Travels Web";
-  var message = "Loojs"
-  var dataString = 'name=' + name + '&email=' + email + '&subject=' + subject + '&message=' + message;
 
 
   $.ajax({
@@ -63,7 +69,7 @@ $('.qte-submit').click(function(){
     url: "php/contact.php",
     data: dataString,
     success: function (data) {    
-     alert(data);   
+    // alert(data);   
         if(data==1){
           $("#res_p").append("Email sent");
         }
@@ -77,8 +83,49 @@ $('.qte-submit').click(function(){
     }
 });
 
+
+
+
+
 })
 
+$('#noOfRooms').change(function(){
+
+ var currentRoomLength=$('.pax-array').length;
+ var slectedRoomLength=$(this).val();
+
+ if(currentRoomLength<slectedRoomLength)
+ {
+ var room={
+  id:slectedRoomLength,
+  adult:0,
+  children:0,
+  infant:0
+}
+roomList.push(room);
+  $('#inner-rooms').html(createRoom(room));
+}
+  else
+  {
+    if(currentRoomLength!=1){
+      roomList.splice(currentRoomLength-1,1);
+      $(".pax-array")[currentRoomLength-1].remove();
+    }
+  
+  }
+
+});
+
+
+// $('.adults').change(function(){
+    
+//   alert($(this).attr('index'));
+// });
+
+$(document).change('adults',function($event){
+    
+  //alert(JSON.stringify($event));
+});
 
 function validateFirstName(){
   reg_name = /^([a-zA-Z]{1,50})$/;
@@ -106,6 +153,66 @@ else{
   $("#email-l").text('Enter your valid email address');
 }	
 }
+
+
+
+function createRoom(room){
+  var html="";
+  for(let i=1;i<room.id;i++)
+  {
+   html=html+'<div class="row pax-array">'+
+  '<div class="col-md-3  col-sm-6">'+
+        '<div class="form-group">'+
+          '<label >Room '+(i+1)+' </label>'+
+        '</div>'+
+  '</div>'+
+
+  '<div class="col-md-3  col-sm-6">'+
+    '<div class="form-group">'+
+      '<label for="">ADULTS </label>'+
+      '<select name="" id="noOfAdults" index="'+i+'" class="adults form-control" >'+
+         ' <option value="">01</option>'+
+          '<option value="">02</option>'+
+          '<option value="">03</option>'+
+          '<option value="">04</option>'+
+        '</select>'+
+    '</div>'+
+  '</div>'+
+
+  '<div class="col-md-3 col-sm-6">'+
+    '<div class="form-group">'+
+      '<label for="">CHILDREN</label>'+
+      '<select name="" id="noOfChild" index="'+i+'" class="child form-control" >'+
+          '<option value="">0</option>'+
+          '<option value="">01</option>'+
+          '<option value="">02</option>'+
+          '<option value="">03</option>'+
+        '</select>'+
+    '</div>'+
+  '</div>'+
+
+  '<div class="col-md-3 col-sm-6">'+
+    '<div class="form-group">'+
+      '<label for="">INFANT'+
+      '</label>'+
+      '<select name="" id="noOfInfant" index="'+i+'" class=" infant form-control" >'+
+          '<option value="">01</option>'+
+          '<option value="">02</option>'+
+          '<option value="">03</option>'+
+          '<option value="">04</option>'+
+        '</select>'+
+    '</div>'+
+  '</div>'+
+'</div>';
+  }
+
+
+return html;
+
+
+}
+
+
 
 var input = document.querySelector("#phone"),
   errorMsg = document.querySelector("#error-msg"),

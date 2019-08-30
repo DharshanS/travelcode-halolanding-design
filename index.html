@@ -65,7 +65,7 @@
 
 <body>
 
-  <div id="app">
+
   <div class="container" >
       <nav class="navbar navbar-expand-lg navbar-light ">
           <a class="navbar-brand nav-left" href="#"><img class="logo" src="assets/images/logo/haloflight-logo.png" alt=""></a>
@@ -1057,33 +1057,34 @@
                 <label for="">NUMBER OF ROOMS</label>
           
                 <select name="" id="noOfRooms" class="form-control" >
-                    <option value="">01</option>
-                    <option value="">02</option>
-                    <option value="">03</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
                   </select>
               </div>
             </div>
        
           </div>
-
-          <div class="row">
+<div class="" id=room-rapper>
+          <div class="row  pax-array">
       
    
-                <div class="col-md-3  col-sm-6">
+
+              <div class="col-md-3  col-sm-6">
                     <div class="form-group">
                       <label >Room 1 </label>
                      
                     </div>
-                  </div>
+              </div>
 
               <div class="col-md-3  col-sm-6">
                 <div class="form-group">
                   <label for="">ADULTS </label>
-                  <select name="" id="noOfAdults" class="form-control" >
-                      <option value="">01</option>
-                      <option value="">02</option>
-                      <option value="">03</option>
-                      <option value="">04</option>
+                  <select name="" id="noOfAdults" index=1 class="adults form-control" >
+                      <option value="1">01</option>
+                      <option value="2">02</option>
+                      <option value="3">03</option>
+                      <option value="4">04</option>
                     </select>
                 </div>
               </div>
@@ -1119,6 +1120,13 @@
 
 
           </div>
+
+          <div id=inner-rooms>
+
+          </div>
+
+        </div>
+
         </div>
         <div class="modal-footer">
           <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
@@ -1189,12 +1197,12 @@
 
 
 
-<div>
+
 
 
   <!-- Sripts -->
   <script src="./assets/js/helo.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
 
   <script>
 
@@ -1266,27 +1274,7 @@
 
 </script>
 
-<script>
-var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!',
-    rooms: [
-      
-    ]
-      
-    
-  },
-  methods: {
 
-    addRoom:function(){
-
-    }
-    
-    
-  },
-})
-</script>
 
 
 </body>
