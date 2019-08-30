@@ -235,7 +235,7 @@
   }
 
   .section-1 .sec1-right .flynowpaylater {
-    display: none;
+    // display: none;
   }
   .con-single_box {
     margin: 6px 0px;
@@ -289,8 +289,12 @@
     margin-top: -3px;
     text-align: center;
 }
+.section-1 .sec1-right label {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
 .section-1 .sec1-right .right-img-main {
-  height: 278px;
+  height: 450px;
 }
   .item-menu .item {
     padding-left: 0px;
@@ -364,7 +368,7 @@
     width: 100%;
   }
   .section-1 .sec1-right label {
-    display: none;
+    // display: none;
   }
   .banner-main .banner-con-main {
     top: -1%;
@@ -390,6 +394,10 @@
   }
 }
 @media (max-width: 414px) {
+  .section-1 .sec1-right .flynowpaylater {
+    padding-top: 0px;
+    height: 174px;
+  }
   .item-menu .item .item-text {
     font-size: 8px;
     display: none;
