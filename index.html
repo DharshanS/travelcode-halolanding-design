@@ -64,7 +64,9 @@
 </head>
 
 <body>
-  <div class="container">
+
+  <div id="app">
+  <div class="container" >
       <nav class="navbar navbar-expand-lg navbar-light ">
           <a class="navbar-brand nav-left" href="#"><img class="logo" src="assets/images/logo/haloflight-logo.png" alt=""></a>
       
@@ -78,7 +80,7 @@
       
                 <a class="nav-link login-text" href="#">
       
-                  <span class="span-phone">CUSTOMER SUPPORT 8AM - 11PM</span>
+                  <span class="span-phone">CUSTOMER SUPPORT 8AM - 11PM {{message}}</span>
                   <label for="" class="phone-num"> 0207 290 5570</label></a>
               </li>
       
@@ -1007,6 +1009,7 @@
                 <input type="text" id="phone" class="form-control "value=""  autocomplete="off">
         
                 <span class="error mt-0 pb-0" id="phoneNumber-l"></span>
+
               </div>
             </div>
          
@@ -1183,8 +1186,15 @@
       </div>
     </div>
   </div>
+
+
+
+<div>
+
+
   <!-- Sripts -->
   <script src="./assets/js/helo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
   <script>
 
@@ -1255,6 +1265,29 @@
  });
 
 </script>
+
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    rooms: [
+      
+    ]
+      
+    
+  },
+  methods: {
+
+    addRoom:function(){
+
+    }
+    
+    
+  },
+})
+</script>
+
 
 </body>
 
