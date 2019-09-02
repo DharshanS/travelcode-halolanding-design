@@ -177,7 +177,7 @@
 
 @media (max-width: 767px) {
   .section-1 .slid-img-left {
-    height: 219px;
+    height: 376px;
   }
   .section-1 .slid-img-right {
     height: 73px;
@@ -265,9 +265,9 @@
   .section-1 .sec1-right .right-img-main {
     height: 267px;
 }
-.section-1 .slid-img-left {
-  height: 289px;
-}
+// .section-1 .slid-img-left {
+//   height: 289px;
+// }
   .section-1 .sec1-right {
     width: 34%;
   }
@@ -285,6 +285,12 @@
 }
 
 @media (max-width: 575px) {
+  .section-1 .slid-img-left {
+    height: 399px;
+}
+.section-1 .sec1-right .right-img-main {
+  height: 367px;
+}
   .banner-main{
     background-image:none;
   }
