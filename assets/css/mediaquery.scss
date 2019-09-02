@@ -5,22 +5,61 @@
   }
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1024px) {
+  .hotel-img {
+    width: 217px;
+}
+}
+
+@media (max-width: 992px){
+  .banner-main {
+    background-image: none;
+  }
+  .banner-main img{
+    display:block;
+    height:412px;
+
+  
+  }
+  .hyperlink-main {
+    padding-left: 10px;
+    position: absolute;
+    right: 8.7%;
+}
 }
 @media (max-width: 991px) {
+  .banner-main {
+    height: 356px;
+}
+  .banner-main {
+    background-image: none;
+  }
+  .banner-main img{
+    display:block;
+    height:  327px;
+  
+  }
+ 
+    .hyperlink-main {
+      position: absolute;
+      right: 11%;
+      height: 100px;
+      top: 169px;
+      background: #fff;
+  
+}
 
-  .hyperlink-main {
-    position: absolute;
-    right: 1%;
-    top: 171px;
-    background: #fff
+.hotel-img {
+  width: 200px;
+}
+.rating-img {
+  right: 52px;
+  position: relative;
 }
   .container {
     max-width: 872px;
   }
-  .banner-main {
-     height: 328px;
-  }
+
   .section-1 .slid-img-left {
     height: 260px;
   }
@@ -177,9 +216,32 @@
 }
 
 @media (max-width: 767px) {
-  .section-1 .slid-img-left {
-    height: 376px;
-  }
+  .tp-widget-wrapper.visible {
+    opacity: 1;
+    width: 191px;
+}
+.hyperlink-main img {
+  width: 175px;
+}
+.trustEX {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+  top: -7px;
+}
+.section-1 .slid-img-left {
+  height: 274px;
+}
+.rating-img {
+  width: 125px;
+  right: 1px;
+  position: relative;
+  top: -67px;
+}
+.single-contact-btn .inner-box {
+  text-align: left;
+}
   .section-1 .slid-img-right {
     height: 73px;
   }
@@ -283,11 +345,25 @@
     padding: 0px 26px;
     height: 306px;
   }
+
+  .tp-widget-wrapper.visible {
+    opacity: 1;
+    width: 160px;
+}
+.hyperlink-main img {
+  width: 150px;
+}
+.right-phone{
+  display: none;
+}
+.single-contact-btn a {
+  font-size: 15px;
+}
 }
 
 @media (max-width: 575px) {
   .section-1 .slid-img-left {
-    height: 259px;
+    height:297px;
 }
 .section-1 .sec1-right .right-img-main {
   // height: 367px;
@@ -311,7 +387,10 @@
   margin-bottom: 12px;
 }
 .section-1 .sec1-right .right-img-main {
-  height: 300px;
+  height: 253px;
+}
+.section-3 {
+  top: -150px;
 }
   .item-menu .item {
     padding-left: 0px;
@@ -370,6 +449,31 @@
   .item-menu {
     height: 80px;
 }
+
+.hyperlink-main {
+  right: 11%;
+  height: 64px;
+  top: 129px;
+}
+.hyperlink-main img {
+  width: 99px;
+  top: -9px;
+  position: relative;
+}
+.tp-widget-logo {
+  margin: 0 0 8px;
+  width: 43%;
+}
+.trustEX {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+  top: -13px;
+}
+.section-1 {
+  position: relative;
+  top: -169px;}
 }
 @media (max-width: 471px) {
   .tp-widget-logo {
@@ -436,8 +540,11 @@ width: 60% !important
     width: 86px;
   }
   .section-3 .menu-btn {
-    height: 40px;
-  }
+    height: 24px;
+}
+.section-4 {
+  top: -119px;
+}
   .single-contact-btn img {
     width: 39px;
     position: relative;
@@ -462,6 +569,23 @@ width: 60% !important
   .single-contact-btn .inner-box{
     text-align: left
   }
+  .hyperlink-main {
+    top: 131px;
+  }
+  .section-1 .slid-img-left {
+    height: 219px;
+}
+.section-1 .sec1-right .flynowpaylater {
+  padding-top: 0px;
+  height: 143px;
+}
+.section-1 .sec1-right .right-img-main {
+  height: 308px;
+}
+.item-img {
+  text-align: center;
+  height: 34px;
+}
 }
 @media (max-width: 414px) {
   .con-single_box a {
@@ -529,18 +653,27 @@ width: 60% !important
   .itinerary .hotel-name {
     font-size: 16px;
 }
+.hyperlink-main {
+  top: 143px;
+}
 }
 @media (max-width: 375px) {
   .itinerary .hotel-name {
     font-size: 14px;
 }
+#cal-main-content .calendar table tbody td .price-text {
 
+  font-size: 9px !important;
+}
 .hyperlink-main {
   position: absolute;
   right: 10.5%;
   top: 130px;
 }
-
+.section-6 {
+  position: relative;
+  top: -61px;
+}
 .section-3 .menu-btn {
   font-size: 10px;
 }

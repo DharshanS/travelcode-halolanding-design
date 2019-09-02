@@ -256,16 +256,22 @@ top:-60px;
   box-shadow: 2px 0px 16px rgba(0,0,0,0.3);
   border-radius: 4px;
 }
+.cunt .col-1 {
+  flex: 0 0 2.333333%;
+  max-width: 2.333333%;
+}
 .Overview-cont-main
 
   
 { 
-  padding: 0px 78px;
+    padding-left: 6px;
   
   padding-bottom: 20px;
   overflow: auto;
 .cunt{
-  padding-bottom: 10px
+  padding-bottom: 10px;
+  color: #000;
+  font-weight: 500;
 }
 
 
@@ -753,8 +759,16 @@ p{
   width: 231px
 }
 
+.icon-1{
+  width: 24% !important;
+  margin: 6px;
+}
+.icon-2{
+  width: 28px !important;
+}
+.icon-3{
+  width: 15% !important;
+}
+.icon-4{
 
-
-
-
-
+}
