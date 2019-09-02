@@ -1,0 +1,24 @@
+{
+  "name": "travelcode-halolanding-design",
+  "version": "1.0.0",
+  "description": "Halo Fight",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DharshanS/travelcode-halolanding-design.git"
+  },
+  "author": "iLojan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DharshanS/travelcode-halolanding-design/issues"
+  },
+  "homepage": "https://github.com/DharshanS/travelcode-halolanding-design#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}
