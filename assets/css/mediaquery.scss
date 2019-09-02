@@ -13,6 +13,7 @@
     position: absolute;
     right: 1%;
     top: 171px;
+    background: #fff
 }
   .container {
     max-width: 872px;
@@ -286,10 +287,10 @@
 
 @media (max-width: 575px) {
   .section-1 .slid-img-left {
-    height: 399px;
+    height: 259px;
 }
 .section-1 .sec1-right .right-img-main {
-  height: 367px;
+  // height: 367px;
 }
   .banner-main{
     background-image:none;
@@ -310,7 +311,7 @@
   margin-bottom: 12px;
 }
 .section-1 .sec1-right .right-img-main {
-  height: 450px;
+  height: 300px;
 }
   .item-menu .item {
     padding-left: 0px;
@@ -371,10 +372,41 @@
 }
 }
 @media (max-width: 471px) {
-  .hyperlink-main {
-    position: absolute;
-    left: -25%;
-    top: 148px;
+  .tp-widget-logo {
+    margin: 0;
+    width: 100%;
+
+}
+.hyperlink-main {
+  position: absolute;
+  right: 10.5%;
+  top: 143px;
+  width: 111px;
+  padding-top: 0;
+  padding-left: 0;
+}
+.trustEX{
+  font-size: 8px;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+  top: -17px;
+}
+.tp-widget-wrapper.visible {
+  opacity: 1;
+  width: 133px;
+  padding-left: 11px;
+  padding-bottom: 7px;
+  height: 63px;
+}
+.hyperlink-main img {
+  width: 75%;
+  position: relative;
+  top: -8px;
+
+}
+ .hyperlink-main svg{
+width: 60% !important
 }
   .topBar {
     height: 61px;
@@ -394,8 +426,11 @@
   .itinerary .hotel-name {
     font-size: 18px;
   }
-  .col-md-4 img {
-    width: 144px;
+  .rating-img {
+    width: 135px;
+    position: relative;
+    top: -74px;
+    right: 29px;
   }
   .hotel-img {
     width: 86px;
@@ -405,16 +440,56 @@
   }
   .single-contact-btn img {
     width: 39px;
+    position: relative;
+    top: 0;
+    right: 0;
   }
   .calHdBtm {
     margin-bottom: 5px;
     margin-top: 24px !important;
   }
+  .h-img-1{
+    width: 100%;
+  }
+  .h-img-2,.h-img-3,.h-img-4{
+    display: none;
+  }
+  .cunt label {
+    line-height: 23px;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .single-contact-btn .inner-box{
+    text-align: left
+  }
 }
 @media (max-width: 414px) {
+  .con-single_box a {
+    display: none;
+  }
+  .con-single_box h5 {
+   
+    color: #555e69;
+    margin-top: 8px;
+    text-align: left;
+    font-size: 18px;
+  }
+  .Overview-cont-main {
+    padding: 0px 15px;
+  }
+  .Overview-cont-main .cunt ul {
+    padding-left: 6px;
+}
+.first-ti{
+  display: none;
+}
+.section-3 .menu-btn {
+  font-size: 11px;
+  height: 25px;
+}
   .section-1 .sec1-right .flynowpaylater {
     padding-top: 0px;
-    height: 174px;
+     height: 150px;
   }
   .item-menu .item .item-text {
     font-size: 8px;
@@ -432,10 +507,7 @@
   .item-menu .item .iata {
     padding-top: 2px;
   }
-  .section-3 .menu-btn {
-    font-size: 10px;
-    height: 36px;
-  }
+
   .logo {
     width: 135px;
   }
@@ -459,6 +531,19 @@
 }
 }
 @media (max-width: 375px) {
+  .itinerary .hotel-name {
+    font-size: 14px;
+}
+
+.hyperlink-main {
+  position: absolute;
+  right: 10.5%;
+  top: 130px;
+}
+
+.section-3 .menu-btn {
+  font-size: 10px;
+}
   .topBar {
     font-size: 14px;
   }
