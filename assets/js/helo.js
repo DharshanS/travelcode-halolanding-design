@@ -148,7 +148,7 @@ roomList.push(room);
 $(document).change('.adults',function(){
     
  
-  alert($( this).data('status'))
+
   //alert(JSON.stringify($event));
 });
 
