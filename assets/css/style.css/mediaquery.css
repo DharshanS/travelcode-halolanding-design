@@ -197,8 +197,8 @@
   .section-5 .aiata-logo-box .desc {
     text-align: justify; }
   .col-img-left {
-    flex: 0 0 100%;
-    max-width: 100%; }
+    flex: 0 0 100% !important;
+    max-width: 100% !important; }
   .col-img-right {
     display: none; }
   .con-single_box {
