@@ -601,6 +601,8 @@
       </div>
     </div>
   </div>
+
+  <input type="hidden" id=dateSelected value="0"/>
   <div class="section-4 col-12">
 
     <div class="container">
@@ -769,7 +771,10 @@
                             </tr>
                             <tr></tr>
                           </tbody>
+
+                        
                         </table>
+                       
                       </div>
                     </div>
                     <div class="col-md-5 col-sm-12 col-xs-12 marginTopMobile20">
@@ -786,9 +791,10 @@
                           <div class="form-group">
                             <label>Number of nights</label>
                             <select class="select2-custom form-control" name="area" id="dealNoNights">
-                              <option value="4">2 NIGHTS</option>
-                              <option value="6">3 NIGHTS</option>
-                              <option value="6">4 NIGHTS</option>
+                              <option value="2">2 Nights</option>
+                              <option value="3">3 Nights</option>
+                              <option value="4">4 Nights</option>
+                              <option value="5">5 Nights</option>
                             </select>
                           </div>
                         </div>
@@ -797,11 +803,11 @@
                           <div class="form-group">
                             <label>Departure airports</label>
                             <select class="select2-custom form-control" name="area" id="dealDepAirport">
-                              <option value="LON">LONDON (ALL)</option>
-                              <option value="MAN">MANCHESTER</option>
-                              <option value="EDI">BIRMINGHAM (BHX)</option>
-                              <option value="EDI">BRISTOL (BRS)</option>
-                              <option value="EDI">GLASGOW (GLA)</option>
+                              <option value="London">London All</option>
+                              <option value="Manchester">Manchester</option>
+                              <option value="Birmingham">Birmingham</option>
+                              <option value="Bristol">Bristol</option>
+                              <option value="Glasgow">Glasgow</option>
                             </select>
                           </div>
                         </div>
@@ -824,7 +830,7 @@
             <div hidden>
               <input value="10006" id="currentDealID" />
               <input value="0" id="currentDealMarkup" />
-              <input value="4" id="dealNoNights" />
+              <!-- <input value="4" id="dealNoNights" /> -->
               <input value="Rome and Venice" id="dealTitle" />
               <input id="selDate" value="" />
               <input id="selPrice" value="" />
@@ -1330,7 +1336,7 @@
     });
 
 
- $('.data-click').click(function () {
+ $('.available').click(function () {
 
 
   $('#exampleModal').modal('show');

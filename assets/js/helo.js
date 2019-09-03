@@ -59,6 +59,14 @@ $("#reEmail").keyup(function(){
 
 
 $('.qte-submit').click(function(){
+
+  var selected_year_month = $(".calMonthPriceSelected").attr("value");
+            var year = parseInt(selected_year_month.split("-")[0], 10);
+            var month = parseInt(selected_year_month.split("-")[1], 10);
+            var depAirport = $('#dealDepAirport').val();
+            var nights = $('#dealNoNights').val();
+
+  alert($('#dateSelected').val()+ selected_year_month);
   validateFirstName();
   emailValidate();
 

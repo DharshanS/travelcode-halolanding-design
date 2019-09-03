@@ -1,5 +1,6 @@
 
         var defDeparture = 'LON';
+        var dateSelected=0;
         if (defDeparture != null && defDeparture != "") {
             $('#dealDepAirport').select2().val(defDeparture).trigger("change");
         }
@@ -15,13 +16,22 @@
 
         });
 
+     
+
         function getCalendarValues_MC() {
+
+            var monthNames = [ "January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December" ];
 
             var tourID = $('#currentDealID').val();
             var depAirport = $('#dealDepAirport').val();
             var nights = $('#dealNoNights').val();
+           
             var selected_year_month = $(".calMonthPriceSelected").attr("value");
+
             var month_ = parseInt(selected_year_month.split("-")[1]);
+            var monthName=monthNames[month_-1];
+
             if (month_.toString().length < 2)
                 month_ = "0" + month_;
 
@@ -30,23 +40,26 @@
 
             var month = month_ + "-" + year_;
 
+           
             $('#calendarPreLoader').show();
             $.ajax({
 
-                url: 'date.json',
+                url: 'https://clickmybooking.com/api/get-rates',
                 type: 'GET',
                 dataType: 'JSON',
                 traditional: true,
                 data: {
                     tourID: tourID,
-                    dealMonth: month,
-                    depAirport: depAirport,
-                    noNights: nights
+                    month: monthName,
+                    airport:depAirport,
+                    nights: nights
                 },
                 success: function (data) {
-                    console.log("Data"+data);
+                   
                     
                     if (data.msg == "Success") {
+                        console.log('sucess');
+                        console.log(data);
                         $('#mob_selMonth').empty();
                         $("#mob_selMonth").append(data.mobileMonth);
                         bindCalendarValues_MC(data);
@@ -69,8 +82,14 @@
 
             var price_arr = [];
 
+            
             for (var i = 0; i < data.dealDates.length; i++) {
-                price_arr[data.dealDates[i]] = '&pound;' + (parseInt(data.dealMCFares[i]) + parseInt(data.priceInclusion1) + parseInt(data.priceInclusion2) + parseInt(data.priceInclusion3) + parseInt(markup));
+
+                console.log(data.dealDates[i])
+                console.log(data.dealMCFares[i])
+               // price_arr[data.dealDates[i]] = '&pound;' + (parseInt(data.dealMCFares[i]) + parseInt(data.priceInclusion1) + parseInt(data.priceInclusion2) + parseInt(data.priceInclusion3) + parseInt(markup));
+                price_arr[data.dealDates[i]]=data.dealMCFares[i];
+                console.log( price_arr[i])
             }
 
             for (i = 0; i < price_arr.length; i++) {
@@ -78,6 +97,7 @@
                     price_arr[i] = "undefined";
             }
 
+           
             cal.generateHTML(month - 1, year, [], price_arr);
             $(".calendar").html(cal.getHTML());
         }
@@ -130,6 +150,17 @@
                 });
             });
 
+
+        
+
+            $('#dealNoNights,#dealDepAirport').change(function(){
+               // alert();
+               getCalendarValues_MC();
+               var selected_year_month = $(".calMonthPriceSelected").attr("value");
+              
+            })
+
+           
         });
 
        
@@ -188,5 +219,24 @@
           input.addEventListener('keyup', reset); 
           
           
+
+          function dateSel($data){
+
+            $('#dateSelected').val($data);
+          
+            var selected_year_month = $(".calMonthPriceSelected").attr("value");
+            var year = parseInt(selected_year_month.split("-")[0], 10);
+            var month = parseInt(selected_year_month.split("-")[1], 10);
+            var depAirport = $('#dealDepAirport').val();
+            var nights = $('#dealNoNights').val();
+
+           // alert($data);
+            $('#exampleModal').modal('show');
+
+
+        }
+
+
+     
           // International Telephone Input End 
           

@@ -8,6 +8,8 @@ function Calendar() {
 }
 (function ($, document, window) {
     Calendar.prototype.generateHTML = function (Month, Year, notAvailableDays, priceArr) {
+
+        
         var days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
         var daynames = new Array("sun", "mon", "tue", "wed", "thu", "fri", "sat");
         var today = new Date();
