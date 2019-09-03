@@ -1209,6 +1209,9 @@
   <!-- Modal2 -->
   <div class="modal fade" id="requestCall" tabindex="-1" role="dialog" aria-labelledby="requestCallLabel"
     aria-hidden="true">
+
+    <form action="/send" method="POST">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <div class="modal-dialog" role="document">
       <div class="modal-content" style="border: solid 4px #262262;">
         <div class="modal-header">
@@ -1262,6 +1265,7 @@
         </div>
       </div>
     </div>
+    </form>
   </div>
 
 
