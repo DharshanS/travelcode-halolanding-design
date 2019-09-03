@@ -34,7 +34,7 @@
             $.ajax({
 
                 url: 'date.json',
-                type: 'POST',
+                type: 'GET',
                 dataType: 'JSON',
                 traditional: true,
                 data: {

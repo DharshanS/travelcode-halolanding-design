@@ -7,9 +7,11 @@ $logo-right: #8e2327;
 body {
   margin: 0 !important;
   font-family:'Proxima Nova';
-  font-weight: 500
+  font-weight: 400
 }
-
+.first-ti {
+  display: none;
+}
 
 .hotel-star{
   color: #FFC107 !important;
@@ -48,6 +50,14 @@ body {
   width: 100%;
   padding: 8px 0px;
   color: #fff;
+}
+
+.trustEX {
+  font-size: 8px;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+  top: -17px;
 }
 .banner-main {
   height: 500px;
@@ -246,16 +256,22 @@ top:-60px;
   box-shadow: 2px 0px 16px rgba(0,0,0,0.3);
   border-radius: 4px;
 }
+.cunt .col-1 {
+  flex: 0 0 2.333333%;
+  max-width: 2.333333%;
+}
 .Overview-cont-main
 
   
 { 
-  padding: 0px 78px;
+    padding-left: 6px;
   
   padding-bottom: 20px;
   overflow: auto;
 .cunt{
-  padding-bottom: 10px
+  padding-bottom: 10px;
+  color: #000;
+  font-weight: 500;
 }
 
 
@@ -651,9 +667,12 @@ tr:first-child > td > .fc-day-grid-event {
   fill: #00b67a;
 }
 .hyperlink-main {
+  padding-left: 10px;
   position: absolute;
-  right: 1%;
-  top: 125px;
+  right: 14.7%;
+  top: 119px;
+  background: #fff;
+  padding-top: 4px;
 }
 .call-btn-main {
   margin: 5px 0px 0px 0px !important;
@@ -740,8 +759,16 @@ p{
   width: 231px
 }
 
+.icon-1{
+  width: 24% !important;
+  margin: 6px;
+}
+.icon-2{
+  width: 28px !important;
+}
+.icon-3{
+  width: 15% !important;
+}
+.icon-4{
 
-
-
-
-
+}
