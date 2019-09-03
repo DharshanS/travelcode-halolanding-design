@@ -89,7 +89,7 @@ request.mobile=$('#phone').val();
 
   $.ajax({
     type: "POST",
-    url: "http://127.0.0.1:8000/api/send/email",
+    url: "http://clickmybooking.com/tc-mailer/api/send/email",
     contentType :  'application/json',
    dataType: 'JSON',
 
