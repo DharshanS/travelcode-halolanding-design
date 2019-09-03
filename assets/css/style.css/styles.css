@@ -618,3 +618,6 @@ tr:first-child > td > .fc-day-grid-event {
 
 .icon-3 {
   width: 15% !important; }
+
+.price-text {
+  font-size: 12px !important; }
