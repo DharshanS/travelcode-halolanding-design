@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+//team@haloflights.co.uk 
 var request={
   name:"",
   email:"",
@@ -8,7 +8,8 @@ var request={
   date:"",
   callbackTime:"",
   specialRequest:"",
-  noOfRooms:[]
+  noOfRooms:[],
+  to:"cdharshans@gmail.com"
 }
 var lastRoomsCount=1;
 var roomList=[];
@@ -61,6 +62,7 @@ $("#reEmail").keyup(function(){
 
 $('.qte-submit').click(function(){
 
+ 
   var selected_year_month = $(".calMonthPriceSelected").attr("value");
             var year = parseInt(selected_year_month.split("-")[0], 10);
             var month = parseInt(selected_year_month.split("-")[1], 10);
@@ -76,8 +78,7 @@ request.specialRequest=$('#special_request').val();
 request.callbackTime=$('#call_bak').val();
 request.noOfRooms=roomList;
 
-alert(JSON.stringify(request))
-}
+
 
 
  
@@ -87,12 +88,12 @@ alert(JSON.stringify(request))
 
   $.ajax({
     type: "POST",
-    url: "php/contact.php",
+    url: "http://clickmybooking.com/tc-mailer/api/send/email",
     data: dataString,
     success: function (data) {    
     // alert(data);   
-        if(data==1){
-          $("#res_p").append("Email sent");
+        if(data==true){
+         alert("Thank you we will be contacting you soon");
         }
         else{
           $("#res_p").append("An error occured");
@@ -103,6 +104,7 @@ alert(JSON.stringify(request))
         //$("#res_p").empty();
     }
 });
+}
 
 
 
@@ -255,7 +257,7 @@ var iti = window.intlTelInput(input, {
     utilsScript: "https://moa-static-files.s3-us-west-2.amazonaws.com/css/utils.js"
   });
   var iti = intlTelInput(input, {
-    initialCountry: "LK"
+    initialCountry: "LON"
   });
   
   
@@ -293,3 +295,5 @@ var iti = window.intlTelInput(input, {
 
 
 })
+
+
