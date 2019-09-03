@@ -9,7 +9,7 @@ var request={
   callbackTime:"",
   specialRequest:"",
   noOfRooms:[],
-  to:"cdharshans@gmail.com"
+  to:"team@haloflights.co.uk"
 }
 var lastRoomsCount=1;
 var roomList=[];
@@ -77,7 +77,7 @@ request.mode=$('#com_mode').val();
 request.specialRequest=$('#special_request').val();
 request.callbackTime=$('#call_bak').val();
 request.noOfRooms=roomList;
-request.mobile="0770885997"
+request.mobile=$('#phone').val();
 
 
 
