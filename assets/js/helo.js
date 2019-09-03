@@ -3,11 +3,12 @@ $(document).ready(function(){
 var request={
   name:"",
   email:"",
-  number:"",
+  mobile:"",
   mode:"",
+  date:"",
   callbackTime:"",
   specialRequest:"",
-  noOfRoms:[]
+  noOfRooms:[]
 }
 var lastRoomsCount=1;
 var roomList=[];
@@ -66,9 +67,21 @@ $('.qte-submit').click(function(){
             var depAirport = $('#dealDepAirport').val();
             var nights = $('#dealNoNights').val();
 
-  alert($('#dateSelected').val()+ selected_year_month);
-  validateFirstName();
-  emailValidate();
+
+if(  validateFirstName() &&  emailValidate())
+{
+request.date= selected_year_month;
+request.mode=$('#com_mode').val();
+request.specialRequest=$('#special_request').val();
+request.callbackTime=$('#call_bak').val();
+request.noOfRooms=roomList;
+
+alert(JSON.stringify(request))
+}
+
+
+ 
+
 
 
 
@@ -125,13 +138,15 @@ roomList.push(room);
 });
 
 
-// $('.adults').change(function(){
+//  $('.adults').change(function(){
     
-//   alert($(this).attr('index'));
-// });
+//    alert($(this).val);
+//  });
 
-$(document).change('adults',function($event){
+$(document).change('.adults',function(){
     
+ 
+  alert($( this).data('status'))
   //alert(JSON.stringify($event));
 });
 
@@ -141,12 +156,15 @@ function validateFirstName(){
 
   
     if(fName !="" && reg_name.test(fName)){
-		$("#firstName-l").hide();
+    $("#firstName-l").hide();
+    request.name=fName;
+    return true;
 	}
 	else{
     
 		$("#firstName-l").text("name should be text");
-	}	
+  }	
+  return false;
 }
 
 
@@ -156,6 +174,8 @@ function emailValidate(){
 
   if(lName !="" && reg_name1.test(lName)){
   $("#email-l").hide();
+  request.email=lName;
+  return true;
 }
 else{
   $("#email-l").text('Enter your valid email address');
@@ -249,6 +269,7 @@ var iti = window.intlTelInput(input, {
       if (iti.isValidNumber()) {
         var num = input.value.trim();
         document.getElementById("phoneNumber").value = num;
+        request.mobile=num;
         document.getElementById("phoneNumber-l").innerHTML = "";
         documet.getElementById("phone").classList.remove("error-b");
       } else {
