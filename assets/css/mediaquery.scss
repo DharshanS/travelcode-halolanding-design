@@ -655,9 +655,12 @@ width: 60% !important
     font-size: 16px;
 }
 .hyperlink-main {
-  top: 143px;
+  top: 130px;
 }
-
+.section-6 {
+  position: relative;
+  top: -82px;
+}
 .icon-1 {
   width: 60px !important;
 }
@@ -666,6 +669,12 @@ width: 60% !important
 }
 .icon-3 {
   width: 45px !important;
+}
+.section-5 {
+  background: #262262;
+  padding: 3em 0px;
+  position: relative;
+  top: -67px;
 }
 }
 @media (max-width: 375px) {

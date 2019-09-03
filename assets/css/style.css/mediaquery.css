@@ -446,13 +446,21 @@
   .itinerary .hotel-name {
     font-size: 16px; }
   .hyperlink-main {
-    top: 143px; }
+    top: 130px; }
+  .section-6 {
+    position: relative;
+    top: -82px; }
   .icon-1 {
     width: 60px !important; }
   .icon-2 {
     width: 35px !important; }
   .icon-3 {
-    width: 45px !important; } }
+    width: 45px !important; }
+  .section-5 {
+    background: #262262;
+    padding: 3em 0px;
+    position: relative;
+    top: -67px; } }
 
 @media (max-width: 375px) {
   .itinerary .hotel-name {
