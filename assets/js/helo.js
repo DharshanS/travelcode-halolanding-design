@@ -77,19 +77,25 @@ request.mode=$('#com_mode').val();
 request.specialRequest=$('#special_request').val();
 request.callbackTime=$('#call_bak').val();
 request.noOfRooms=roomList;
+request.mobile="0770885997"
 
 
 
 
  
 
-
+//http://clickmybooking.com/tc-mailer/api/send/email
 
 
   $.ajax({
     type: "POST",
-    url: "http://clickmybooking.com/tc-mailer/api/send/email",
-    data: dataString,
+    url: "http://127.0.0.1:8000/api/send/email",
+    contentType :  'application/json',
+   dataType: 'JSON',
+
+    data:JSON.stringify(request),
+    
+   
     success: function (data) {    
     // alert(data);   
         if(data==true){
