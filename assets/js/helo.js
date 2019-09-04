@@ -6,10 +6,11 @@ var request={
   mobile:"",
   mode:"",
   date:"",
+  price:"",
   callbackTime:"",
   specialRequest:"",
   noOfRooms:[],
-  to:"team@haloflights.co.uk"
+  to:"cdharshans@gmail.com"
 }
 var lastRoomsCount=1;
 var roomList=[];
@@ -68,7 +69,13 @@ $('.qte-submit').click(function(){
             var month = parseInt(selected_year_month.split("-")[1], 10);
             var depAirport = $('#dealDepAirport').val();
             var nights = $('#dealNoNights').val();
+       
 
+            for(let i=0;i<=roomList.length;i++){
+             // alert('#noOfAdults_0'+(i+1));
+              alert($('#noOfAdults_0'+(i+1)).val())
+              document.getElementById('#noOfAdults_0'+(i+1).value)
+            }
 
 if(  validateFirstName() &&  emailValidate())
 {
@@ -77,9 +84,12 @@ request.mode=$('#com_mode').val();
 request.specialRequest=$('#special_request').val();
 request.callbackTime=$('#call_bak').val();
 request.noOfRooms=roomList;
+request.price=$('#priceSelected').val();
+//request.price=$('#dateSelected').val();
 request.mobile=$('#phone').val();
 
 
+alert(JSON.stringify(request));
 
 
  
@@ -87,29 +97,30 @@ request.mobile=$('#phone').val();
 //http://clickmybooking.com/tc-mailer/api/send/email
 
 
-  $.ajax({
-    type: "POST",
-    url: "http://clickmybooking.com/tc-mailer/api/send/email",
-    contentType :  'application/json',
-   dataType: 'JSON',
+//   $.ajax({
+//     type: "POST",
+//     url: "http://clickmybooking.com/tc-mailer/api/send/email",
+//     contentType :  'application/json',
+//    dataType: 'JSON',
 
-    data:JSON.stringify(request),
+//     data:JSON.stringify(request),
     
    
-    success: function (data) {    
-    // alert(data);   
-        if(data==true){
-         alert("Thank you we will be contacting you soon");
-        }
-        else{
-          $("#res_p").append("An error occured");
-        }     
-        // $('.text-success').fadeIn(1000);
-        // $('.text-success').fadeOut(500);
-        // $("#contact-form")[0].reset();
-        //$("#res_p").empty();
-    }
-});
+//     success: function (data) {    
+//     // alert(data);   
+//         if(data==true){
+//          alert("Thank you we will be contacting you soon");
+//         }
+//         else{
+//           $("#res_p").append("An error occured");
+//         }     
+//         // $('.text-success').fadeIn(1000);
+//         // $('.text-success').fadeOut(500);
+//         // $("#contact-form")[0].reset();
+//         //$("#res_p").empty();
+//     }
+// });
+
 }
 
 
@@ -206,7 +217,7 @@ function createRoom(room){
   '<div class="col-md-3  col-sm-6">'+
     '<div class="form-group">'+
       '<label for="">ADULTS </label>'+
-      '<select name="" id="noOfAdults" index="'+i+'" class="adults form-control" >'+
+      '<select name="" id="noOfAdults_0'+i+'"  class="adults form-control"  onchange="myFunction()">'+
          ' <option value="">01</option>'+
           '<option value="">02</option>'+
           '<option value="">03</option>'+
@@ -279,12 +290,12 @@ var iti = window.intlTelInput(input, {
         document.getElementById("phoneNumber").value = num;
         request.mobile=num;
         document.getElementById("phoneNumber-l").innerHTML = "";
-        documet.getElementById("phone").classList.remove("error-b");
+        document.getElementById("phone").classList.remove("error-b");
       } else {
         
         document.getElementById("phoneNumber").value = "";
         document.getElementById("phoneNumber-l").innerHTML = "Enter valid mobile number";
-        documet.getElementById("phone").classList.add("error-b");
+        document.getElementById("phone").classList.add("error-b");
       }
     }
   

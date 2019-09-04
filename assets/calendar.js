@@ -87,9 +87,9 @@ function Calendar() {
             }
             else if (className.includes("unavailable")) {
                 //  html += "<td class='" + className + "'><a href='#' data-toggle='modal' data-target='#tourUnavailableModal'><span>" + i + "</span></a></td>";
-                html += "<td class='" + className + "'><a href='#' data-toggle='modal' data-target='#tourRequModal' onclick='dateSel(\"" + i + "\",\"0\")'><span>" + i + "</span></a></td>";
+                html += "<td class='" + className + "'><a href='#' data-toggle='modal' data-target='#tourRequModal' onclick='dateSel(\"" +i+":"+ priceArr[i] + "\",\"" + priceArr[i] + "\")'><span>" + i + "</span></a></td>";
             } else {
-                html += "<td class='" + className + "'><a href='#' data-toggle='modal' data-target='#tourRequModal' onclick='dateSel(\"" + i + "\",\"" + priceArr[i] + "\")'>" + i + priceText + "</a></td>";
+                html += "<td class='" + className + "'><a href='#' data-toggle='modal' data-target='#tourRequModal' onclick='dateSel(\"" +i+":"+ priceArr[i] + "\",\"" + priceArr[i] + "\")'>" + i + priceText + "</a></td>";
             }
 
 

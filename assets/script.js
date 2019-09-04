@@ -222,7 +222,9 @@
 
           function dateSel($data){
 
-            $('#dateSelected').val($data);
+            var info=$data.split(':');
+            $('#dateSelected').val(info[0]);
+            $('#priceSelected').val(info[1]);
           
             var selected_year_month = $(".calMonthPriceSelected").attr("value");
             var year = parseInt(selected_year_month.split("-")[0], 10);
