@@ -73,7 +73,7 @@ $('.qte-submit').click(function(){
 
             for(let i=0;i<=roomList.length;i++){
              // alert('#noOfAdults_0'+(i+1));
-              alert($('#noOfAdults_0'+(i+1)).val())
+             // alert($('#noOfAdults_0'+(i+1)).val())
               document.getElementById('#noOfAdults_0'+(i+1).value)
             }
 
@@ -89,7 +89,7 @@ request.price=$('#priceSelected').val();
 request.mobile=$('#phone').val();
 
 
-alert(JSON.stringify(request));
+//alert(JSON.stringify(request));
 
 
  
