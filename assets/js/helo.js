@@ -10,7 +10,7 @@ var request={
   callbackTime:"",
   specialRequest:"",
   noOfRooms:[],
-  to:"team@haloflights.co.uk"
+  to:"indika.k@creativesoftware.com"
 }
 var lastRoomsCount=1;
 var roomList=[];
