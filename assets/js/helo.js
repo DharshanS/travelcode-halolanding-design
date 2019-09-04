@@ -97,29 +97,29 @@ alert(JSON.stringify(request));
 //http://clickmybooking.com/tc-mailer/api/send/email
 
 
-//   $.ajax({
-//     type: "POST",
-//     url: "http://clickmybooking.com/tc-mailer/api/send/email",
-//     contentType :  'application/json',
-//    dataType: 'JSON',
+  $.ajax({
+    type: "POST",
+    url: "http://clickmybooking.com/tc-mailer/api/send/email",
+    contentType :  'application/json',
+   dataType: 'JSON',
 
-//     data:JSON.stringify(request),
+    data:JSON.stringify(request),
     
    
-//     success: function (data) {    
-//     // alert(data);   
-//         if(data==true){
-//          alert("Thank you we will be contacting you soon");
-//         }
-//         else{
-//           $("#res_p").append("An error occured");
-//         }     
-//         // $('.text-success').fadeIn(1000);
-//         // $('.text-success').fadeOut(500);
-//         // $("#contact-form")[0].reset();
-//         //$("#res_p").empty();
-//     }
-// });
+    success: function (data) {    
+    // alert(data);   
+        if(data==true){
+         alert("Thank you we will be contacting you soon");
+        }
+        else{
+          $("#res_p").append("An error occured");
+        }     
+        // $('.text-success').fadeIn(1000);
+        // $('.text-success').fadeOut(500);
+        // $("#contact-form")[0].reset();
+        //$("#res_p").empty();
+    }
+});
 
 }
 
