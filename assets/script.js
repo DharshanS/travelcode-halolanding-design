@@ -187,10 +187,10 @@
           // initialise plugin
           // initialise plugin
           var iti = window.intlTelInput(input, {
-            utilsScript: "https://moa-static-files.s3-us-west-2.amazonaws.com/css/utils.js"
+            utilsScript: "tel/utils.js"
           });
           var iti = intlTelInput(input, {
-            initialCountry: "LK"
+            initialCountry: "UK"
           });
           
           
