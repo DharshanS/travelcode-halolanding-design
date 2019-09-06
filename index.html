@@ -50,7 +50,7 @@
   <link rel='stylesheet' href='assets//tel/intlTelInput.css'>
   <!-- <link rel='stylesheet' href="https://intl-tel-input.com/node_modules/intl-tel-input/build/css/demo.css?3"> -->
 
-  <script src="assets/tel/utils.js"></script>
+  <!-- <script src="assets/tel/utils.js"></script> -->
   <script src="assets/tel/intlTelInput.js"></script>
   <script src="./aws-sdk-2.521.0.min.js"></script>
 
@@ -1075,8 +1075,8 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="">CONTACT NUMBER</label>
-                <input type="hidden" class="form-control" name="phoneNumberN"  placeholder="CONTACT NUMBER"   value="" autocomplete="off">
-                <input type="number"  class="form-control "value="" placeholder="CONTACT NUMBER"  autocomplete="off" id=phone>
+                <input type="hidden" class="form-control" name="phoneNumberN"     value="" autocomplete="off">
+                <input type="number"  class="form-control "value=""  autocomplete="off" id=phone>
         
                 <span class="error mt-0 pb-0" id="phoneNumber-l"></span>
 
@@ -1243,7 +1243,16 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="">Your Contact Number </label>
-                <input type="text" placeholder="Your Contact Number" class="form-control">
+                <!-- <img src="assets/images/banner-1.jpg" alt="Flag" alt=""> -->
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text p-1" style="background: #fff;">
+                    <img src="assets/images/uk.jpg" style="width: 25PX;height: 20PX;" alt="">
+                    </div>
+                  </div>
+                  <input type="number" class="form-control" id="inlineFormInputGroup" placeholder="Your Contact Number">
+                </div>
+                <!-- <input type="text" placeholder="Your Contact Number"  id=phone class="form-control"> -->
               </div>
             </div>
             <div class="col-md-6">

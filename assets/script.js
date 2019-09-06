@@ -178,6 +178,7 @@
           
           
           var input = document.querySelector("#phone"),
+           input2 = document.querySelector("#phone2"),
             errorMsg = document.querySelector("#error-msg"),
             validMsg = document.querySelector("#valid-msg");
           
@@ -192,7 +193,12 @@
           var iti = intlTelInput(input, {
             initialCountry: "UK"
           });
-          
+          var iti = window.intlTelInput(input2, {
+            utilsScript: "tel/utils.js"
+          });
+          var iti = intlTelInput(input2, {
+            initialCountry: "UK"
+          });
           
           
           
