@@ -99,7 +99,7 @@ request.mobile=$('#phone').val();
 
   $.ajax({
     type: "POST",
-    url: "http://clickmybooking.com/tc-mailer/api/send/email",
+    url: "http://deals.haloflights.co.uk/api/send/email",
     contentType :  'application/json',
    dataType: 'JSON',
 
