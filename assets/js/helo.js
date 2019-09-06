@@ -88,6 +88,7 @@ request.price=$('#priceSelected').val();
 //request.price=$('#dateSelected').val();
 request.mobile=$('#phone').val();
 
+console.log("request"+request);
 
 //alert(JSON.stringify(request));
 

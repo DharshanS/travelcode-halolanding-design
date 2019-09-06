@@ -688,7 +688,9 @@ tr:first-child > td > .fc-day-grid-event {
     box-sizing: border-box;
 
   }
+
   h5{
+    cursor: pointer;
     color: #555e69;
     margin-bottom: 1px;
     font-size: 13px;
