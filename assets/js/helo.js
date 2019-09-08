@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
 //team@haloflights.co.uk 
 var request={
@@ -7,13 +9,30 @@ var request={
   mode:"",
   date:"",
   price:"",
+  airPort:"",
   callbackTime:"",
   specialRequest:"",
   noOfRooms:[],
   to:"sales@haloflights.co.uk"
+
 }
+
+var roomsList=[];
+
+var room={
+  id:0,
+  adult:1,
+  children:0,
+  infant:0
+}
+
+roomsList.push(room);
+
+
+$('#roomsList').val(JSON.stringify(roomsList));
+
 var lastRoomsCount=1;
-var roomList=[];
+
 
     $("#firstName").keyup(function(){
   
@@ -60,40 +79,41 @@ $("#reEmail").keyup(function(){
 
 })	
 
-
 $('.qte-submit').click(function(){
 
- 
+
+
   var selected_year_month = $(".calMonthPriceSelected").attr("value");
             var year = parseInt(selected_year_month.split("-")[0], 10);
             var month = parseInt(selected_year_month.split("-")[1], 10);
             var depAirport = $('#dealDepAirport').val();
             var nights = $('#dealNoNights').val();
        
-
-            for(let i=0;i<=roomList.length;i++){
+           
+            for(let i=0;i<=roomsList.length;i++){
              // alert('#noOfAdults_0'+(i+1));
-             // alert($('#noOfAdults_0'+(i+1)).val())
-              document.getElementById('#noOfAdults_0'+(i+1).value)
+             var empTable = document.getElementById('#noOfAdults_test');
+            // alert('empTable'+ empTable);
             }
 
 if(  validateFirstName() &&  emailValidate())
 {
-request.date= selected_year_month;
+request.date= selected_year_month+"-"+$('#dateSelected').val();
 request.mode=$('#com_mode').val();
 request.specialRequest=$('#special_request').val();
 request.callbackTime=$('#call_bak').val();
-request.noOfRooms=roomList;
+request.noOfRooms=roomsList;
+request.airPort=depAirport;
+request.nights=nights;
 request.price=$('#priceSelected').val();
-//request.price=$('#dateSelected').val();
 request.mobile=$('#phone').val();
 
-console.log("request"+request);
-
-//alert(JSON.stringify(request));
+console.log(request);
 
 
- 
+
+
+
 
 //http://clickmybooking.com/tc-mailer/api/send/email
 
@@ -139,11 +159,11 @@ $('#noOfRooms').change(function(){
  {
  var room={
   id:slectedRoomLength,
-  adult:0,
+  adult:1,
   children:0,
   infant:0
 }
-roomList.push(room);
+roomsList.push(room);
   $('#inner-rooms').html(createRoom(room));
 }
   else
@@ -218,11 +238,11 @@ function createRoom(room){
   '<div class="col-md-3  col-sm-6">'+
     '<div class="form-group">'+
       '<label for="">ADULTS </label>'+
-      '<select name="" id="noOfAdults_0'+i+'"  class="adults form-control"  onchange="myFunction()">'+
-         ' <option value="">01</option>'+
-          '<option value="">02</option>'+
-          '<option value="">03</option>'+
-          '<option value="">04</option>'+
+      '<select name="" id="'+i+'"  class="adults form-control"  onchange="adultChange(this )" >'+
+         ' <option value="1">01</option>'+
+          '<option value="2">02</option>'+
+          '<option value="3">03</option>'+
+          '<option value="4">04</option>'+
         '</select>'+
     '</div>'+
   '</div>'+
@@ -230,7 +250,7 @@ function createRoom(room){
   '<div class="col-md-3 col-sm-6">'+
     '<div class="form-group">'+
       '<label for="">CHILDREN</label>'+
-      '<select name="" id="noOfChild" index="'+i+'" class="child form-control" >'+
+      '<select name="" id="'+i+'"  class="child form-control"  onchange="childChange(this )" >'+
           '<option value="">0</option>'+
           '<option value="">01</option>'+
           '<option value="">02</option>'+
@@ -243,7 +263,7 @@ function createRoom(room){
     '<div class="form-group">'+
       '<label for="">INFANT'+
       '</label>'+
-      '<select name="" id="noOfInfant" index="'+i+'" class=" infant form-control" >'+
+      '<select name="" id="'+i+'"  class=" infant form-control"  onchange="infantChange(this )" >'+
           '<option value="">01</option>'+
           '<option value="">02</option>'+
           '<option value="">03</option>'+
@@ -252,6 +272,16 @@ function createRoom(room){
     '</div>'+
   '</div>'+
 '</div>';
+
+var room={
+  id:i,
+  adult:1,
+  children:0,
+  infant:0
+}
+
+this.roomsList[room];
+$('#roomsList').val(JSON.stringify(roomsList));
   }
 
 
@@ -311,7 +341,29 @@ var iti = window.intlTelInput(input, {
 
 
 
-
 })
 
+function adultChange(data){
 
+ var roomList= JSON.parse($('#roomsList').val());
+ alert( data.id);
+  roomList[data.id].adult=data.value;
+  $('#roomsList').val(JSON.stringify(roomList));
+ alert( JSON.stringify(roomList));
+
+}
+
+
+function childChange(data){
+
+  var roomList= JSON.parse($('#roomsList').val());
+  roomList[data.id].child=data.value;
+  $('#roomsList').val(JSON.stringify(roomList));
+}
+function infantChange(data){
+
+  var roomList= JSON.parse($('#roomsList').val());
+  roomList[data.id].infant=data.value;
+  $('#roomsList').val(JSON.stringify(roomList));
+
+}
