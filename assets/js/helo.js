@@ -11,7 +11,7 @@ $(document).ready(function() {
     callbackTime: "",
     specialRequest: "",
     noOfRooms: [],
-    to: "sales@haloflights.co.uk"
+    to: "Sales@haloflights.co.uk"
   };
 
   const datsList = [
@@ -132,7 +132,7 @@ $(document).ready(function() {
       var room = {
         id: slectedRoomLength,
         adult: 1,
-        children: 0,
+        child: 0,
         infant: 0
       };
       // roomsList.push(room);
