@@ -34,7 +34,7 @@ $(document).ready(function() {
   var room = {
     id: 0,
     adult: 1,
-    children: 0,
+    child: 0,
     infant: 0
   };
 
@@ -289,7 +289,7 @@ $(document).ready(function() {
       var room = {
         id: i,
         adult: 1,
-        children: 0,
+        child: 0,
         infant: 0
       };
 
