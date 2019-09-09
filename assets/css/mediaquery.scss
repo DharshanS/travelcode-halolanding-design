@@ -26,6 +26,9 @@
     position: absolute;
     right: 8.7%;
 }
+.single-contact-btn a {
+  font-size: 22px;
+}
 }
 @media (max-width: 991px) {
   .banner-main {
@@ -80,9 +83,10 @@
     height: 106px;
   }
   .con-single_box {
-    margin-top: -5px;
-  }
-
+    margin-top: 3px;
+}
+.right-phone {
+  display: none;}
   .item-menu .item img {
     float: inherit;
   }
@@ -154,6 +158,24 @@
     padding-left: 22px;
     text-align: center;
   }
+
+  .single-contact-btn a {
+    font-size: 15px;
+}
+.con-single_box img {
+  width: 18px;
+}
+.con-single_box a {
+  font-size: 10px;
+  color: black;
+  display: none;}
+
+  .con-single_box h5 {
+    font-size: 14px;
+    padding-top: 12px;
+}
+
+
 }
 
 @media (max-width: 768px) {
@@ -190,7 +212,7 @@
     top: -65px;
   }
   .single-contact-btn a {
-    font-size: 19px;
+    font-size: 15px;
   }
 
   #cal-main-content .calendar table tbody td > span {
@@ -250,7 +272,7 @@
     height: 91px;
   }
   .section-1 .sec1-right .right-img-main {
-    height: 197px;
+    height:254px
   }
   .item-menu .item .item-text {
     font-size: 9px;
@@ -264,7 +286,7 @@
     line-height: 15px;
   }
   .item-menu {
-    height: 64px;
+    height: 79px;
   }
   .section-3 {
     top: -107px;
@@ -323,6 +345,15 @@
   .hotel-img {
     width: 154px;
   }
+
+
+  .section-1 .sec1-right {
+    width: 27%;
+}
+.single-contact-btn a {
+  font-size: 10px;
+}
+
 }
 
 @media (max-width: 640px) {
@@ -360,6 +391,10 @@
 .single-contact-btn a {
   font-size: 15px;
 }
+.single-contact-btn .inner-box {
+  text-align: left;
+  height: 85px;
+}
 }
 
 @media (max-width: 575px) {
@@ -381,7 +416,7 @@
   }
   .section-1 .sec1-right .con-single_box {
     margin-top: -3px;
-    text-align: center;
+    text-align: left;
 }
 .section-1 .sec1-right label {
   margin-top: 12px;
@@ -424,7 +459,8 @@
     text-align: justify;
   }
   .hotel-img {
-    width: 110px;
+    width: 102px;
+    height: 100px;
   }
   .textarea .f-bottom-links {
     text-align: left;
@@ -477,6 +513,10 @@
   top: -169px;}
 }
 @media (max-width: 471px) {
+  .con-single_box h5 {
+    font-size: 19px;
+    padding-top: 4px;
+}
   .tp-widget-logo {
     margin: 0;
     width: 100%;
@@ -534,12 +574,13 @@ width: 60% !important
   .rating-img {
     width: 135px;
     position: relative;
-    top: -74px;
-    right: 29px;
+    top: -97px;
+    right: 9px;
   }
-  .hotel-img {
-    width: 86px;
-  }
+  .h-img-1 {
+    height: auto;
+    width: 100%;
+}
   .section-3 .menu-btn {
     height: 24px;
 }
@@ -676,6 +717,17 @@ width: 60% !important
   position: relative;
   top: -67px;
 }
+.single-contact-btn a {
+  font-size: 21px;
+}
+.single-contact-btn p {
+  margin-bottom: 1px;
+  font-size: 14px;
+}
+.single-contact-btn .inner-box {
+  text-align: left;
+  height: 65px;
+}
 }
 @media (max-width: 375px) {
   .itinerary .hotel-name {
@@ -728,10 +780,11 @@ width: 60% !important
     height: 79px;
   }
   .section-1 .sec1-right label {
-    font-size: 12px;
+    font-size: 17px;
+    margin-bottom: 0px
   }
   .section-1 .sec1-right .right-img-main {
-    height: 167px;
+    height: 292px;
   }
   .topBar {
     font-size: 11px;
