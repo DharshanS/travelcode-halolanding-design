@@ -150,7 +150,23 @@ console.log(request);
 
 })
 
-$('#noOfRooms').change(function(){
+$('.in-submit').click(function(){
+
+  inqueryNow();
+})
+
+$('.in-submit').click(function(){
+
+  inqueryNow();
+})
+
+$('.cal-submit').click(function(){
+
+  callInqueryNow();
+})
+
+
+$('.noOfRooms').change(function(){
 
  var currentRoomLength=$('.pax-array').length;
  var slectedRoomLength=$(this).val();
@@ -167,7 +183,7 @@ $('#noOfRooms').change(function(){
   infant:0
 }
 // roomsList.push(room);
-  $('#inner-rooms').html(createRoom(room));
+  $('.inner-rooms').html(createRoom(room));
 }
   else
   {
@@ -181,10 +197,6 @@ $('#noOfRooms').change(function(){
 });
 
 
-//  $('.adults').change(function(){
-    
-//    alert($(this).val);
-//  });
 
 $(document).change('.adults',function(){
     
@@ -225,6 +237,44 @@ else{
 }	
 }
 
+
+
+function inqueryNow(){
+
+
+  var request={
+    firstName:$('#in-firstName').val(),
+    email:$('#in-email').val(),
+    mobile:$('#in-phone').val(),
+    mode:$('#in-mode').val(),
+    callbackTime:$('#in-callback').val(),
+    date:$('#in-date').val(),
+    airPort:$('#in-airport').val(),
+    nights:$('#in-nights').val(),
+    specialRequest:('#in-specialReq'),
+    noOfRooms:[]
+    
+  }
+
+  alert(JSON.stringify(request));
+}
+
+function callInqueryNow(){
+
+  var request={
+    firstName:$('#cal-firstName').val(),
+    email:$('#cal-email').val(),
+    mobile:$('#cal-phone').val(),
+    mode:$('#cal-mode').val(),
+    callbackTime:$('#cal-callback').val(),
+    date:$('#cal-date').val(),
+    airPort:$('#call-airport').val(),
+    nights:$('#call-nights').val(),
+    specialRequest:('#call-specialReq'),
+    noOfRooms:[]
+  }
+
+}
 
 
 function createRoom(room){
