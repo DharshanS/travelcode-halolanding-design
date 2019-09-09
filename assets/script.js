@@ -106,7 +106,7 @@
             // ------------------------------
 
 
-            var defaultCalDate = '2019-08';
+            var defaultCalDate = '2019-09';
 
             $(".calMonthPrice").each(function () {
 
