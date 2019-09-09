@@ -628,6 +628,21 @@ width: 60% !important
   text-align: center;
   height: 34px;
 }
+
+.calendar {
+    padding: 0;
+    margin-left: -22px;
+    margin-right: -22px;
+}
+#cal-main-content .calendar table tbody td .price-text {
+
+  font-size: 11px !important;
+}
+#cal-main-content .calendar table tbody td > a, #cal-main-content .calendar table tbody td > span, #flight-main-content .calendar table tbody td > a, #flight-main-content .calendar table tbody td > span, #cruise-main-content .calendar table tbody td > a, #cruise-main-content .calendar table tbody td > span{
+  font-size: 11px;
+  border-radius: 1px;
+}
+
 }
 @media (max-width: 414px) {
   .con-single_box a {
@@ -727,6 +742,9 @@ width: 60% !important
 .single-contact-btn .inner-box {
   text-align: left;
   height: 65px;
+}
+.rating-img {
+  width: 92px;
 }
 }
 @media (max-width: 375px) {
