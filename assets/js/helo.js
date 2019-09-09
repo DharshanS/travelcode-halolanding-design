@@ -84,11 +84,7 @@ $(document).ready(function() {
     var depAirport = $("#dealDepAirport").val();
     var nights = $("#dealNoNights").val();
 
-    for (let i = 0; i <= roomsList.length; i++) {
-      // alert('#noOfAdults_0'+(i+1));
-      var empTable = document.getElementById("#noOfAdults_test");
-      // alert('empTable'+ empTable);
-    }
+   
 
     if (validateFirstName() && emailValidate()) {
       (request.date = {
@@ -99,7 +95,7 @@ $(document).ready(function() {
         (request.mode = $("#com_mode").val());
       request.specialRequest = $("#special_request").val();
       request.callbackTime = $("#call_bak").val();
-      request.noOfRooms = roomsList;
+      request.noOfRooms = roomsList.length;
       request.airPort = depAirport;
       request.nights = nights;
       request.price = $("#priceSelected").val();
@@ -345,6 +341,7 @@ $(document).ready(function() {
 
 function adultChange(data) {
   var roomList = JSON.parse($("#roomsList").val());
+  roomList[data.id].id=data.id;
   roomList[data.id].adult = data.value;
   $("#roomsList").val(JSON.stringify(roomList));
   alert(JSON.stringify(roomList));
