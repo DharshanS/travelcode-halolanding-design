@@ -155,6 +155,9 @@ $('#noOfRooms').change(function(){
  var currentRoomLength=$('.pax-array').length;
  var slectedRoomLength=$(this).val();
 
+ console.log(currentRoomLength);
+ console.log(slectedRoomLength);
+
  if(currentRoomLength<slectedRoomLength)
  {
  var room={
@@ -163,13 +166,13 @@ $('#noOfRooms').change(function(){
   children:0,
   infant:0
 }
-roomsList.push(room);
+// roomsList.push(room);
   $('#inner-rooms').html(createRoom(room));
 }
   else
   {
     if(currentRoomLength!=1){
-      roomList.splice(currentRoomLength-1,1);
+      roomsList.splice(currentRoomLength-1,1);
       $(".pax-array")[currentRoomLength-1].remove();
     }
   
@@ -225,20 +228,25 @@ else{
 
 
 function createRoom(room){
+
+ 
   var html="";
-  for(let i=1;i<room.id;i++)
+  var roomsCount=room.id;
+  for( i=1;i<roomsCount;i++)
   {
+   let roomNo=i+1;
+
    html=html+'<div class="row pax-array">'+
   '<div class="col-md-3  col-sm-6">'+
         '<div class="form-group">'+
-          '<label >Room '+(i+1)+' </label>'+
+          '<label >Room '+roomNo+' </label>'+
         '</div>'+
   '</div>'+
 
   '<div class="col-md-3  col-sm-6">'+
     '<div class="form-group">'+
       '<label for="">ADULTS </label>'+
-      '<select name="" id="'+i+'"  class="adults form-control"  onchange="adultChange(this )" >'+
+      '<select name="" id="'+roomNo+'" class="adults form-control"  onchange="adultChange(this )" >'+
          ' <option value="1">01</option>'+
           '<option value="2">02</option>'+
           '<option value="3">03</option>'+
@@ -250,7 +258,7 @@ function createRoom(room){
   '<div class="col-md-3 col-sm-6">'+
     '<div class="form-group">'+
       '<label for="">CHILDREN</label>'+
-      '<select name="" id="'+i+'"  class="child form-control"  onchange="childChange(this )" >'+
+      '<select name="" id="'+roomNo+'" class="child form-control"  onchange="childChange(this )" >'+
           '<option value="">0</option>'+
           '<option value="">01</option>'+
           '<option value="">02</option>'+
@@ -263,7 +271,7 @@ function createRoom(room){
     '<div class="form-group">'+
       '<label for="">INFANT'+
       '</label>'+
-      '<select name="" id="'+i+'"  class=" infant form-control"  onchange="infantChange(this )" >'+
+      '<select name=""  id="'+roomNo+'" class=" infant form-control"  onchange="infantChange(this )" >'+
           '<option value="">01</option>'+
           '<option value="">02</option>'+
           '<option value="">03</option>'+
@@ -280,7 +288,7 @@ var room={
   infant:0
 }
 
-this.roomsList[room];
+roomsList.push(room);
 $('#roomsList').val(JSON.stringify(roomsList));
   }
 
@@ -346,7 +354,6 @@ var iti = window.intlTelInput(input, {
 function adultChange(data){
 
  var roomList= JSON.parse($('#roomsList').val());
- alert( data.id);
   roomList[data.id].adult=data.value;
   $('#roomsList').val(JSON.stringify(roomList));
  alert( JSON.stringify(roomList));
