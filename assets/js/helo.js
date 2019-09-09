@@ -152,7 +152,7 @@ $(document).ready(function() {
 
       success: function(data) {
         if (data == true) {
-          alert("Thank you we will be contacting you soon");
+          alert("Thank You for Inquiring with Halo Flights UK.");
         } else {
           $("#res_p").append("An error occured");
         }
@@ -344,7 +344,7 @@ function adultChange(data) {
   roomList[data.id].id=data.id;
   roomList[data.id].adult = data.value;
   $("#roomsList").val(JSON.stringify(roomList));
-  alert(JSON.stringify(roomList));
+  //alert(JSON.stringify(roomList));
 }
 
 function childChange(data) {
