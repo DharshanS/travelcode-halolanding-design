@@ -377,8 +377,7 @@ $(document).ready(function() {
         year: date[2],
         month: datsList[parseInt(date[0])],
         day: date[1]
-      }
-  ,
+      },
       airPort: $("#call-airport").val(),
       nights: $("#call-nights").val(),
       specialRequest: "#call-specialReq",
