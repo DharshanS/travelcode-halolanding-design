@@ -1748,6 +1748,7 @@
               <div class="form-group">
                 <label for="">Your Name<i class="fas fa-star-of-life error"></i></label>
                 <input type="text" placeholder="Your Name" class="form-control" id="cal-firstName">
+                <span class="error mt-0 pb-0" id="cal-firstName-l"></span>
               </div>
             </div>
             <div class="col-md-6">
@@ -1755,6 +1756,7 @@
               <div class="form-group">
                 <label for="">Your Email<i class="fas fa-star-of-life error"></i></label>
                 <input type="text" placeholder="Your Email" class="form-control" id="cal-email">
+                <span class="error mt-0 pb-0" id="cal-email-l"></span>
               </div>
             </div>
           </div>
@@ -1772,6 +1774,7 @@
                   </div>
                   <input type="text" class="form-control" id="cal-phone" placeholder="0207 290 5570 ">
                 </div>
+                <span class="error mt-0 pb-0" id="cal-phone-l"></span>
                 <!-- <input type="text" placeholder="Your Contact Number"  id=phone class="form-control"> -->
               </div>
             </div>
@@ -1794,7 +1797,7 @@
                 <div class="form-group">
                   <label for="">DEPARTURE DATE<i class="fas fa-star-of-life error"></i> </label>
                   <input class="form-control datepicker" placeholder="mm/dd/yyyy"  data-date-format="mm/dd/yyyy" id=cal-date>
-             
+                  <span class="error mt-0 pb-0" id="cal-date-l"></span>
                 </div>
               </div>
               <div class="col-md-6">
@@ -1823,9 +1826,9 @@
                   </div>
          </div>
         </div>
-        <div class="modal-footer">
-          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        <div style="text-align: center; padding: 10px">
           <button type="submit" class="btn btn-primary cal-submit">Submit</button>
+          <button type="button" id="clearRequestCallBackForm" class="btn btn-primary in-submit">Clear</button>
         </div>
       </div>
     </div>

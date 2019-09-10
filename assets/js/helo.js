@@ -89,6 +89,17 @@ $(document).ready(function() {
     $("#in-depature-date").text("");
   });
 
+   $("#clearRequestCallBackForm").click(function() {
+    $("#cal-firstName").val("");
+    $("#cal-firstName-l").text("");
+    $("#cal-email").val("");
+    $("#cal-email-l").text("");
+    $("#cal-phone").val("");
+    $("#cal-phone-l").text("");
+    $("#cal-date").val("");
+    $("#cal-date-l").text("");
+  });
+
   $("#sendEmailInquiry").click(function() {
     
     var isFromValid = true;
@@ -158,7 +169,34 @@ $(document).ready(function() {
   });
 
   $(".cal-submit").click(function() {
-    callInqueryNow();
+
+    var isFromValid = true;
+    let name_pattern = /^[a-zA-Z]+$/;
+    let email_pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(!name_pattern.test($("#cal-firstName").val())){
+      $("#cal-firstName-l").text("Please enter valid name");
+      isFormValid = false;
+    }
+    if(!email_pattern.test($("#cal-email").val())){
+      $("#cal-email-l").text("Please enter valid email address");
+      isFormValid = false;
+    }
+    var phone = $("#cal-phone").val();
+ 
+    if(phone == "" || !(phone.match(/\d/g).length===10)){
+      $("#cal-phone-l").text("Please enter valid phone");
+      isFormValid = false;
+    }
+    var depatureDate = $("#cal-date").val();
+    if(depatureDate == ""){
+      $("#cal-date-l").text("Please select depature date");
+      isFormValid = false;
+    }
+   
+    if(isFormValid){
+      requestCallBack();
+    }
+
   });
 
   $(".noOfRooms").change(function() {
@@ -264,6 +302,22 @@ $(document).ready(function() {
     };
     sendMail(request);
     //alert(JSON.stringify(request));
+  }
+
+   function requestCallBack() {
+    var request = {
+      firstName: $("#cal-firstName").val(),
+      email: $("#cal-email").val(),
+      mobile: $("#cal-phone").val(),
+      mode: $("#cal-mode").val(),
+      callbackTime: $("#cal-callback").val(),
+      date: $("#cal-date").val(),
+      airPort: $("#call-airport").val(),
+      nights: $("#call-nights").val(),
+      specialRequest: "#call-specialReq",
+      noOfRooms: []
+    };
+    sendMail(request);
   }
 
   function callInqueryNow() {
