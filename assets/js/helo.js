@@ -366,8 +366,7 @@ $(document).ready(function() {
 
    function requestCallBack() {
     var date=$('#cal-date').val().split("/");
-  
-    var request = {
+    let request = {
       name: $("#cal-firstName").val(),
       email: $("#cal-email").val(),
       mobile: $("#cal-phone").val(),
@@ -378,7 +377,7 @@ $(document).ready(function() {
         month: datsList[parseInt(date[0])],
         day: date[1]
       },
-      airPort: $("#cal-airport").val(),
+      airPort: $("#call-airport").val(),
       nights: $("#cal-nights").val(),
       noOfRooms: []
     };
