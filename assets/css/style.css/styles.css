@@ -658,7 +658,7 @@ tr:first-child > td > .fc-day-grid-event {
   background-color: #8e2327; }
 
 i.error {
-  font-size: 5px;
+  font-size: 3px;
   color: #f70a0a;
   position: relative;
   top: -7px;

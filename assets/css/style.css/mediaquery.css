@@ -343,6 +343,10 @@
     top: -169px; } }
 
 @media (max-width: 471px) {
+  .iti-flag.gb {
+    height: 21px;
+    background-position: -3554px 0px;
+    width: 38px; }
   .con-single_box h5 {
     font-size: 19px;
     padding-top: 4px; }
@@ -385,10 +389,10 @@
   .itinerary .hotel-name {
     font-size: 18px; }
   .rating-img {
-    width: 135px;
+    width: 100px;
     position: relative;
-    top: -97px;
-    right: 9px; }
+    top: -77px;
+    right: -7px; }
   .h-img-1 {
     height: auto;
     width: 100%; }
@@ -536,6 +540,8 @@
     width: 60%; } }
 
 @media (max-width: 320px) {
+  .rating-img {
+    width: 68px; }
   .section-3 .menu-btn {
     font-size: 8px; }
   .section-1 .slid-img-left {
