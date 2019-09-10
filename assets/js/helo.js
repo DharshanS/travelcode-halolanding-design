@@ -147,7 +147,7 @@ $(document).ready(function() {
 
       console.log(request);
 
-    //  sendMail(request);
+      sendMail(request);
 
       //http://clickmybooking.com/tc-mailer/api/send/email
     }
