@@ -1793,7 +1793,7 @@
              
                 <div class="form-group">
                   <label for="">DEPARTURE DATE<i class="fas fa-star-of-life error"></i> </label>
-                  <input class="form-control datepicker" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" id=cal-date>
+                  <input class="form-control datepicker" placeholder="mm/dd/yyyy"  data-date-format="mm/dd/yyyy" id=cal-date>
              
                 </div>
               </div>
@@ -1930,9 +1930,17 @@
   <script>
 $.fn.datepicker.defaults.format = "mm/dd/yyyy";
 $('.datepicker').datepicker({
-    startDate: '-3d'
+    startDate: new Date(),
+    autoclose: true
 });
+function today(){
 
+    var d = new Date();
+    var curr_date = d.getDate();
+    var curr_month = d.getMonth() + 1;
+    var curr_year = d.getFullYear();
+    document.write(curr_date + "-" + curr_month + "-" + curr_year);
+}
   </script>
 </body>
 
