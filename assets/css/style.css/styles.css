@@ -12,7 +12,7 @@ body {
 
 .cunt li {
   list-style: none;
-  padding: 7px 0px; }
+  padding: 6px 0px; }
 
 .cunt i {
   color: #8e2327;
@@ -600,7 +600,7 @@ tr:first-child > td > .fc-day-grid-event {
   margin-left: 6px; }
 
 .itinerary {
-  margin-top: 15px; }
+  margin-top: 1px; }
   .itinerary h5 {
     font-size: 16px; }
   .itinerary label {
@@ -663,3 +663,6 @@ i.error {
   position: relative;
   top: -7px;
   left: 2px; }
+
+.cunt ul {
+  margin-bottom: 0px; }

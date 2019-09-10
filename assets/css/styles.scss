@@ -19,7 +19,7 @@ body {
 }
 .cunt li {
   list-style: none;
-  padding: 7px 0px;
+  padding: 6px 0px;
 
 }
 .cunt i {
@@ -738,6 +738,7 @@ p{
 
 }
 }
+
 .tp-widget-businessinfo__trustscore {
   float: left;
   color: #000;
@@ -747,7 +748,7 @@ p{
   margin-left: 6px;
 }
 .itinerary{
-  margin-top: 15px;
+  margin-top: 1px;
   h5{
     font-size: 16px;
   }
@@ -833,4 +834,7 @@ i.error {
   position: relative;
   top: -7px;
   left: 2px;
+}
+.cunt ul {
+  margin-bottom: 0px;
 }
