@@ -106,7 +106,7 @@
             // ------------------------------
 
 
-            var defaultCalDate = '2019-09';
+            var defaultCalDate = '2019-10';
 
             $(".calMonthPrice").each(function () {
 
@@ -175,54 +175,6 @@
           
           
           // International Telephone Input {{ asset('js/tel/utils.js?1549804213570')}}
-          
-          
-          var input = document.querySelector("#phone"),
-           input2 = document.querySelector("#phone2"),
-            errorMsg = document.querySelector("#error-msg"),
-            validMsg = document.querySelector("#valid-msg");
-          
-          // here, the index maps to the error code returned from getValidationError - see readme
-          var errorMap = [ "Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
-          
-          // initialise plugin
-          // initialise plugin
-          var iti = window.intlTelInput(input, {
-            utilsScript: "tel/utils.js"
-          });
-          var iti = intlTelInput(input, {
-            initialCountry: "UK"
-          });
-          var iti = window.intlTelInput(input2, {
-            utilsScript: "tel/utils.js"
-          });
-          var iti = intlTelInput(input2, {
-            initialCountry: "UK"
-          });
-          
-          
-          
-          // on blur: validate
-          input.addEventListener('blur', function() {
-          
-            // reset();
-            if (input.value.trim()) {
-              if (iti.isValidNumber()) {
-                var num = input.value.trim();
-                document.getElementById("phoneNumber").value = num;
-                document.getElementById("phoneNumber-l").innerHTML = "";
-                documet.getElementById("phone").classList.remove("error-b");
-              } else {
-                
-                document.getElementById("phoneNumber").value = "";
-                document.getElementById("phoneNumber-l").innerHTML = "Enter valid mobile number";
-                documet.getElementById("phone").classList.add("error-b");
-              }
-            }
-          
-          });
-          input.addEventListener('change', reset);
-          input.addEventListener('keyup', reset); 
           
           
 

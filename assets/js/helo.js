@@ -88,7 +88,15 @@ $(document).ready(function() {
     $("#in-date").val("");
     $("#in-depature-date").text("");
   });
+$("#clearCalendarSendEmailInquiry").click(function(){
+  $("#firstName").val("");
+  $("#email").val("");
+  $("#phone").val("");
+  $("#firstName-l").text("");
+  $("#phone-l").text("");
+  $("#email-l").text("");
 
+})
    $("#clearRequestCallBackForm").click(function() {
     $("#cal-firstName").val("");
     $("#cal-firstName-l").text("");
@@ -108,21 +116,29 @@ $(document).ready(function() {
     if(!name_pattern.test($("#in-firstName").val())){
       $("#in-firstName-l").text("Please enter valid name");
       isFromValid = false;
+    }else{
+      $("#in-firstName-l").text("");
     }
     if(!email_pattern.test($("#in-email").val())){
       $("#in-email-l").text("Please enter valid email address");
       isFromValid = false;
+    }else{
+      $("#in-email-l").text("");
     }
     var phone = $("#in-phone").val();
  
     if(phone == "" || !(phone.match(/\d/g).length===10)){
-      $("#in-phoneNumber-l").text("Please enter valid phone");
+      $("#in-phoneNumber-l").text("Please enter valid phone number");
       isFromValid = false;
+    }else{
+      $("#in-phoneNumber-l").text("");
     }
     var depatureDate = $("#in-date").val();
     if(depatureDate == ""){
       $("#in-depature-date").text("Please select depature date");
       isFromValid = false;
+    }else{
+      $("#in-depature-date").text("");
     }
    
  
@@ -163,7 +179,34 @@ $(document).ready(function() {
     var depAirport = $("#dealDepAirport").val();
     var nights = $("#dealNoNights").val();
 
-    if (validateFirstName() && emailValidate()) {
+    let isFormValid = true;
+    let name_pattern = /^([a-z A-Z]{1,50})$/;
+    let email_pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(!name_pattern.test($("#firstName").val())){
+      $("#firstName-l").text("Please enter valid name");
+      isFromValid = false;
+    }
+    else{
+      $("#firstName-l").text("");
+    }
+    if(!email_pattern.test($("#email").val())){
+      $("#email-l").text("Please enter valid email address");
+      isFromValid = false;
+    }
+    else{
+       $("#email-l").text("");
+    }
+    var phone = $("#phone").val();
+ 
+    if(phone == "" || !(phone.match(/\d/g).length===10)){
+      $("#phone-l").text("Please enter valid phone number");
+      isFromValid = false;
+    }
+    else{
+      $("#phone-l").text(" ");
+    }
+
+    if (isFromValid) {
       (request.date = {
         year: year,
         month: datsList[month-1],
@@ -370,8 +413,8 @@ $(document).ready(function() {
       name: $("#cal-firstName").val(),
       email: $("#cal-email").val(),
       mobile: $("#cal-phone").val(),
-      mode: $("#cal-mode").val(),
-      callbackTime: $("#cal-callback").val(),
+      mode: 'A Call Back',
+      callbackTime: $("#cal-time").val(),
       date : {
         year: date[2],
         month: datsList[parseInt(date[0])],
@@ -380,6 +423,7 @@ $(document).ready(function() {
       airPort: $("#call-airport").val(),
       price: 0,
       nights: $("#cal-nights").val(),
+      specialRequest: '',
       noOfRooms: []
     };
     sendMail(request);
@@ -552,7 +596,7 @@ $(document).ready(function() {
     return html;
   }
 
-  var input = document.querySelector("#phone"),
+  var input = document.querySelector("#phone1"),
     errorMsg = document.querySelector("#error-msg"),
     validMsg = document.querySelector("#valid-msg");
 

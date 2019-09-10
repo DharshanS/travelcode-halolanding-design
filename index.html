@@ -945,14 +945,14 @@
                             </div>
 
                           </div> -->
-                          <div>
+                         <!--  <div>
 
                             <div class="calMonthPrice" value="2019-09">
                               <h2>Sep </h2>
                               <h4>2019</h4>
                             </div>
 
-                          </div>
+                          </div> -->
                           <div>
 
                             <div class="calMonthPrice" value="2019-10">
@@ -1385,13 +1385,29 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="">CONTACT NUMBER<i class="fas fa-star-of-life error"></i></label>
-                <input type="hidden" class="form-control" name="phoneNumberN"     value="" autocomplete="off">
-                <input type="text"  class="form-control " value=""  autocomplete="off" id=phone>
+           <!--      <input type="hidden" class="form-control" name="phoneNumberN"     value="" autocomplete="off">
+                <input type="number" max="10" maxlength="10" required="required" class="form-control " value=""  autocomplete="off" id=phone>
         
+ -->
+
+
+               <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text p-1" style="background: #fff;">
+                    <img src="assets/images/uk.jpg" style="width: 25PX;height: 20PX;" alt="">
+                    </div>
+                  </div>
+                  <input type="number" class="form-control" id="phone" placeholder="0207 290 5570 ">
+                </div>
+                <span class="error mt-0 pb-0" id="phone-l"></span>
+                <!-- <input type="text" placeholder="Your Contact Number"  id=phone class="form-control"> -->
+              </div>
+
+
                 <span class="error mt-0 pb-0" id="phoneNumber-l"></span>
 
               </div>
-            </div>
+
          
             <div class="col-md-6">
 
@@ -1508,10 +1524,10 @@
         </div>
 
         </div>
-        <div class="modal-footer">
+        <div style="text-align: center;padding: 10px">
           <!-- <button type="button" class="btn btn-secondary qte-submit" data-dismiss="modal">Close</button> -->
           <button type="button" class="btn btn-primary qte-submit">Submit</button>
-          <button type="button" class="btn btn-secondary qte-submit">Clear</button>
+          <button type="button" id="clearCalendarSendEmailInquiry" class="btn btn-primary qte-submit">Clear</button>
         </div>
       </div>
     </div>
@@ -1775,9 +1791,10 @@
                   </div>
                   <input type="text" class="form-control" id="cal-phone" placeholder="0207 290 5570 ">
                 </div>
+              </div>
                 <span class="error mt-0 pb-0" id="cal-phone-l"></span>
                 <!-- <input type="text" placeholder="Your Contact Number"  id=phone class="form-control"> -->
-              </div>
+            
             </div>
             <div class="col-md-6">
 
