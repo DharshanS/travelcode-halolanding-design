@@ -378,9 +378,8 @@ $(document).ready(function() {
         month: datsList[parseInt(date[0])],
         day: date[1]
       },
-      airPort: $("#call-airport").val(),
-      nights: $("#call-nights").val(),
-      specialRequest: "#call-specialReq",
+      airPort: $("#cal-airport").val(),
+      nights: $("#cal-nights").val(),
       noOfRooms: []
     };
     sendMail(request);
