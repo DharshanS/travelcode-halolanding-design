@@ -124,19 +124,20 @@ $(document).ready(function() {
     var selected_year_month = $(".calMonthPriceSelected").attr("value");
     var year = parseInt(selected_year_month.split("-")[0], 10);
     var month = parseInt(selected_year_month.split("-")[1], 10);
+    alert(month);
     var depAirport = $("#dealDepAirport").val();
     var nights = $("#dealNoNights").val();
 
     if (validateFirstName() && emailValidate()) {
       (request.date = {
         year: year,
-        month: datsList[month],
+        month: datsList[month-1],
         day: $("#dateSelected").val()
       }),
         (request.mode = $("#com_mode").val());
       request.specialRequest = $("#special_request").val();
       request.callbackTime = $("#call_bak").val();
-      request.noOfRooms = roomsList;
+      request.noOfRooms = JSON.parse($("#roomsList").val());
       request.airPort = depAirport;
       request.nights = nights;
       request.price = $("#priceSelected").val();
@@ -144,7 +145,7 @@ $(document).ready(function() {
 
       console.log(request);
 
-      sendMail(request);
+      //sendMail(request);
 
       //http://clickmybooking.com/tc-mailer/api/send/email
     }
@@ -161,10 +162,12 @@ $(document).ready(function() {
   $(".noOfRooms").change(function() {
     var currentRoomLength = $(".pax-array").length;
     var slectedRoomLength = $(this).val();
-    console.log(currentRoomLength);
+
+    console.log("pax-array :" +currentRoomLength);
+    console.log("slectedRoomLength :"+ slectedRoomLength)
  
 
-    if (currentRoomLength <=slectedRoomLength) {
+    if (currentRoomLength <slectedRoomLength) {
       var room = {
         id: slectedRoomLength,
         adult: 1,
@@ -175,16 +178,21 @@ $(document).ready(function() {
       $(".inner-rooms").html(createRoom(room));
     } else {
      
-   
-      console.log("current :" +currentRoomLength);
-      if (currentRoomLength != 0) {
-        var del=currentRoomLength-slectedRoomLength;
-        roomsList.splice(currentRoomLength , del);
-
-        console.log(currentRoomLength);
-        console.log(del);
-        $(".pax-array")[currentRoomLength - 1].remove();
+     var paxArray= $(".pax-array");
+     
+     for(i=0;i<paxArray.length;i++){
+    
+      if(slectedRoomLength<=i){
+       
+       // alert($(".pax-array")[1
+       roomsList.splice(i,1);
+        $(".pax-array")[i-1].remove();
       }
+     }
+     
+     
+
+     
     }
     alert(JSON.stringify(roomsList));
   });
@@ -275,8 +283,9 @@ $(document).ready(function() {
   function createRoom(room) {
     var html = "";
     var roomsCount = room.id;
+    
     for (i = 1; i < roomsCount; i++) {
-      let roomNo = i + 1;
+      var roomNo = i ;
 
       html =
         html +
@@ -389,14 +398,16 @@ $(document).ready(function() {
 
 function adultChange(data) {
   var roomList = JSON.parse($("#roomsList").val());
+
   roomList[data.id].id=data.id;
   roomList[data.id].adult = data.value;
   $("#roomsList").val(JSON.stringify(roomList));
-  //alert(JSON.stringify(roomList));
+  alert(JSON.stringify(roomList));
 }
 
 function childChange(data) {
   var roomList = JSON.parse($("#roomsList").val());
+ 
   roomList[data.id].child = data.value;
   $("#roomsList").val(JSON.stringify(roomList));
 }
