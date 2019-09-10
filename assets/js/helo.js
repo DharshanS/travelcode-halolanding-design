@@ -116,6 +116,8 @@ $(document).ready(function() {
    
     if(isFormValid){
       //call sendEmail
+
+      sendMail(request);
     }
 
   });
@@ -124,7 +126,7 @@ $(document).ready(function() {
     var selected_year_month = $(".calMonthPriceSelected").attr("value");
     var year = parseInt(selected_year_month.split("-")[0], 10);
     var month = parseInt(selected_year_month.split("-")[1], 10);
-    alert(month);
+   // alert(month);
     var depAirport = $("#dealDepAirport").val();
     var nights = $("#dealNoNights").val();
 
@@ -145,7 +147,7 @@ $(document).ready(function() {
 
       console.log(request);
 
-      //sendMail(request);
+    //  sendMail(request);
 
       //http://clickmybooking.com/tc-mailer/api/send/email
     }
@@ -194,7 +196,7 @@ $(document).ready(function() {
 
      
     }
-    alert(JSON.stringify(roomsList));
+   // alert(JSON.stringify(roomsList));
   });
 
   function sendMail(request) {
@@ -402,7 +404,7 @@ function adultChange(data) {
   roomList[data.id].id=data.id;
   roomList[data.id].adult = data.value;
   $("#roomsList").val(JSON.stringify(roomList));
-  alert(JSON.stringify(roomList));
+ // alert(JSON.stringify(roomList));
 }
 
 function childChange(data) {
