@@ -1562,7 +1562,7 @@
               </div>
               <input type="text" class="form-control"  name="phoneNumberN"  placeholder="0207 290 5570 " id=in-phone>
             </div>
-             <span class="error mt-0 pb-0" id="phoneNumber-l"></span>
+             <span class="error mt-0 pb-0" id="in-phoneNumber-l"></span>
 
            </div>
          </div>
@@ -1603,7 +1603,7 @@
            <div class="form-group">
              <label for="">DEPARTURE DATE<i class="fas fa-star-of-life error"></i> </label>
              <input class="form-control datepicker" placeholder="mm/dd/yyyy" data-date-format="mm/dd/yyyy" id="in-date">
-        
+            <span class="error mt-0 pb-0" id="in-depature-date"></span>
            </div>
          </div>
          <div class="col-md-6">
@@ -1718,9 +1718,11 @@
      </div>
 
      </div>
-     <div class="modal-footer">
+     <div style="padding: 13px;text-align: center;">
        <!-- <button type="button" class="btn btn-secondary qte-submit" data-dismiss="modal">Close</button> -->
-       <button type="button" class="btn btn-primary in-submit">Submit</button>
+       <button type="button" id="sendEmailInquiry" class="btn btn-primary in-submit">Submit</button>
+       <button type="button" id="clearSendEmailInquiry" class="btn btn-primary in-submit">Clear</button>
+       
      </div>
    </div>
  </div>

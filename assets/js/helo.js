@@ -77,14 +77,55 @@ $(document).ready(function() {
     }
   });
 
+
+  $("#clearSendEmailInquiry").click(function() {
+    $("#in-firstName").val("");
+    $("#in-firstName-l").text("");
+    $("#in-email").val("");
+    $("#in-email-l").text("");
+    $("#in-phone").val("");
+    $("#in-phoneNumber-l").text("");
+    $("#in-date").val("");
+    $("#in-depature-date").text("");
+  });
+
+  $("#sendEmailInquiry").click(function() {
+    
+    var isFromValid = true;
+    let name_pattern = /^[a-zA-Z]+$/;
+    let email_pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(!name_pattern.test($("#in-firstName").val())){
+      $("#in-firstName-l").text("Please enter valid name");
+      isFormValid = false;
+    }
+    if(!email_pattern.test($("#in-email").val())){
+      $("#in-email-l").text("Please enter valid email address");
+      isFormValid = false;
+    }
+    var phone = $("#in-phone").val();
+ 
+    if(phone == "" || !(phone.match(/\d/g).length===10)){
+      $("#in-phoneNumber-l").text("Please enter valid phone");
+      isFormValid = false;
+    }
+    var depatureDate = $("#in-date").val();
+    if(depatureDate == ""){
+      $("#in-depature-date").text("Please select depature date");
+      isFormValid = false;
+    }
+   
+    if(isFormValid){
+      //call sendEmail
+    }
+
+  });
+
   $(".qte-submit").click(function() {
     var selected_year_month = $(".calMonthPriceSelected").attr("value");
     var year = parseInt(selected_year_month.split("-")[0], 10);
     var month = parseInt(selected_year_month.split("-")[1], 10);
     var depAirport = $("#dealDepAirport").val();
     var nights = $("#dealNoNights").val();
-
-   
 
     if (validateFirstName() && emailValidate()) {
       (request.date = {
