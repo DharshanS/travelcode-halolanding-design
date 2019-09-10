@@ -357,7 +357,7 @@
     padding-top: 0;
     padding-left: 0; }
   .trustEX {
-    font-size: 8px;
+    font-size: 6px;
     font-weight: 700;
     color: #000;
     position: relative;
@@ -425,7 +425,16 @@
     height: 308px; }
   .item-img {
     text-align: center;
-    height: 34px; } }
+    height: 34px; }
+  .calendar {
+    padding: 0;
+    margin-left: -22px;
+    margin-right: -22px; }
+  #cal-main-content .calendar table tbody td .price-text {
+    font-size: 11px !important; }
+  #cal-main-content .calendar table tbody td > a, #cal-main-content .calendar table tbody td > span, #flight-main-content .calendar table tbody td > a, #flight-main-content .calendar table tbody td > span, #cruise-main-content .calendar table tbody td > a, #cruise-main-content .calendar table tbody td > span {
+    font-size: 11px;
+    border-radius: 1px; } }
 
 @media (max-width: 414px) {
   .con-single_box a {
@@ -495,7 +504,9 @@
     font-size: 14px; }
   .single-contact-btn .inner-box {
     text-align: left;
-    height: 65px; } }
+    height: 65px; }
+  .rating-img {
+    width: 92px; } }
 
 @media (max-width: 375px) {
   .itinerary .hotel-name {
