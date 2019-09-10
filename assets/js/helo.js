@@ -218,6 +218,7 @@ $("#clearCalendarSendEmailInquiry").click(function(){
       request.nights = nights;
       request.price = $("#priceSelected").val();
       request.mobile = $("#phone").val();
+      request.email=$("#email").val()
 
       console.log(request);
 
