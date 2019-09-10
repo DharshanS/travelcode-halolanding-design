@@ -140,7 +140,7 @@ $(document).ready(function() {
      
       (request.date = {
         year: date[2],
-        month: datsList[date[0]],
+        month: datsList[parseInt(date[0])],
         day: date[1]
       }),
       
@@ -149,7 +149,7 @@ $(document).ready(function() {
       request.noOfRooms = JSON.parse($("#roomsList").val());
       request.specialRequest = $("#in-specialReq").val();
       request.callbackTime = $("#in-callback").val();
-
+      console.log(request);
       sendMail(request);
     }
 
