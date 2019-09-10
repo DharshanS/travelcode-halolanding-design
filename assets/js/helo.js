@@ -186,9 +186,7 @@ $(document).ready(function() {
     }
   });
 
-  $(".in-submit").click(function() {
-    inqueryNow();
-  });
+;
 
   $(".cal-submit").click(function() {
 
@@ -215,7 +213,7 @@ $(document).ready(function() {
       isFormValid = false;
     }
    
-    if(isFormValid){
+    if(isFromValid){
       requestCallBack();
     }
 
@@ -366,18 +364,25 @@ $(document).ready(function() {
       specialRequest: "#in-specialReq",
       noOfRooms: []
     };
-    sendMail(request);
+   // sendMail(request);
     //alert(JSON.stringify(request));
   }
 
    function requestCallBack() {
+    var date=$('#cal-date').val().split("/");
+  
     var request = {
       name: $("#cal-firstName").val(),
       email: $("#cal-email").val(),
       mobile: $("#cal-phone").val(),
       mode: $("#cal-mode").val(),
       callbackTime: $("#cal-callback").val(),
-      date: $("#cal-date").val(),
+      date : {
+        year: date[2],
+        month: datsList[parseInt(date[0])],
+        day: date[1]
+      }
+  ,
       airPort: $("#call-airport").val(),
       nights: $("#call-nights").val(),
       specialRequest: "#call-specialReq",
