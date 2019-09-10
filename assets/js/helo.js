@@ -136,7 +136,7 @@ $(document).ready(function() {
         (request.mode = $("#com_mode").val());
       request.specialRequest = $("#special_request").val();
       request.callbackTime = $("#call_bak").val();
-      request.noOfRooms = roomsList.length;
+      request.noOfRooms = roomsList;
       request.airPort = depAirport;
       request.nights = nights;
       request.price = $("#priceSelected").val();
@@ -159,11 +159,10 @@ $(document).ready(function() {
   });
 
   $(".noOfRooms").change(function() {
-    var currentRoomLength = $(".pax-array-cal").length;
+    var currentRoomLength = $(".pax-array").length;
     var slectedRoomLength = $(this).val();
-
     console.log(currentRoomLength);
-    console.log(slectedRoomLength);
+ 
 
     if (currentRoomLength <=slectedRoomLength) {
       var room = {
@@ -175,11 +174,19 @@ $(document).ready(function() {
       // roomsList.push(room);
       $(".inner-rooms").html(createRoom(room));
     } else {
-      if (currentRoomLength != 1) {
-        roomsList.splice(slectedRoomLength + 1, 1);
+     
+   
+      console.log("current :" +currentRoomLength);
+      if (currentRoomLength != 0) {
+        var del=currentRoomLength-slectedRoomLength;
+        roomsList.splice(currentRoomLength , del);
+
+        console.log(currentRoomLength);
+        console.log(del);
         $(".pax-array")[currentRoomLength - 1].remove();
       }
     }
+    alert(JSON.stringify(roomsList));
   });
 
   function sendMail(request) {
