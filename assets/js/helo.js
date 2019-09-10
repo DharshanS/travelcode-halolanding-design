@@ -107,26 +107,48 @@ $(document).ready(function() {
     let email_pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!name_pattern.test($("#in-firstName").val())){
       $("#in-firstName-l").text("Please enter valid name");
-      isFormValid = false;
+      isFromValid = false;
     }
     if(!email_pattern.test($("#in-email").val())){
       $("#in-email-l").text("Please enter valid email address");
-      isFormValid = false;
+      isFromValid = false;
     }
     var phone = $("#in-phone").val();
  
     if(phone == "" || !(phone.match(/\d/g).length===10)){
       $("#in-phoneNumber-l").text("Please enter valid phone");
-      isFormValid = false;
+      isFromValid = false;
     }
     var depatureDate = $("#in-date").val();
     if(depatureDate == ""){
       $("#in-depature-date").text("Please select depature date");
-      isFormValid = false;
+      isFromValid = false;
     }
    
-    if(isFormValid){
+ 
+   
+
+    if(isFromValid){
       //call sendEmail
+
+      var date=$('#in-date').val().split("/");
+    
+     
+      request.name=$("#in-firstName").val();
+      request.email=$("#in-email").val();
+      request.mobile=$("#in-phone").val();
+     
+      (request.date = {
+        year: date[2],
+        month: datsList[date[0]],
+        day: date[1]
+      }),
+      
+      request.airPort =$("#in-airport").val();
+      request.nights = $("#in-nights").val();
+      request.noOfRooms = JSON.parse($("#roomsList").val());
+      request.specialRequest = $("#in-specialReq").val();
+      request.callbackTime = $("#in-callback").val();
 
       sendMail(request);
     }
@@ -237,6 +259,50 @@ $(document).ready(function() {
    // alert(JSON.stringify(roomsList));
   });
 
+
+  $(".noOfRoomsEmail").change(function(){
+
+    var currentRoomLength = $(".pax-array-email").length;
+    var slectedRoomLength = $(this).val();
+
+  
+ 
+
+    if (currentRoomLength <slectedRoomLength) {
+      var room = {
+        id: slectedRoomLength,
+        adult: 1,
+        child: 0,
+        infant: 0
+      };
+      // roomsList.push(room);
+      $(".inner-rooms-email").html(createRoomEmail(room));
+    } else {
+     
+     var paxArray= $(".pax-array-email");
+     
+     for(i=0;i<=paxArray.length;i++){
+    
+      console.log("pax-array-email:" +i);
+      console.log("paxArray :"+ paxArray.length)
+      console.log("slectedRoomLength :"+ slectedRoomLength)
+
+      if(slectedRoomLength<=i){
+       
+        console.log("inside :"+ slectedRoomLength);
+
+       roomsList.splice(i,1);
+        $(".pax-array-email")[i-1].remove();
+      }
+     }
+     
+     
+
+     
+    }
+
+  })
+
   function sendMail(request) {
     $.ajax({
       type: "POST",
@@ -336,6 +402,84 @@ $(document).ready(function() {
     sendMail(request);
   }
 
+
+
+  function createRoomEmail(room) {
+    var html = "";
+    var roomsCount = room.id;
+    
+    for (i = 1; i < roomsCount; i++) {
+      var roomNo = i ;
+
+      html =
+        html +
+        '<div class="row pax-array-email">' +
+        '<div class="col-md-3  col-sm-6">' +
+        '<div class="form-group">' +
+        "<label >Room " +
+        (roomNo+1) +
+        " </label>" +
+        "</div>" +
+        "</div>" +
+        '<div class="col-md-3  col-sm-6">' +
+        '<div class="form-group">' +
+        '<label for="">ADULTS </label>' +
+        '<select name="" id="' +
+        roomNo +
+        '" class="adults form-control"  onchange="adultChange(this )" >' +
+        ' <option value="1">01</option>' +
+        '<option value="2">02</option>' +
+        '<option value="3">03</option>' +
+        '<option value="4">04</option>' +
+        "</select>" +
+        "</div>" +
+        "</div>" +
+        '<div class="col-md-3 col-sm-6">' +
+        '<div class="form-group">' +
+        '<label for="">CHILDREN</label>' +
+        '<select name="" id="' +
+        roomNo +
+        '" class="child form-control"  onchange="childChange(this )" >' +
+        '<option value="">0</option>' +
+        '<option value="">01</option>' +
+        '<option value="">02</option>' +
+        '<option value="">03</option>' +
+        "</select>" +
+        "</div>" +
+        "</div>" +
+        '<div class="col-md-3 col-sm-6">' +
+        '<div class="form-group">' +
+        '<label for="">INFANT' +
+        "</label>" +
+        '<select name=""  id="' +
+        roomNo +
+        '" class=" infant form-control"  onchange="infantChange(this )" >' +
+        '<option value="">01</option>' +
+        '<option value="">02</option>' +
+        '<option value="">03</option>' +
+        '<option value="">04</option>' +
+        "</select>" +
+        "</div>" +
+        "</div>" +
+        "</div>";
+
+      var room = {
+        id: i,
+        adult: 1,
+        child: 0,
+        infant: 0
+      };
+
+      roomsList.push(room);
+      $("#roomsList").val(JSON.stringify(roomsList));
+    }
+
+    return html;
+  }
+
+
+
+
   function createRoom(room) {
     var html = "";
     var roomsCount = room.id;
@@ -349,7 +493,7 @@ $(document).ready(function() {
         '<div class="col-md-3  col-sm-6">' +
         '<div class="form-group">' +
         "<label >Room " +
-        roomNo +
+        (roomNo+1) +
         " </label>" +
         "</div>" +
         "</div>" +
