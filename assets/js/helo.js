@@ -378,6 +378,7 @@ $(document).ready(function() {
         day: date[1]
       },
       airPort: $("#call-airport").val(),
+      price: 0,
       nights: $("#cal-nights").val(),
       noOfRooms: []
     };
