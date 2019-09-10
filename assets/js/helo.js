@@ -179,7 +179,7 @@ $("#clearCalendarSendEmailInquiry").click(function(){
     var depAirport = $("#dealDepAirport").val();
     var nights = $("#dealNoNights").val();
 
-    let isFormValid = true;
+    var isFormValid = true;
     let name_pattern = /^([a-z A-Z]{1,50})$/;
     let email_pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!name_pattern.test($("#firstName").val())){
@@ -232,27 +232,35 @@ $("#clearCalendarSendEmailInquiry").click(function(){
 ;
 
   $(".cal-submit").click(function() {
-    let isFormValid = true;
+    var isFormValid = true;
     let name_pattern = /^([a-z A-Z]{1,50})$/;
     let email_pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!name_pattern.test($("#cal-firstName").val())){
       $("#cal-firstName-l").text("Please enter valid name");
       isFormValid = false;
+    }else{
+      $("#cal-firstName-l").text("");
     }
     if(!email_pattern.test($("#cal-email").val())){
       $("#cal-email-l").text("Please enter valid email address");
       isFormValid = false;
+    }else{
+      $("#cal-email-l").text("");
     }
     let phone = $("#cal-phone").val();
  
     if(phone == "" || !(phone.match(/\d/g).length===10)){
       $("#cal-phone-l").text("Please enter valid phone");
       isFormValid = false;
+    }else{
+      $("#cal-phone-l").text("");
     }
     let depatureDate = $("#cal-date").val();
     if(depatureDate == ""){
       $("#cal-date-l").text("Please select depature date");
       isFormValid = false;
+    }else{
+      $("#cal-date-l").text("");
     }
 
     if(isFormValid){
@@ -302,9 +310,6 @@ $("#clearCalendarSendEmailInquiry").click(function(){
     var currentRoomLength = $(".pax-array-email").length;
     var slectedRoomLength = $(this).val();
 
-  
- 
-
     if (currentRoomLength <slectedRoomLength) {
       var room = {
         id: slectedRoomLength,
@@ -332,9 +337,6 @@ $("#clearCalendarSendEmailInquiry").click(function(){
         $(".pax-array-email")[i-1].remove();
       }
      }
-     
-     
-
      
     }
 
