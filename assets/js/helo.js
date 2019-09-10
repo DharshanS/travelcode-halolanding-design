@@ -115,13 +115,13 @@ $("#clearCalendarSendEmailInquiry").click(function(){
     let email_pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!name_pattern.test($("#in-firstName").val())){
       $("#in-firstName-l").text("Please enter valid name");
-      isFromValid = false;
+      isFormValid = false;
     }else{
       $("#in-firstName-l").text("");
     }
     if(!email_pattern.test($("#in-email").val())){
       $("#in-email-l").text("Please enter valid email address");
-      isFromValid = false;
+      isFormValid = false;
     }else{
       $("#in-email-l").text("");
     }
@@ -129,22 +129,20 @@ $("#clearCalendarSendEmailInquiry").click(function(){
  
     if(phone == "" || !(phone.match(/\d/g).length===10)){
       $("#in-phoneNumber-l").text("Please enter valid phone number");
-      isFromValid = false;
+      isFormValid = false;
     }else{
       $("#in-phoneNumber-l").text("");
     }
     var depatureDate = $("#in-date").val();
     if(depatureDate == ""){
       $("#in-depature-date").text("Please select depature date");
-      isFromValid = false;
+      isFormValid = false;
     }else{
       $("#in-depature-date").text("");
     }
    
  
-   
-
-    if(isFromValid){
+    if(isFormValid){
       //call sendEmail
 
       var date=$('#in-date').val().split("/");
@@ -184,14 +182,14 @@ $("#clearCalendarSendEmailInquiry").click(function(){
     let email_pattern  = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!name_pattern.test($("#firstName").val())){
       $("#firstName-l").text("Please enter valid name");
-      isFromValid = false;
+      isFormValid = false;
     }
     else{
       $("#firstName-l").text("");
     }
     if(!email_pattern.test($("#email").val())){
       $("#email-l").text("Please enter valid email address");
-      isFromValid = false;
+      isFormValid = false;
     }
     else{
        $("#email-l").text("");
@@ -200,13 +198,13 @@ $("#clearCalendarSendEmailInquiry").click(function(){
  
     if(phone == "" || !(phone.match(/\d/g).length===10)){
       $("#phone-l").text("Please enter valid phone number");
-      isFromValid = false;
+      isFormValid = false;
     }
     else{
       $("#phone-l").text(" ");
     }
 
-    if (isFromValid) {
+    if (isFormValid) {
       (request.date = {
         year: year,
         month: datsList[month-1],
