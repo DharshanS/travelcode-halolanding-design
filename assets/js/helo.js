@@ -11,7 +11,7 @@ $(document).ready(function() {
     callbackTime: "",
     specialRequest: "",
     noOfRooms: [],
-    to: "Sales@haloflights.co.uk"
+    to: "team@haloflights.co.uk"
   };
 
   const datsList = [
