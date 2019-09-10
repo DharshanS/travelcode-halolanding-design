@@ -350,6 +350,13 @@
   .con-single_box h5 {
     font-size: 19px;
     padding-top: 4px; }
+  .callNow-h5 {
+    font-size: 19px;
+    display: block !important;
+    cursor: pointer;
+    color: #555e69;
+    margin-bottom: 1px;
+    text-decoration: unset; }
   .tp-widget-logo {
     margin: 0;
     width: 100%; }
