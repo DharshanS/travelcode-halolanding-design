@@ -159,13 +159,13 @@ $(document).ready(function() {
   });
 
   $(".noOfRooms").change(function() {
-    var currentRoomLength = $(".pax-array").length;
+    var currentRoomLength = $(".pax-array-cal").length;
     var slectedRoomLength = $(this).val();
 
     console.log(currentRoomLength);
     console.log(slectedRoomLength);
 
-    if (currentRoomLength < slectedRoomLength) {
+    if (currentRoomLength <=slectedRoomLength) {
       var room = {
         id: slectedRoomLength,
         adult: 1,
@@ -176,7 +176,7 @@ $(document).ready(function() {
       $(".inner-rooms").html(createRoom(room));
     } else {
       if (currentRoomLength != 1) {
-        roomsList.splice(currentRoomLength - 1, 1);
+        roomsList.splice(slectedRoomLength + 1, 1);
         $(".pax-array")[currentRoomLength - 1].remove();
       }
     }
