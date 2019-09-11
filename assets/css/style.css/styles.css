@@ -615,6 +615,19 @@ tr:first-child > td > .fc-day-grid-event {
 .Overview-cont-main .cunt label {
   font-weight: 400; }
 
+.calMonthPrice .cla-text {
+  display: none; }
+
+.calMonthPriceSelected .cla-month, .calMonthPriceSelected .cla-year {
+  color: #262262; }
+
+.cla-month, .cla-year {
+  line-height: 18px;
+  font-size: 13px;
+  color: #fff;
+  display: block;
+  text-transform: uppercase; }
+
 .icon-1 {
   width: 24% !important;
   margin: 6px; }

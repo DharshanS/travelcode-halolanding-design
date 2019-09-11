@@ -766,6 +766,20 @@ p{
 .Overview-cont-main .cunt label {
   font-weight: 400;
 }
+.calMonthPrice .cla-text{
+  display: none;
+}
+.calMonthPriceSelected .cla-month,.calMonthPriceSelected .cla-year{
+  color: $logo-left
+}
+.cla-month,.cla-year{
+  line-height: 18px;
+    font-size: 13px;
+    color: #fff;
+    // font-weight: 600;
+    display: block;
+    text-transform: uppercase;
+}
 .icon-1{
   width: 24% !important;
   margin: 6px;

@@ -518,7 +518,7 @@
 }
 
 .calMonthPriceSelected {
-    background: #fff !important;
+    background: #fff ;
 }
 
 .calMonthPrice h2, .calMonthPrice h4 {
