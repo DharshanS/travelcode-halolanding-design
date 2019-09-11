@@ -15,13 +15,14 @@
 
         $('#dealDepAirport,#dealNoNights').change(function () {
 
-            getCalendarValues_MC();
+            getCalendarValues_MC(0);
 
         });
 
-     
 
-        function getCalendarValues_MC() {
+       
+
+        function getCalendarValues_MC(monthParam) {
 
   
 
@@ -31,8 +32,15 @@
            
             var selected_year_month = $(".calMonthPriceSelected").attr("value");
 
-            var month_ = parseInt(selected_year_month.split("-")[1]);
-             monthName=monthNames[month_-1];
+             var month_ = parseInt(selected_year_month.split("-")[1]);
+             if(monthParam==0){
+                monthName=monthNames[month_-1];
+             }else if(monthParam==1){
+                monthName=monthNames[month_];
+             }else{
+                monthName=monthNames[month_-2];
+             }
+        
 
             if (month_.toString().length < 2)
                 month_ = "0" + month_;
@@ -40,7 +48,7 @@
             var year_ = parseInt(selected_year_month.split("-")[0]);
             year_ = year_.toString().substring(2);
 
-            var month = month_ + "-" + year_;
+            //var month = month_ + "-" + year_;
 
            
             $('#calendarPreLoader').show();
@@ -110,6 +118,33 @@
 
             var defaultCalDate = '2019-10';
 
+            $(".owl-next").click(function(){
+              
+                var selected_year_month = $(".calMonthPriceSelected").attr("value");
+
+                var month_ = parseInt(selected_year_month.split("-")[1]);
+
+              if(month_==4){
+                getCalendarValues_MC(0);
+              }else{
+                getCalendarValues_MC(1);
+              }
+            });
+     
+            $(".owl-prev").click(function(){
+
+                var selected_year_month = $(".calMonthPriceSelected").attr("value");
+
+                var month_ = parseInt(selected_year_month.split("-")[1]);
+
+              if(month_==10){
+                getCalendarValues_MC(0);
+              }else{
+                getCalendarValues_MC(2);
+              }
+              
+            });
+
             $(".calMonthPrice").each(function () {
 
                 currentValue = $(this).attr("value");
@@ -121,13 +156,11 @@
 
             });
 
-            getCalendarValues_MC();
+            getCalendarValues_MC(0);
 
             $("#monthSlider").click(function () {
-                var selected_year_month = $(".calMonthPriceSelected").attr("value");
-                var month_ = parseInt(selected_year_month.split("-")[1]);
-                monthName=monthNames[month_-1];
-                getCalendarValues_MC();
+          
+               // getCalendarValues_MC(0);
             });
 
 
@@ -160,8 +193,8 @@
 
             $('#dealNoNights,#dealDepAirport').change(function(){
                // alert();
-               getCalendarValues_MC();
-               var selected_year_month = $(".calMonthPriceSelected").attr("value");
+               getCalendarValues_MC(0);
+              // var selected_year_month = $(".calMonthPriceSelected").attr("value");
               
             })
 
