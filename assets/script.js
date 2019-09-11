@@ -15,6 +15,7 @@
 
         $('#dealDepAirport,#dealNoNights').change(function () {
 
+           
             getCalendarValues_MC(0);
 
         });
@@ -33,15 +34,13 @@
             var selected_year_month = $(".calMonthPriceSelected").attr("value");
 
              var month_ = parseInt(selected_year_month.split("-")[1]);
-             if(monthParam==0){
+            if(monthParam==0){
                 monthName=monthNames[month_-1];
-             }else if(monthParam==1){
-                monthName=monthNames[month_];
-             }else{
-                monthName=monthNames[month_-2];
-             }
-        
+            }else if(monthName==1){
 
+            }
+               
+          
             if (month_.toString().length < 2)
                 month_ = "0" + month_;
 
@@ -192,10 +191,14 @@
         
 
             $('#dealNoNights,#dealDepAirport').change(function(){
-               // alert();
+             
                getCalendarValues_MC(0);
               // var selected_year_month = $(".calMonthPriceSelected").attr("value");
               
+            })
+
+            $(".owl-item").click(function(){
+                getCalendarValues_MC(0);
             })
 
            
