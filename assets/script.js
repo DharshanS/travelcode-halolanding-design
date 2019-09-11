@@ -36,8 +36,10 @@
              var month_ = parseInt(selected_year_month.split("-")[1]);
             if(monthParam==0){
                 monthName=monthNames[month_-1];
-            }else if(monthName==1){
-
+            }else if(monthParam==1){
+                monthName=monthNames[month_];
+            }else{
+                monthName=monthNames[month_-2];
             }
                
           
