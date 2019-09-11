@@ -1,6 +1,8 @@
 
         var defDeparture = 'LON';
         var monthName;
+        var monthNames = [ "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+        "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" ];
         var dateSelected=0;
         if (defDeparture != null && defDeparture != "") {
             $('#dealDepAirport').select2().val(defDeparture).trigger("change");
@@ -21,8 +23,7 @@
 
         function getCalendarValues_MC() {
 
-            var monthNames = [ "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
-"JUL", "AUG", "SEP", "OCT", "NOV", "DEC" ];
+  
 
             var tourID = $('#currentDealID').val();
             var depAirport = $('#dealDepAirport').val();
@@ -123,6 +124,7 @@
             getCalendarValues_MC();
 
             $("#monthSlider").click(function () {
+                var selected_year_month = $(".calMonthPriceSelected").attr("value");
                 var month_ = parseInt(selected_year_month.split("-")[1]);
                 monthName=monthNames[month_-1];
                 getCalendarValues_MC();
