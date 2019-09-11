@@ -362,6 +362,11 @@
     color: #fff; }
   .calMonthPriceSelected .cla-month, .calMonthPriceSelected .cla-year, .calMonthPriceSelected .cla-text {
     color: #262262 !important; }
+  .calMonthPriceSelected .cla-text {
+    display: none; }
+  .calMonthPriceSelected {
+    background: #fff !important;
+    padding: 10px !important; }
   .calMonthPriceSelected {
     background: #262262 !important;
     border: 1px solid #262262; }
