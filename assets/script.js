@@ -20,8 +20,8 @@
 
         function getCalendarValues_MC() {
 
-            var monthNames = [ "January", "February", "March", "April", "May", "June",
-"July", "August", "September", "October", "November", "December" ];
+            var monthNames = [ "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+"JUL", "AUG", "SEP", "OCT", "NOV", "DEC" ];
 
             var tourID = $('#currentDealID').val();
             var depAirport = $('#dealDepAirport').val();

@@ -15,18 +15,18 @@ $(document).ready(function() {
   };
 
   const datsList = [
-    "JAN",
-    "FEB",
-    "MAR",
-    "APR",
-    "MAY",
-    "JUN",
-    "JUL",
-    "AUG",
-    "SEP",
-    "OCT",
-    "NOV",
-    "DEC"
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
   ];
 
   var roomsList = [];
@@ -164,7 +164,7 @@ $("#clearCalendarSendEmailInquiry").click(function(){
       request.specialRequest = $("#in-specialReq").val();
       request.callbackTime = $("#in-callback").val();
       console.log(request);
-      sendMail(request, 'InquireModal');
+      sendMail(request);
     }
 
   });
@@ -222,7 +222,7 @@ $("#clearCalendarSendEmailInquiry").click(function(){
 
       console.log(request);
 
-      sendMail(request, 'exampleModal');
+      sendMail(request);
     }
   });
 
@@ -339,7 +339,7 @@ $("#clearCalendarSendEmailInquiry").click(function(){
 
   })
 
-  function sendMail(request, popupId) {
+  function sendMail(request) {
     $.ajax({
       type: "POST",
       url: "http://deals.haloflights.co.uk/api/send/email",
@@ -347,17 +347,15 @@ $("#clearCalendarSendEmailInquiry").click(function(){
       dataType: "JSON",
 
       data: JSON.stringify(request),
+
       success: function(data) {
-        
         if (data == true) {
-          $("#" + popupId).dialog('close');
           alert("Thank You for Inquiring with Halo Flights UK.");
         } else {
           $("#res_p").append("An error occured");
         }
       }
     });
-
   }
 
   $(document).change(".adults", function() {
@@ -428,7 +426,7 @@ $("#clearCalendarSendEmailInquiry").click(function(){
       to: "Sale@haloflights.co.uk",
       noOfRooms: []
     };
-    sendMail(request,'requestCall');
+    sendMail(request);
   }
 
   function callInqueryNow() {
