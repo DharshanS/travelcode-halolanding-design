@@ -1893,7 +1893,7 @@
       items: 6,
       loop: true,
       navigation: true,
-      navigationText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      navigationText: ["<i class='fas fa-chevron-left rate-right'></i>", "<i class='fas fa-chevron-right rate-left'></i>"],
       dots: false,
       autoPlay: false,
       autoPlayHoverPause: false,
@@ -1914,6 +1914,16 @@
   </script>
 
   <script>
+
+$(document).click(function(){
+$(".rate-right").click(function(){
+  alert("bhhdf")
+})
+
+
+}
+
+
     $('.calMonthPrice').click(function () {
 
       $('.calMonthPrice').removeClass('calMonthPriceSelected');
