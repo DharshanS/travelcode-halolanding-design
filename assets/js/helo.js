@@ -350,12 +350,13 @@ $("#clearCalendarSendEmailInquiry").click(function(){
 
       success: function(data) {
         if (data == true) {
-          $("#" + popupId).dialog('close');
+          $("#" + popupId).modal('hide');
           alert("Thank You for Inquiring with Halo Flights UK.");
           $("#res_p").append("An error occured");
         }
       }
     });
+
   }
 
   $(document).change(".adults", function() {
