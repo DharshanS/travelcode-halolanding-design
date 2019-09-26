@@ -79,7 +79,7 @@
             var year = parseInt(selected_year_month.split("-")[0], 10);
             var month = parseInt(selected_year_month.split("-")[1], 10);
             var markup = $('#currentDealMarkup').val();
-           // $("#nightBoardBasis").text(cuNights);
+           
 
             var price_arr = [];
 
@@ -88,8 +88,7 @@
 
                 console.log(data.dealDates[i])
                 console.log(data.dealMCFares[i])
-               // price_arr[data.dealDates[i]] = '&pound;' + (parseInt(data.dealMCFares[i]) + parseInt(data.priceInclusion1) + parseInt(data.priceInclusion2) + parseInt(data.priceInclusion3) + parseInt(markup));
-                price_arr[data.dealDates[i]]=data.dealMCFares[i];
+               price_arr[data.dealDates[i]]=data.dealMCFares[i];
                 console.log( price_arr[i])
             }
 
@@ -132,13 +131,12 @@
                 $('#cruise-features .tabs a[href="#cruise-write-review"]').tab('show')
             });
 
-            // editable rating
+        
             $(".editable-rating.five-stars-container").each(function () {
                 var oringnal_value = $(this).data("original-stars");
                 if (typeof oringnal_value == "undefined") {
                     oringnal_value = 0;
                 } else {
-                    //oringnal_value = 10 * parseInt(oringnal_value);
                 }
                 $(this).slider({
                     range: "min",
@@ -155,7 +153,7 @@
         
 
             $('#dealNoNights,#dealDepAirport').change(function(){
-               // alert();
+           
                getCalendarValues_MC();
                var selected_year_month = $(".calMonthPriceSelected").attr("value");
               
@@ -170,12 +168,11 @@
             console.log("php");
           
                    $('#myModal').modal('show');
-          
-          // hf
+      
               });
           
           
-          // International Telephone Input {{ asset('js/tel/utils.js?1549804213570')}}
+   
           
           
 
@@ -191,7 +188,7 @@
             var depAirport = $('#dealDepAirport').val();
             var nights = $('#dealNoNights').val();
 
-           // alert($data);
+         
             $('#exampleModal').modal('show');
 
 
@@ -199,5 +196,4 @@
 
 
      
-          // International Telephone Input End 
           
