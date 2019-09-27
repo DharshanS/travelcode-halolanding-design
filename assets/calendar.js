@@ -18,7 +18,7 @@ function Calendar() {
         if (typeof priceArr == "undefined") {
             priceArr = [];
         }
-S
+
 
         var html = "";
         firstDay = new Date(Year, Month, 1);

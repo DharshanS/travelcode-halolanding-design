@@ -60,7 +60,7 @@
                     if (data.msg == "Success") {
                         console.log('sucess');
                         console.log(data);
-                        alert(date)
+                      
                         $('#mob_selMonth').empty();
                         $("#mob_selMonth").append(data.mobileMonth);
                         bindCalendarValues_MC(data);
