@@ -49,6 +49,7 @@ function Calendar() {
         }
 
         for (i = 1; i <= days[Month]; i++) {
+            console.log()
             var className = "";
             if ((i == thisDay) && (Month == thisMonth) && (Year == thisYear)) {
                 className += " today";
@@ -97,7 +98,7 @@ function Calendar() {
     };
 
     Calendar.prototype.getHTML = function () {
-        console.log("html"+this.html);
+      //  console.log("html"+this.html);
         
         return this.html;
     };

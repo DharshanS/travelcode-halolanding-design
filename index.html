@@ -1976,28 +1976,30 @@
 
     $(document).click(function () {
       $(".rate-right").click(function () {
-        alert("bhhdf")
+       
       })
 
 
-    }
+    })
+
+      $('.calMonthPrice').click(function () {
+
+$('.calMonthPrice').removeClass('calMonthPriceSelected');
+
+$(this).addClass('calMonthPriceSelected');
+
+});
 
 
-    $('.calMonthPrice').click(function () {
-
-      $('.calMonthPrice').removeClass('calMonthPriceSelected');
-
-      $(this).addClass('calMonthPriceSelected');
-
-    });
+$('.available').click(function () {
 
 
-    $('.available').click(function () {
+$('#exampleModal').modal('show');
 
+});
+  
 
-      $('#exampleModal').modal('show');
-
-    });
+  
 
   </script>
 
