@@ -343,6 +343,33 @@
     top: -169px; } }
 
 @media (max-width: 471px) {
+  .calMonthPrice h2, .calMonthPrice h4 {
+    display: inherit;
+    float: left; }
+  .calMonthPrice {
+    float: left;
+    width: 97%; }
+  .cla-month, .cla-year {
+    display: inline;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff !important;
+    width: 100%; }
+  .calMonthPrice .cla-text {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff; }
+  .calMonthPriceSelected .cla-month, .calMonthPriceSelected .cla-year, .calMonthPriceSelected .cla-text {
+    color: #262262 !important; }
+  .calMonthPriceSelected .cla-text {
+    display: none; }
+  .calMonthPriceSelected {
+    background: #fff !important;
+    padding: 10px !important; }
+  .calMonthPriceSelected {
+    background: #262262 !important;
+    border: 1px solid #262262; }
   .iti-flag.gb {
     height: 21px;
     background-position: -3554px 0px;
