@@ -365,7 +365,7 @@ $("#clearCalendarSendEmailInquiry").click(function(){
   });
 
   function validateFirstName() {
-    reg_name = /^([a-zA-Z]{1,50})$/;
+    reg_name = /^([a-z A-Z]{1,50})$/;
     fName = $("#firstName").val();
 
     if (fName != "" && reg_name.test(fName)) {
@@ -373,7 +373,7 @@ $("#clearCalendarSendEmailInquiry").click(function(){
       request.name = fName;
       return true;
     } else {
-      $("#firstName-l").text("name should be text");
+      $("#firstName-l").text("Name should be text");
     }
     return false;
   }
