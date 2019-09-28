@@ -40,11 +40,14 @@
 
             var month = month_ + "-" + year_;
 
+            var package = $('#package').val();
+
+         
            
             $('#calendarPreLoader').show();
             $.ajax({
-
-                url: 'https://clickmybooking.com/api/get-rates',
+            
+                url: 'deals.haloflights.co.uk/api/rates',
                 type: 'GET',
                 dataType: 'JSON',
                 traditional: true,
@@ -52,7 +55,8 @@
                     tourID: tourID,
                     month: monthName,
                     airport:depAirport,
-                    nights: nights
+                    nights: nights,
+                    package:package
                 },
                 success: function (data) {
                    
