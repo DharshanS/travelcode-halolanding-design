@@ -47,7 +47,7 @@
             $('#calendarPreLoader').show();
             $.ajax({
             
-                url: 'deals.haloflights.co.uk/api/rates',
+                url: '/api/rates',
                 type: 'GET',
                 dataType: 'JSON',
                 traditional: true,
