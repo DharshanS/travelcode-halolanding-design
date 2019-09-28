@@ -127,7 +127,7 @@ $("#clearCalendarSendEmailInquiry").click(function(){
     }
     var phone = $("#in-phone").val();
  
-    if(phone == "" || !(phone.match(/\d/g).length>=10)){
+    if(phone == "" || !(phone.match(/\d/g).length>9)){
       $("#in-phoneNumber-l").text("Please enter valid phone number");
       isFormValid = false;
     }else{
