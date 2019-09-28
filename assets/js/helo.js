@@ -127,7 +127,7 @@ $("#clearCalendarSendEmailInquiry").click(function(){
     }
     var phone = $("#in-phone").val();
  
-    if(phone == "" || !(phone.match(/\d/g).length>9)){
+    if(phone == "" || !(phone.match(/\d/g).length>=10)){
       $("#in-phoneNumber-l").text("Please enter valid phone number");
       isFormValid = false;
     }else{
@@ -198,7 +198,7 @@ $("#clearCalendarSendEmailInquiry").click(function(){
     }
     var phone = $("#phone").val();
  
-    if(phone == "" || !(phone.match(/\d/g).length===10)){
+    if(phone == "" || !(phone.match(/\d/g).length>=10)){
       $("#phone-l").text("Please enter valid phone number");
       isFormValid = false;
     }
@@ -248,7 +248,7 @@ $("#clearCalendarSendEmailInquiry").click(function(){
     }
     let phone = $("#cal-phone").val();
  
-    if(phone == "" || !(phone.match(/\d/g).length===10)){
+    if(phone == "" || !(phone.match(/\d/g).length>=10)){
       $("#cal-phone-l").text("Please enter valid phone");
       isFormValid = false;
     }else{
