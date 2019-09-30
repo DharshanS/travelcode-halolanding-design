@@ -428,7 +428,9 @@ $("#clearCalendarSendEmailInquiry").click(function(){
       nights: $("#cal-nights").val(),
       specialRequest: '',
       to: "Sale@haloflights.co.uk",
-      noOfRooms: []
+      noOfRooms: [],
+      subject:$('#subject').val(),
+      deal:$('#deal').val()
     };
     sendMail(request);
   }
