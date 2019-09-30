@@ -404,7 +404,9 @@ $("#clearCalendarSendEmailInquiry").click(function(){
       airPort: $("#in-airport").val(),
       nights: $("#in-nights").val(),
       specialRequest: "#in-specialReq",
-      noOfRooms: []
+      noOfRooms: [],
+      subject:$('#subject').val(),
+      deal:$('#deal').val()
     };
    // sendMail(request);
     //alert(JSON.stringify(request));
@@ -446,7 +448,9 @@ $("#clearCalendarSendEmailInquiry").click(function(){
       airPort: $("#call-airport").val(),
       nights: $("#call-nights").val(),
       specialRequest: "#call-specialReq",
-      noOfRooms: []
+      noOfRooms: [],
+      subject:$('#subject').val(),
+      deal:$('#deal').val()
     };
     sendMail(request);
   }
