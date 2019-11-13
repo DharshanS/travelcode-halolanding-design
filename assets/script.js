@@ -29,9 +29,9 @@
            
             var selected_year_month = $(".calMonthPriceSelected").attr("value");
 
-            try{
+           
                 var month_ = parseInt(selected_year_month.split("-")[1]);
-            }catch(Ex);
+           
            
             var monthName=monthNames[month_-1];
 
